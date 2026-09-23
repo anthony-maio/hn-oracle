@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Two-stage cascade: cheap gate on everything, detail only on predictions</title>
+  <rect width="900" height="300" rx="14" fill="#0f1115"/>
+  <text x="40" y="50" fill="#ff6600" font-size="15" font-weight="700" letter-spacing="1.5">ONE CHEAP QUESTION FOR EVERYONE, TEN FOR THE FEW</text>
+
+  <!-- funnel stages -->
+  <path d="M40 80 H300 L270 250 H70 Z" fill="#1d2230" stroke="#3a3f4b"/>
+  <text x="170" y="120" fill="#f2f2f2" font-size="20" font-weight="700" text-anchor="middle">Every comment</text>
+  <text x="170" y="146" fill="#c9cdd6" font-size="14" text-anchor="middle">2006-2020, 5+ years of hindsight</text>
+  <text x="170" y="186" fill="#ff6600" font-size="15" font-weight="700" text-anchor="middle">Stage A</text>
+  <text x="170" y="208" fill="#c9cdd6" font-size="13" text-anchor="middle">1 yes/no: "is this a prediction?"</text>
+  <text x="170" y="228" fill="#c9cdd6" font-size="13" text-anchor="middle">up to 16 comments per request</text>
+
+  <path d="M315 165 L345 165" stroke="#7d8494" stroke-width="2"/>
+  <path d="M345 159 L355 165 L345 171 Z" fill="#7d8494"/>
+
+  <path d="M370 110 H570 L550 220 H390 Z" fill="#1d2230" stroke="#3a3f4b"/>
+  <text x="470" y="140" fill="#f2f2f2" font-size="18" font-weight="700" text-anchor="middle">~5-15% pass</text>
+  <text x="470" y="170" fill="#ff6600" font-size="15" font-weight="700" text-anchor="middle">Stage B</text>
+  <text x="470" y="192" fill="#c9cdd6" font-size="13" text-anchor="middle">10 typed questions:</text>
+  <text x="470" y="210" fill="#c9cdd6" font-size="13" text-anchor="middle">checkable, horizon, certainty...</text>
+
+  <path d="M585 165 L615 165" stroke="#7d8494" stroke-width="2"/>
+  <path d="M615 159 L625 165 L615 171 Z" fill="#7d8494"/>
+
+  <path d="M640 130 H860 L845 200 H655 Z" fill="#1d2230" stroke="#4cc38a"/>
+  <text x="750" y="158" fill="#4cc38a" font-size="16" font-weight="700" text-anchor="middle">Code, not the model</text>
+  <text x="750" y="180" fill="#c9cdd6" font-size="13" text-anchor="middle">horizon -> resolution year</text>
+
+  <text x="40" y="282" fill="#7d8494" font-size="13">Missed predictions are gone for good; false positives are cheap because stage B filters them. So the gate is tuned for recall (G1 &gt;= 0.85).</text>
+</svg>

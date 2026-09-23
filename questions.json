@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "schema_version": "pilot-0.1",
+    "model": "jev-1.13.0",
+    "notes": [
+      "Question IDs are never sent to the model; answers return under the same IDs.",
+      "Stage A runs on every comment. Stage B runs only on comments where stage A clears the gate threshold.",
+      "Criteria option names are stable enum values. Rewording any instruction or criterion text bumps schema_version and invalidates thresholds.",
+      "No question asks Jev to compute or compare dates. Timestamps, horizons-to-years, and resolution windows are computed in code."
+    ]
+  },
+
+  "stage_a_packed_template": {
+    "_comment": "One request per packed state of N comments. Code renders this template once per comment ID (c01..cNN). Keep instructions short: this text is billed once per comment.",
+    "is_prediction_{id}": {
+      "type": "noul",
+      "instructions": "Does comment {id} make a prediction about what will happen in the future?",
+      "criteria": {
+        "true": "Comment {id} claims something will or will not happen later: a technology, company, product, market, law, or social trend",
+        "false": "Comment {id} only describes the present or past, gives an opinion or advice, asks a question, or jokes without a real forecast"
+      }
+    }
+  },
+
+  "stage_a_single": {
+    "is_prediction": {
+      "type": "noul",
+      "instructions": "Does the comment make a prediction about what will happen in the future?",
+      "criteria": {
+        "true": "The comment claims something will or will not happen later: a technology, company, product, market, law, or social trend",
+        "false": "The comment only describes the present or past, gives an opinion or advice, asks a question, or jokes without a real forecast"
+      }
+    }
+  },
+
+  "stage_b": {
+    "is_checkable": {
+      "type": "noul",
+      "instructions": "Could a reasonable person decide years later whether this prediction came true?",
+      "criteria": {
+        "true": "The prediction names a concrete outcome that later events could confirm or refute",
+        "false": "The prediction is too vague, unfalsifiable, or purely a matter of taste to check"
+      }
+    },
+    "is_sarcastic": {
+      "type": "noul",
+      "instructions": "Is the prediction meant sarcastically or as a joke rather than sincerely?"
+    },
+    "is_conditional": {
+      "type": "noul",
+      "instructions": "Does the prediction depend on an explicit condition, such as 'if X happens, then Y'?"
+    },
+    "direction": {
+      "type": "choice",
+      "instructions": "What kind of outcome does the comment predict for its subject?",
+      "criteria": {
+        "success": "The subject will grow, win, be adopted, or succeed",
+        "failure": "The subject will shrink, lose, be abandoned, or fail",
+        "change": "Something will change or happen, without a clear success or failure framing",
+        "no_change": "Things will stay the same; a hyped change will not happen"
+      }
+    },
+    "domain": {
+      "type": "choice",
+      "instructions": "Which area is the prediction mainly about?",
+      "criteria": {
+        "language_or_framework": "Programming languages, frameworks, libraries, developer tools",
+        "company_fate": "A specific company's survival, growth, acquisition, or decline",
+        "product_adoption": "Whether a product, platform, or device will be adopted",
+        "ai_ml": "Artificial intelligence, machine learning, automation of work",
+        "crypto_finance": "Cryptocurrency, markets, prices, startup funding, the economy",
+        "policy_law": "Regulation, courts, government, privacy law, antitrust",
+        "infrastructure": "Cloud, hardware, chips, networks, energy, operating systems",
+        "society_work": "Jobs, careers, education, remote work, culture, media",
+        "science_space": "Science, medicine, space, climate",
+        "other": "None of the above"
+      }
+    },
+    "horizon": {
+      "type": "choice",
+      "instructions": "Over what time frame does the comment expect the prediction to play out?",
+      "criteria": {
+        "under_1y": "Within about a year, or 'soon' / 'next release'",
+        "1_to_5y": "Roughly one to five years",
+        "5_to_10y": "Roughly five to ten years",
+        "over_10y": "More than ten years, 'eventually', or 'in our lifetime'",
+        "unstated": "No time frame stated or implied"
+      }
+    },
+    "stance_vs_thread": {
+      "type": "choice",
+      "instructions": "Compared with the parent comment and story title shown in the state, is this prediction going with or against the prevailing view?",
+      "criteria": {
+        "agrees": "Supports or extends the view in the parent comment or story",
+        "contrarian": "Pushes back on the view in the parent comment or story",
+        "unclear": "No clear relationship to a prevailing view"
+      }
+    },
+    "certainty": {
+      "type": "score",
+      "instructions": "How certain does the commenter sound about the prediction?",
+      "criteria": [
+        "Openly speculative: 'maybe', 'I wonder if', 'could'",
+        "Leaning: 'probably', 'I suspect', 'likely'",
+        "Confident: 'will', 'is going to', no hedging",
+        "Emphatic: 'guaranteed', 'mark my words', 'there is no way'"
+      ]
+    },
+    "specificity": {
+      "type": "score",
+      "instructions": "How specific is the predicted outcome?",
+      "criteria": [
+        "Vague direction only: 'this will be big'",
+        "Named subject with a general outcome",
+        "Named subject, concrete outcome, rough time frame",
+        "Named subject, measurable outcome, explicit time frame or number"
+      ]
+    }
+  },
+
+  "stage_b_subject_choice": {
+    "_comment": "Optional. Jev cannot extract free-text entities, so the subject is a Choice over a curated roster (max 255 options). Build the roster from the pilot's hand labels plus a frequency pass over story titles. 'other' is mandatory; its rate is a pilot metric.",
+    "subject": {
+      "type": "choice",
+      "instructions": "Which company, product, or technology is the main subject of the prediction?",
+      "criteria": {
+        "rust": "The Rust programming language",
+        "go": "The Go programming language",
+        "javascript_node": "JavaScript, Node.js, npm",
+        "bitcoin": "Bitcoin",
+        "ethereum": "Ethereum",
+        "apple": "Apple and its products",
+        "google": "Google or Alphabet and its products",
+        "microsoft": "Microsoft and its products",
+        "facebook_meta": "Facebook, Meta, Instagram, WhatsApp",
+        "amazon_aws": "Amazon or AWS",
+        "tesla": "Tesla",
+        "self_driving": "Self-driving cars in general",
+        "vr_ar": "Virtual or augmented reality",
+        "deep_learning": "Deep learning, neural networks, AI models",
+        "other": "Something not in this list"
+      }
+    }
+  }
+}
