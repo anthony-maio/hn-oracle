@@ -51,8 +51,16 @@ class ApiError(RuntimeError):
         self.body = body
 
 
-class DailyLimit(RuntimeError):
-    """Quota exhausted for the day (OpenRouter free models). Stop the run; resume tomorrow."""
+class StopRun(RuntimeError):
+    """Every remaining request would fail the same way. Stop the run; progress is kept."""
+
+
+class DailyLimit(StopRun):
+    """Quota exhausted for the day (OpenRouter free models). Resume tomorrow."""
+
+
+class AccountBlocked(StopRun):
+    """The account's own settings (OpenRouter guardrails / privacy) exclude every endpoint for this model."""
 
 
 def is_daily_limit(status: int, body: str) -> bool:
@@ -77,6 +85,11 @@ def post_json(client, url: str, body: dict, headers: dict, limiter: RateLimiter 
         dt = (time.perf_counter() - t0) * 1000
         if is_daily_limit(r.status_code, r.text):
             raise DailyLimit(r.text[:300])
+        if r.status_code == 404 and ("guardrail" in r.text or "data policy" in r.text):
+            raise AccountBlocked(
+                "OpenRouter account settings exclude every endpoint for this model. Allow it at "
+                "https://openrouter.ai/workspaces/default/guardrails (and, for :free models, allow "
+                "free-model training at https://openrouter.ai/settings/privacy). Detail: " + r.text[:400])
         if r.status_code in RETRY_STATUS:
             last = ApiError(r.status_code, r.text)
             ra = r.headers.get("retry-after")
@@ -148,7 +161,7 @@ def run_units(units: Iterable[dict], fn: Callable[[dict], dict], out_path: Path,
 
     def guarded(u):
         if stop.is_set():
-            raise DailyLimit("skipped after daily limit")
+            raise StopRun("skipped after the run was stopped")
         return fn(u)
 
     with out_path.open("a", encoding="utf-8") as out, ThreadPoolExecutor(workers) as ex:
@@ -157,10 +170,12 @@ def run_units(units: Iterable[dict], fn: Callable[[dict], dict], out_path: Path,
             u = futs[fut]
             try:
                 rec = fut.result()
-            except DailyLimit as e:
+            except StopRun as e:
                 if not stop.is_set():
                     stop.set()
-                    print(f"daily request limit reached ({e}); progress is saved, rerun tomorrow to continue")
+                    why = "daily request limit reached; rerun tomorrow" if isinstance(e, DailyLimit) else str(e)
+                    print(f"stopping: {why}")
+                    print("progress is saved; rerun the same command to continue")
                 continue
             except Exception as e:
                 failed += 1
@@ -175,7 +190,7 @@ def run_units(units: Iterable[dict], fn: Callable[[dict], dict], out_path: Path,
             if i % 50 == 0 or i == len(todo):
                 print(f"  {i}/{len(todo)} (ok {ok}, failed {failed})")
     if stop.is_set():
-        return {"ran": ok, "failed": failed, "stopped": "daily_limit"}
+        return {"ran": ok, "failed": failed, "stopped": True}
     if failed:
         print(f"{failed} failures logged to {err_path}; re-run the same command to retry them")
     return {"ran": ok, "failed": failed}

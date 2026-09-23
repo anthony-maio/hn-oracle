@@ -114,8 +114,14 @@ def capabilities(model: str) -> frozenset[str]:
 
 
 def with_output_format(body: dict, model: str, name: str, schema: dict) -> dict:
-    """Strict JSON schema when the model supports it, JSON mode next, else prompt-only JSON (parsed leniently)."""
+    """Strict JSON schema when the model supports it, JSON mode next, else prompt-only JSON (parsed leniently).
+
+    Also drops `temperature` for models that don't accept it (e.g. Claude Sonnet 5), since
+    require_parameters would otherwise route to no endpoint at all.
+    """
     caps = capabilities(model)
+    if caps and "temperature" not in caps:
+        body.pop("temperature", None)
     if "structured_outputs" in caps:
         body["response_format"] = {"type": "json_schema", "json_schema": {"name": name, "strict": True, "schema": schema}}
         body["provider"] = {"require_parameters": True}

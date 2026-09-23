@@ -85,7 +85,7 @@ python pilot.py publish
 | Preset | Model | Rough cost for 1,000 comments |
 |---|---|---|
 | `--name cheap` | `deepseek/deepseek-v4-flash` | $0.04 |
-| `--name frontier` | `anthropic/claude-sonnet-5` | $5 |
+| `--name frontier` | `anthropic/claude-sonnet-5` | $1.60 (measured) |
 | `--name free_cheap` | `liquid/lfm-2.5-2.6b:free` | $0 |
 | `--name free_frontier` | `nvidia/nemotron-3-ultra-550b-a55b:free` | $0 |
 | `--sweep cheap` | 7 paid models under ~$0.35 each | ~$1 |

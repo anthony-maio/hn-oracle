@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
-  <title>Full-archive run time at 1,200 requests per minute</title>
+  <title>Full-run stage A time at 1,200 requests per minute</title>
   <rect width="900" height="360" rx="14" fill="#0f1115"/>
   <text x="40" y="58" fill="#ff6600" font-size="15" font-weight="700" letter-spacing="1.5">THE WALL IS THE REQUEST LIMIT, NOT THE BILL</text>
-  <text x="40" y="92" fill="#f2f2f2" font-size="24" font-weight="700">41.3M comments at 1,200 requests/min</text>
+  <text x="40" y="92" fill="#f2f2f2" font-size="24" font-weight="700">17.95M gradable HN comments at 1,200 requests/min</text>
 
   <!-- axis -->
   <line x1="300" y1="130" x2="300" y2="300" stroke="#3a3f4b" stroke-width="1"/>
 
-  <!-- bar 1: 23.9 days = 573.6 h ; scale: 560px = 24 days -->
+  <!-- bar 1: 17.95M requests / 1,200 per min = 10.4 days; full width -->
   <text x="40" y="160" fill="#c9cdd6" font-size="15">1 comment / request</text>
-  <text x="40" y="180" fill="#7d8494" font-size="13">41.3M requests</text>
+  <text x="40" y="180" fill="#7d8494" font-size="13">17.95M requests</text>
   <rect x="300" y="146" width="557" height="34" rx="4" fill="#ff6600"/>
-  <text x="846" y="169" fill="#0f1115" font-size="16" font-weight="700" text-anchor="end">23.9 days</text>
+  <text x="846" y="169" fill="#0f1115" font-size="16" font-weight="700" text-anchor="end">10.4 days</text>
 
-  <!-- bar 2: 16 per request = 35.9 h = 1.5 days -> 35px -->
+  <!-- bar 2: 1.12M requests = 15.6 h = 0.065 of bar 1 -> 35px -->
   <text x="40" y="228" fill="#c9cdd6" font-size="15">16 comments / request</text>
-  <text x="40" y="248" fill="#7d8494" font-size="13">2.6M requests</text>
+  <text x="40" y="248" fill="#7d8494" font-size="13">1.12M requests</text>
   <rect x="300" y="214" width="35" height="34" rx="4" fill="#4cc38a"/>
-  <text x="346" y="237" fill="#f2f2f2" font-size="16" font-weight="700">36 hours</text>
+  <text x="346" y="237" fill="#f2f2f2" font-size="16" font-weight="700">16 hours</text>
 
-  <text x="40" y="300" fill="#7d8494" font-size="13">Stage A only, before the 2006-2020 filter. Packing is only worth it if quality holds:</text>
+  <text x="40" y="300" fill="#7d8494" font-size="13">Stage A only; comments from 2006-2020 with 5+ years of hindsight. Packing only counts if quality holds:</text>
   <text x="40" y="320" fill="#7d8494" font-size="13">the pilot runs 1, 8 and 16 per request head to head (gate G4).</text>
 </svg>

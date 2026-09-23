@@ -3,16 +3,16 @@
 **Hacker News has spent 20 years predicting the future in its comment threads. I want to grade every one of those predictions, and this repo is the pre-registered test of whether that's affordable.**
 
 <p align="center">
-  <img src="docs/assets/request-wall.svg" alt="At 1,200 requests per minute, one comment per request takes 23.9 days for 41.3M comments; packing 16 per request takes 36 hours" width="820">
+  <img src="docs/assets/request-wall.svg" alt="At 1,200 requests per minute, one comment per request takes 10.4 days for 17.95M gradable comments; packing 16 per request takes 16 hours" width="820">
 </p>
 
 In December 2025 Andrej Karpathy pointed GPT-5.1 Thinking at the Hacker News front page from exactly ten years earlier: 930 threads from December 2015, graded in hindsight for about $60 and an hour of compute ([write-up](https://karpathy.bearblog.dev/auto-grade-hn/), [code](https://github.com/karpathy/hn-time-capsule), [results](https://karpathy.ai/hncapsule/)). It was a great demo, and it covered one month.
 
-The full archive holds 41.3 million comments. A frontier LLM with web search can't grade all of them at that price, and it doesn't need to, because almost none of them are predictions. The real job is to find the few million comments that make a checkable claim about the future, tag them with calibrated probabilities, and save the expensive hindsight grading for those.
+The archive holds 41.3 million comments. 17.95 million of them are from 2006-2020, have five or more years of hindsight, and are long enough to say something (DuckDB counted them exactly). A frontier LLM with web search can't grade all of them at that price, and it doesn't need to, because almost none of them are predictions. The real job is to find the few million comments that make a checkable claim about the future, tag them with calibrated probabilities, and save the expensive hindsight grading for those.
 
 This repo is the 1,000-comment pilot that decides whether the full run happens. Every threshold was written down before the first API call, and every gate gets published as pass or fail, including the ones that fail.
 
-> **Status:** built and tested end to end against a synthetic archive with mocked APIs; not yet run on real labels. Results, raw responses and labels get published here when it runs, pass or fail.
+> **Status:** the real 1,000-comment sample is drawn and a 20-comment smoke test against Jev has run ([first numbers below](#first-numbers-from-the-smoke-test)). Labeling is next. Results, raw responses and labels get published here when the pilot runs, pass or fail.
 
 ## The model: Jev
 
@@ -28,7 +28,7 @@ My first estimate for the full archive was about $500 and 14 hours. It was wrong
 
 Question text is billed as input tokens on every call. A full 10-question detail schema costs roughly 1,000 to 1,500 tokens per comment before the comment itself is even counted.
 
-The bigger miss was time. At 1,200 requests per minute, one comment per request across 41.3M comments takes **23.9 days**, and no amount of token budget changes that number.
+The bigger miss was time. At 1,200 requests per minute, one comment per request across the 17.95M gradable comments takes **10.4 days**, and no amount of token budget changes that number.
 
 Two design changes follow, and the pilot tests both.
 
@@ -38,11 +38,11 @@ Two design changes follow, and the pilot tests both.
 
 **A two-stage cascade.** Stage A asks one short Noul of every comment. Stage B's ten questions run only on comments that clear the gate. The gate is tuned for recall, because a missed prediction is gone for good while a false positive just costs one more stage B call.
 
-**Packing.** Stage A puts up to 16 comments in one request, each under its own ID. That turns 23.9 days into about 36 hours. It might also wreck quality: an independent benchmark found that 40-row batches failed a ranking gate that one row per request passed. So single, 8-packed and 16-packed runs go head to head, and gate G4 decides the largest pack size the full run may use.
+**Packing.** Stage A puts up to 16 comments in one request, each under its own ID. That turns 10.4 days into about 16 hours. It might also wreck quality: an independent benchmark found that 40-row batches failed a ranking gate that one row per request passed. So single, 8-packed and 16-packed runs go head to head, and gate G4 decides the largest pack size the full run may use.
 
 ```mermaid
 flowchart LR
-    A[(HN archive<br/>41.3M comments)] -->|DuckDB, exact count<br/>2006-2020 only| B[Eligible comments]
+    A[(HN archive<br/>41.3M comments)] -->|DuckDB, exact count<br/>2006-2020, 80-4000 chars| B[17.95M eligible]
     B --> C{Stage A<br/>is_prediction?<br/>16 per request}
     C -->|below gate| X[dropped]
     C -->|above gate<br/>~5-15%| D[Stage B<br/>10 typed questions]
@@ -52,6 +52,22 @@ flowchart LR
     style D fill:#ff6600,color:#000
     style E fill:#4cc38a,color:#000
 ```
+
+## First numbers from the smoke test
+
+On 2026-09-23 I ran Jev (`jev-1.13.0`) on 20 real comments from the uniform sample, one per request, then again with 16 per request, plus 5 comments asked 3 times with a random nonce. That's 37 requests for well under a cent. With no labels yet, none of this is a result; it's a check that the instrument works and a first read on where to look.
+
+| | one comment per request | 16 per request |
+|---|---|---|
+| input tokens per comment | 571 | **346** |
+| latency, p50 | 207 ms per comment | 535 ms per 16 comments |
+| stage A for 17.95M comments | 10.4 days, ~$430 | **16 hours, ~$260** |
+
+- **Nonce robustness looks solid.** Across 3 repeats, no comment's probability moved more than 0.01.
+- **Packing moves the uncertain middle.** Median drift against single requests was only 0.015, but every big move started between 0.29 and 0.82, and all of them went down: 0.82 to 0.62, 0.70 to 0.54, 0.34 to 0.16. The gate threshold will sit in exactly that zone, so G4 against real labels decides whether packing survives.
+- **The ranking already looks sane.** The top comment, at 0.94, says "the United States will create the opposite regime"; the product complaints and Bible takes sit at 0.02 to 0.08.
+
+**One comment per request fails G7's seven-day limit on stage A alone, so the full run needs packing to hold up.**
 
 ## Calibrated probabilities you can add up
 
@@ -109,13 +125,13 @@ flowchart LR
 
 ## What the pilot costs
 
-About ten dollars, and the labeling is the expensive part.
+Under ten dollars, and the labeling is the expensive part.
 
 | Item | Cost |
 |---|---|
 | Jev, every pilot run combined (~1-3M input tokens) | under $1 |
 | Cheap LLM baseline (`deepseek/deepseek-v4-flash`) | ~$0.04 |
-| Frontier LLM baseline (`anthropic/claude-sonnet-5`) | ~$5 |
+| Frontier LLM baseline (`anthropic/claude-sonnet-5`, measured $0.0016 per comment) | ~$1.60 |
 | Optional sweep of 7 low-cost models | ~$1 |
 | Stage C hindsight spot check, 30 predictions with web search | ~$1 |
 | Hand labeling | ~8 hours of my time |

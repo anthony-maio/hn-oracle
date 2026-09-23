@@ -9,7 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def load_dotenv(path: Path = ROOT / ".env") -> None:
-    """KEY=value lines from .env; real environment variables win."""
+    """KEY=value lines from .env. The project file wins over the shell: a user-level key left over from
+    another project must not silently replace the one you put here."""
     if not path.exists():
         return
     for line in path.read_text(encoding="utf-8").splitlines():
@@ -17,7 +18,7 @@ def load_dotenv(path: Path = ROOT / ".env") -> None:
         if not line or line.startswith("#") or "=" not in line:
             continue
         key, _, val = line.removeprefix("export ").partition("=")
-        os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
+        os.environ[key.strip()] = val.strip().strip('"').strip("'")
 
 
 load_dotenv()
@@ -65,7 +66,7 @@ OPENROUTER_FREE_RPM = 18
 OPENROUTER_PAID_RPM = 300
 BASELINE_PRESETS = {
     "cheap": "deepseek/deepseek-v4-flash",                     # $0.07/$0.14 per M, ~$0.04 per 1k comments
-    "frontier": "anthropic/claude-sonnet-5",                   # $2/$10 per M, ~$5 per 1k comments
+    "frontier": "anthropic/claude-sonnet-5",                   # $2/$10 per M, measured ~$1.60 per 1k comments
     "free_cheap": "liquid/lfm-2.5-2.6b:free",                  # smallest free model, native structured output
     "free_frontier": "nvidia/nemotron-3-ultra-550b-a55b:free",  # largest free model (550B MoE)
 }
