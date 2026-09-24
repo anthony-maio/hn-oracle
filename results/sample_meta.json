@@ -1,0 +1,25 @@
+{
+  "source": "hf://datasets/nikhilambhure00/hacker-news/data/*/*.parquet",
+  "n": 1000,
+  "by_stratum": {
+    "uniform": 600,
+    "enriched": 400
+  },
+  "years": [
+    2009,
+    2019
+  ],
+  "text_len": [
+    80,
+    4000
+  ],
+  "seeds": {
+    "uniform_hash": 42,
+    "pool_hash": 7,
+    "enriched_draw": 7,
+    "sheet_shuffle": 1
+  },
+  "pool_regex_hit_rate": 0.17195,
+  "top_level_share": 0.254,
+  "missing_story_title": 1
+}

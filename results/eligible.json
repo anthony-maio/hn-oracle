@@ -1,0 +1,90 @@
+{
+  "years": [
+    2006,
+    2020
+  ],
+  "text_len": [
+    80,
+    4000
+  ],
+  "n_comments": 20725396,
+  "n_len_filtered": 17950609,
+  "by_year": [
+    {
+      "year": 2006,
+      "n_comments": 12,
+      "n_len_filtered": 4
+    },
+    {
+      "year": 2007,
+      "n_comments": 68736,
+      "n_len_filtered": 54462
+    },
+    {
+      "year": 2008,
+      "n_comments": 240480,
+      "n_len_filtered": 196581
+    },
+    {
+      "year": 2009,
+      "n_comments": 474327,
+      "n_len_filtered": 403678
+    },
+    {
+      "year": 2010,
+      "n_comments": 812363,
+      "n_len_filtered": 695601
+    },
+    {
+      "year": 2011,
+      "n_comments": 1001271,
+      "n_len_filtered": 858022
+    },
+    {
+      "year": 2012,
+      "n_comments": 1197491,
+      "n_len_filtered": 1029067
+    },
+    {
+      "year": 2013,
+      "n_comments": 1605220,
+      "n_len_filtered": 1375539
+    },
+    {
+      "year": 2014,
+      "n_comments": 1456574,
+      "n_len_filtered": 1260011
+    },
+    {
+      "year": 2015,
+      "n_comments": 1580393,
+      "n_len_filtered": 1378393
+    },
+    {
+      "year": 2016,
+      "n_comments": 2011058,
+      "n_len_filtered": 1748525
+    },
+    {
+      "year": 2017,
+      "n_comments": 2257912,
+      "n_len_filtered": 1960468
+    },
+    {
+      "year": 2018,
+      "n_comments": 2283234,
+      "n_len_filtered": 1988090
+    },
+    {
+      "year": 2019,
+      "n_comments": 2633009,
+      "n_len_filtered": 2295872
+    },
+    {
+      "year": 2020,
+      "n_comments": 3103316,
+      "n_len_filtered": 2706296
+    }
+  ],
+  "note": "n_len_filtered matches the pilot's sample frame and is the default basis for projections."
+}

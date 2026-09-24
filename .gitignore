@@ -1,7 +1,7 @@
 .venv/
 __pycache__/
 .pytest_cache/
-# Local data holds usernames (sample.jsonl) and the HN item cache. Publish via `pilot.py publish`.
+# Local data holds usernames (sample.jsonl) and the HN item cache. `pilot.py publish` writes the
+# public, username-free copy to results/, which is committed.
 data/
-publish/
 .env

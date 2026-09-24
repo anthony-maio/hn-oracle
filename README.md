@@ -12,7 +12,34 @@ The archive holds 41.3 million comments. 17.95 million of them are from 2006-202
 
 This repo is the 1,000-comment pilot that decides whether the full run happens. Every threshold was written down before the first API call, and every gate gets published as pass or fail, including the ones that fail.
 
-> **Status:** the real 1,000-comment sample is drawn and a 20-comment smoke test against Jev has run ([first numbers below](#first-numbers-from-the-smoke-test)). Labeling is next. Results, raw responses and labels get published here when the pilot runs, pass or fail.
+> **Status:** the pilot ran on September 23, 2026. Every pre-registered gate passed, and the whole thing cost **$3.46** in API calls. Raw responses, labels and the full report are in [`results/`](results/).
+
+## Results: GO, and the full archive costs about $400
+
+| Gate | Result | Threshold | |
+|---|---|---|---|
+| **G1 recall** | 0.92 on the uniform stratum (46 of 50 predictions) | ≥ 0.85 | pass |
+| **G2 calibration** | ECE 0.017 after isotonic recalibration (raw: 0.105) | ≤ 0.08 | pass |
+| **G3 prevalence** | recalibrated estimate within 0.05 pts of the labeled 8.3% | ±2 pts | pass |
+| **G4 packing** | 8 per request: ΔF1 -0.017. 16 per request: -0.031 | ≥ -0.03 | pass at 8 |
+| **G5 baselines** | Jev F1 0.76 vs regex 0.48, vs Claude Sonnet 5 0.69 | +0.15 / -0.05 | pass |
+| **G6 robustness** | median drift across nonce repeats 0.01 | ≤ 0.05 | pass |
+| **G7 economics** | 17.95M comments, packed 8: **$407, 2.4 days** | < $3,000, < 7 days | pass |
+
+On the 864 comments I labeled by hand, Jev found predictions better than both LLM baselines given the same question: F1 0.76 against 0.69 for Claude Sonnet 5 and 0.49 for gpt-5-nano, at $0.042 per million input tokens. One comment per request would have taken 11.7 days, and packing 8 per request gets the full run to 2.4 days, with the request limit, not the bill, still the wall.
+
+Every gate passed, and some of them passed with less margin than the table suggests:
+
+- **Calibration needs a correction step.** Jev's raw probabilities miss by about 0.1 ECE, consistently enough that isotonic recalibration on held-out halves fixes it. Every "calibrated" claim here means "after recalibration."
+- **Packing costs recall.** At 8 per request, uniform recall at the same gate drops from 0.92 to 0.86, one comment above the line. The full run has to re-pick its gate on packed output.
+- **Sonnet 5 is better calibrated than Jev** (ECE 0.067 vs 0.100 raw), even though Jev ranks predictions better.
+- **The recall margin is thin.** Choosing the gate on one half and testing on the other gave 1.00 and 0.84.
+- **The question itself is ambiguous.** Three model families agreed unanimously on only 59% of regex-flagged comments. GPT-5.6 Luna called 55% of them predictions, and Claude Haiku 4.5 called 27%.
+- **Stage B passes on a lenient reference.** Jev is scored against the panel's majority label, which is easier to agree with than one model is with another. In absolute terms, `direction` (0.73) and `is_checkable` (0.74) are the weak fields.
+- **The subject roster is too small.** 68% of predictions landed in `other`, far past the 40% line, so the roster gets built out from labels before the full run.
+- **Panel labels carry an 11% error rate** (95% CI 6-19%) on a blind audit of 100. They never touch G1-G3 or G5.
+
+The full report, with reliability tables, the packing penalty with bootstrap intervals, and 10 misses and 10 false positives with their comment text, is in [`results/report.md`](results/report.md).
 
 ## The model: Jev
 
@@ -123,21 +150,19 @@ flowchart LR
     G3[G3 prevalence] & G5[G5 baselines] & G6[G6 robustness] --> F[shape the public framing,<br/>not the decision]
 ```
 
-## What the pilot costs
+## What the pilot cost
 
-Under ten dollars, and the labeling is the expensive part.
+**$3.46**, and the labeling was the expensive part.
 
 | Item | Cost |
 |---|---|
-| Jev, every pilot run combined (~1-3M input tokens) | under $1 |
-| Cheap LLM baseline (`openai/gpt-5-nano`) | ~$0.03 |
-| Frontier LLM baseline (`anthropic/claude-sonnet-5`, measured $0.0016 per comment) | ~$1.60 |
-| Optional sweep of 7 low-cost models | ~$1 |
-| Stage C hindsight spot check, 30 predictions with web search | ~$1 |
-| Three-model labeling panel | ~$2 |
-| Hand labeling | ~2.5 hours of my time |
+| Jev, every pilot run (1.95M input tokens) | $0.08 |
+| Three-model labeling panel (1,808 calls) | $1.38 |
+| gpt-5-nano baseline (1,000 calls) | $0.33 |
+| Claude Sonnet 5 baseline (1,000 calls) | $1.67 |
+| Hand labeling (864 comments, 370 notes) | one evening |
 
-OpenRouter's `:free` models work too (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
+The stage C hindsight spot check (about $1 with web search) hasn't run yet; it's for demo pages, not scoring. OpenRouter's `:free` models also work (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
 
 ## Run it
 
@@ -161,7 +186,7 @@ Data comes from the [nikhilambhure00/hacker-news](https://huggingface.co/dataset
 
 ## What gets published
 
-Everything: `questions.json`, every raw response, the labels, the report JSON, and a write-up that shows 10 misses and 10 false positives with their actual comment text. HN usernames are removed from every published artifact, and nothing in the pilot scores individual people.
+Everything is in [`results/`](results/): `questions.json`, every raw Jev, baseline and panel response, my labels with notes, the merged labels with provenance, the panel audit, and the report. HN usernames are removed from every published artifact, `MANIFEST.json` has a SHA-256 for each file, and nothing in the pilot scores individual people.
 
 Working title for the write-up: *I asked a decision model to find every prediction on Hacker News. Here's how calibrated it was.*
 

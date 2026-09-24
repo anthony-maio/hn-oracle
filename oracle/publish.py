@@ -1,4 +1,4 @@
-"""Copy publishable artifacts into publish/ with HN usernames removed, plus a checksum manifest."""
+"""Copy publishable artifacts into results/ with HN usernames removed, plus a checksum manifest."""
 from __future__ import annotations
 
 import hashlib
@@ -11,9 +11,9 @@ from . import config as C
 from .sample import load_sample
 
 DROP_KEYS = {"author", "by"}
-JSONL_GLOBS = ["raw_*.jsonl", "baseline_*.jsonl", "stage_c.jsonl"]
+JSONL_GLOBS = ["raw_*.jsonl", "baseline_*.jsonl", "panel_*.jsonl", "stage_c.jsonl"]
 COPY_AS_IS = ["report.json", "report.md", "eligible.json", "sample_meta.json", "disagreements.csv",
-              "stage_c_review.csv"]
+              "stage_c_review.csv", "panel_audit.json", "panel_plan.json"]
 
 
 def scrub(obj):

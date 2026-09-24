@@ -1,0 +1,865 @@
+id,stratum,is_prediction,is_checkable,is_sarcastic,is_conditional,direction,domain,horizon,stance_vs_thread,certainty,specificity,subject_text,labeler,notes
+9239334,uniform,0,,,,,,,,,,,anthony,
+14994043,uniform,0,,,,,,,,,,,anthony,
+11567113,uniform,0,,,,,,,,,,,anthony,
+12317972,uniform,0,,,,,,,,,,,anthony,
+12262775,uniform,0,,,,,,,,,,,anthony,"review: present-tense benchmark claims, not a forecast"
+8176452,enriched,1,,,,,,,,,,,anthony,
+15892976,uniform,0,,,,,,,,,,,anthony,
+9999897,uniform,0,,,,,,,,,,,anthony,
+21305090,uniform,0,,,,,,,,,,,anthony,
+3284174,uniform,0,,,,,,,,,,,anthony,
+1746791,uniform,0,,,,,,,,,,,anthony,
+16772822,uniform,0,,,,,,,,,,,anthony,
+5947415,enriched,0,,,,,,,,,,,anthony,"will is capability or refusal, not forecast"
+16298109,uniform,0,,,,,,,,,,,anthony,"the govt will just be adding in traffic surveillance cameras | review: question, no assertion"
+963607,uniform,1,,,,,,,,,,,anthony,They will (soon) have type/proof systems
+16965093,enriched,0,,,,,,,,,,,anthony,Wills are quoted; no own forecast
+12647501,enriched,0,,,,,,,,,,,anthony,"Rhetorical question, not a stated forecast"
+6011379,uniform,0,,,,,,,,,,,anthony,
+11400152,enriched,1,,,,,,,,,,,anthony,they will never be cool
+5147479,uniform,0,,,,,,,,,,,anthony,"Describes current bundler behavior, not forecast"
+6481074,uniform,0,,,,,,,,,,,anthony,
+20908911,uniform,0,,,,,,,,,,,anthony,
+20041764,enriched,0,,,,,,,,,,,anthony,going to is advice about concern
+2316141,uniform,0,,,,,,,,,,,anthony,
+9811051,uniform,0,,,,,,,,,,,anthony,
+510085,enriched,0,,,,,,,,,,,anthony,"Quoted question, not a forecast"
+9181052,uniform,0,,,,,,,,,,,anthony,
+3979092,enriched,1,,,,,,,,,,,anthony,Chances are high that it will be Linux
+2292330,uniform,0,,,,,,,,,,,anthony,
+17164225,uniform,0,,,,,,,,,,,anthony,
+1348595,enriched,0,,,,,,,,,,,anthony,"Quotes Google's plan, not own forecast"
+10549425,uniform,1,,,,,,,,,,,anthony,I doubt the same is going to happen
+8599484,uniform,0,,,,,,,,,,,anthony,going to is hypothetical courtroom procedure
+20630004,uniform,0,,,,,,,,,,,anthony,
+8844779,uniform,0,,,,,,,,,,,anthony,
+15644325,enriched,1,,,,,,,,,,,anthony,Give it ten years. Less if you elect Trump again
+19775877,enriched,0,,,,,,,,,,,anthony,going to need is startup advice
+1755553,uniform,0,,,,,,,,,,,anthony,
+15388897,uniform,0,,,,,,,,,,,anthony,
+17806301,uniform,0,,,,,,,,,,,anthony,
+6986468,uniform,0,,,,,,,,,,,anthony,
+4819607,uniform,0,,,,,,,,,,,anthony,
+4387363,uniform,0,,,,,,,,,,,anthony,"Uncertainty, no stated forecast"
+8594594,uniform,0,,,,,,,,,,,anthony,
+19453429,enriched,0,,,,,,,,,,,anthony,"Habitual will, not a forecast"
+1975391,uniform,0,,,,,,,,,,,anthony,
+18297242,uniform,0,,,,,,,,,,,anthony,
+7142885,uniform,0,,,,,,,,,,,anthony,
+7184724,enriched,1,,,,,,,,,,,anthony,guarantees will put less pressure on insurance companies
+10690610,uniform,0,,,,,,,,,,,anthony,
+12064590,uniform,0,,,,,,,,,,,anthony,
+600558,enriched,1,,,,,,,,,,,anthony,won't get a 3.x update
+21017722,enriched,0,,,,,,,,,,,anthony,"Interview advice, not a forecast"
+7967558,enriched,1,,,,,,,,,,,anthony,GDP is going to end up going the same direction
+6118083,enriched,0,,,,,,,,,,,anthony,"Coding advice, not a forecast"
+8526901,uniform,0,,,,,,,,,,,anthony,
+13093882,uniform,0,,,,,,,,,,,anthony,"I wonder if they would change the law | review: question, no assertion"
+13420909,uniform,0,,,,,,,,,,,anthony,
+8292853,uniform,0,,,,,,,,,,,anthony,
+18378379,uniform,0,,,,,,,,,,,anthony,
+5518375,uniform,0,,,,,,,,,,,anthony,
+14864119,uniform,0,,,,,,,,,,,anthony,
+15821946,uniform,0,,,,,,,,,,,anthony,
+13301263,enriched,1,,,,,,,,,,,anthony,billions lost will be covered by someone else
+13235423,uniform,0,,,,,,,,,,,anthony,
+21726858,uniform,0,,,,,,,,,,,anthony,
+10996714,enriched,1,,,,,,,,,,,anthony,I doubt the rate raise will stick
+10418280,enriched,0,,,,,,,,,,,anthony,free will is not a forecast
+11905590,enriched,0,,,,,,,,,,,anthony,"algorithm behavior, not a forecast"
+9541596,enriched,0,,,,,,,,,,,anthony,"habitual behavior, not a forecast"
+10450472,uniform,0,,,,,,,,,,,anthony,"how-to necessity, not a forecast"
+13580287,uniform,0,,,,,,,,,,,anthony,
+2954135,enriched,0,,,,,,,,,,,anthony,"hope, not a claimed forecast"
+1582614,enriched,0,,,,,,,,,,,anthony,"quoted principle, not a forecast"
+8568073,uniform,0,,,,,,,,,,,anthony,"restates parent, not own forecast"
+16215514,enriched,0,,,,,,,,,,,anthony,"Maybe the next one will be | review: conversational filler, not a product forecast"
+12382195,uniform,0,,,,,,,,,,,anthony,
+10208482,uniform,1,,,,,,,,,,,anthony,"plan critique, not an outcome forecast | review: asserts a policy change will happen"
+18133517,enriched,0,,,,,,,,,,,anthony,"personal hope, not a forecast"
+13759643,uniform,0,,,,,,,,,,,anthony,
+2970135,uniform,0,,,,,,,,,,,anthony,"it may become a feature once they convert | review: hearsay, not an endorsed forecast"
+8583234,uniform,0,,,,,,,,,,,anthony,
+20508848,enriched,1,,,,,,,,,,,anthony,that will never happen
+8341500,uniform,0,,,,,,,,,,,anthony,
+21822166,uniform,0,,,,,,,,,,,anthony,
+9200286,uniform,0,,,,,,,,,,,anthony,
+15920677,uniform,0,,,,,,,,,,,anthony,"present language behavior, not forecast"
+13087762,uniform,0,,,,,,,,,,,anthony,
+3024841,uniform,1,,,,,,,,,,,anthony,"will be assimilated, in a few years' time"
+4250927,uniform,0,,,,,,,,,,,anthony,
+21496134,enriched,1,,,,,,,,,,,anthony,shows falling costs as a percentage of GDP
+3349785,uniform,0,,,,,,,,,,,anthony,
+3697420,uniform,0,,,,,,,,,,,anthony,
+2682375,uniform,0,,,,,,,,,,,anthony,
+18040922,uniform,0,,,,,,,,,,,anthony,
+1872112,enriched,0,,,,,,,,,,,anthony,personal end of own Gmail use
+18588371,enriched,1,,,,,,,,,,,anthony,All this is going to do is shuffle out the miners
+1837674,enriched,0,,,,,,,,,,,anthony,"career advice, not a trend forecast"
+11480460,uniform,0,,,,,,,,,,,anthony,
+6764541,uniform,0,,,,,,,,,,,anthony,
+16224198,uniform,0,,,,,,,,,,,anthony,
+7978343,uniform,0,,,,,,,,,,,anthony,
+7609265,uniform,0,,,,,,,,,,,anthony,
+1342285,uniform,0,,,,,,,,,,,anthony,
+11669063,enriched,1,,,,,,,,,,,anthony,we'll fork it and relicense it under the GPL
+9212890,uniform,0,,,,,,,,,,,anthony,
+13306505,uniform,0,,,,,,,,,,,anthony,
+21617175,enriched,0,,,,,,,,,,,anthony,"personal encouragement, not a trend"
+13115317,enriched,1,,,,,,,,,,,anthony,won't stand up in a court of law
+16524293,uniform,0,,,,,,,,,,,anthony,
+8898332,uniform,0,,,,,,,,,,,anthony,
+642911,uniform,1,,,,,,,,,,,anthony,The kids will love school in a way that no one thought possible
+11944930,uniform,0,,,,,,,,,,,anthony,
+11828305,uniform,0,,,,,,,,,,,anthony,
+6036988,uniform,0,,,,,,,,,,,anthony,
+11391679,uniform,0,,,,,,,,,,,anthony,quoted joke about closing a window
+8639406,uniform,0,,,,,,,,,,,anthony,
+10827238,uniform,0,,,,,,,,,,,anthony,
+5211827,uniform,0,,,,,,,,,,,anthony,
+10426384,enriched,0,,,,,,,,,,,anthony,"one person's fate, not a trend"
+6675258,enriched,0,,,,,,,,,,,anthony,"maybe some day someone will come along and help | review: advice, maybe-someday is not a forecast"
+13122449,enriched,1,,,,,,,,,,,anthony,might encourage more people to sign up for United credit cards
+20768120,enriched,0,,,,,,,,,,,anthony,"Advice about one employee, not a trend"
+8640816,uniform,0,,,,,,,,,,,anthony,
+11376338,uniform,1,,,,,,,,,,,anthony,Electron is the future of desktop software
+15015756,enriched,0,,,,,,,,,,,anthony,"One person's conduct, not a listed topic"
+1110871,uniform,0,,,,,,,,,,,anthony,
+15223101,uniform,0,,,,,,,,,,,anthony,
+14884762,enriched,0,,,,,,,,,,,anthony,"Personal to-do, not a forecast"
+11474680,uniform,1,,,,,,,,,,,anthony,they could be popular again
+11414081,enriched,0,,,,,,,,,,,anthony,"going to Apple is travel, not future"
+17372246,enriched,0,,,,,,,,,,,anthony,"Question asking who will, no claim"
+11124259,uniform,0,,,,,,,,,,,anthony,
+10510388,uniform,0,,,,,,,,,,,anthony,
+2405458,uniform,0,,,,,,,,,,,anthony,"Own app memory guess, not a forecast"
+19477301,uniform,0,,,,,,,,,,,anthony,
+12808510,uniform,1,,,,,,,,,,,anthony,it'll exist and be great if ads die off
+4085694,enriched,0,,,,,,,,,,,anthony,"Technique effectiveness, not a future event"
+9167474,uniform,0,,,,,,,,,,,anthony,
+6532430,uniform,0,,,,,,,,,,,anthony,
+16812911,uniform,0,,,,,,,,,,,anthony,
+12574131,enriched,1,,,,,,,,,,,anthony,the big biz will save themselves by going overseas
+11502046,uniform,0,,,,,,,,,,,anthony,
+14321409,uniform,0,,,,,,,,,,,anthony,
+19719631,uniform,0,,,,,,,,,,,anthony,
+15829718,uniform,1,,,,,,,,,,,anthony,nobody will ever turn it into a workable policy
+2519505,enriched,0,,,,,,,,,,,anthony,"Quoted going-to is rejected, not endorsed"
+21012358,uniform,0,,,,,,,,,,,anthony,
+10139891,enriched,0,,,,,,,,,,,anthony,"local deploy claim, not a trend"
+13340570,enriched,0,,,,,,,,,,,anthony,"I won't have to worry about renewing certs anymore | review: current product behavior, not a forecast"
+7030996,uniform,0,,,,,,,,,,,anthony,
+20016297,uniform,0,,,,,,,,,,,anthony,personal refusal; habitual present behavior
+18591245,uniform,0,,,,,,,,,,,anthony,
+16884249,uniform,0,,,,,,,,,,,anthony,
+16137821,enriched,1,,,,,,,,,,,anthony,human race shrivelling up and going extinct
+4197954,enriched,0,,,,,,,,,,,anthony,"math logic claim, not a trend"
+14066908,enriched,0,,,,,,,,,,,anthony,"hypothetical mechanism, not a forecast"
+4504462,enriched,1,,,,,,,,,,,anthony,I don't see how this is going to harm the bottom line
+12952466,enriched,1,,,,,,,,,,,anthony,manufacturers will have to add little heating pads
+18153093,uniform,0,,,,,,,,,,,anthony,
+5514897,enriched,1,,,,,,,,,,,anthony,they will also know every customers web habbits
+8577442,uniform,0,,,,,,,,,,,anthony,
+7661704,uniform,0,,,,,,,,,,,anthony,
+12230585,uniform,1,,,,,,,,,,,anthony,they might reach a point where the competition looks very bad
+13868519,enriched,0,,,,,,,,,,,anthony,"current customs duty, not a forecast"
+16664240,enriched,1,,,,,,,,,,,anthony,A company will always err on the side of firing
+10374670,uniform,0,,,,,,,,,,,anthony,
+15151441,enriched,0,,,,,,,,,,,anthony,"gerund going-to, not a forecast"
+8328488,uniform,0,,,,,,,,,,,anthony,
+4885178,uniform,0,,,,,,,,,,,anthony,
+5003787,uniform,0,,,,,,,,,,,anthony,
+1812160,enriched,0,,,,,,,,,,,anthony,"advice, not a product forecast"
+6093684,uniform,0,,,,,,,,,,,anthony,describes current Google behavior
+7608491,uniform,0,,,,,,,,,,,anthony,"reader motivation, not a tech forecast"
+10673510,enriched,1,,,,,,,,,,,anthony,Swift 3 will be ABI stable
+9284895,uniform,0,,,,,,,,,,,anthony,
+4024331,uniform,0,,,,,,,,,,,anthony,
+13356428,enriched,0,,,,,,,,,,,anthony,notes they didn't say; no own claim
+15760353,uniform,0,,,,,,,,,,,anthony,
+4534162,uniform,0,,,,,,,,,,,anthony,
+20968028,uniform,0,,,,,,,,,,,anthony,
+910998,uniform,0,,,,,,,,,,,anthony,
+20916596,enriched,1,,,,,,,,,,,anthony,people will always get around things like that
+3415752,uniform,0,,,,,,,,,,,anthony,
+6901396,enriched,1,,,,,,,,,,,anthony,I don't think it will prove much worse
+17391148,uniform,0,,,,,,,,,,,anthony,
+8236298,enriched,0,,,,,,,,,,,anthony,"quoted spec steps, not a forecast"
+18204938,uniform,0,,,,,,,,,,,anthony,
+13330322,uniform,1,,,,,,,,,,,anthony,They will not be part of any adtech renaissance
+14670774,uniform,0,,,,,,,,,,,anthony,
+2038912,enriched,1,,,,,,,,,,,anthony,It will probably be hard to scale indefinitely
+7282947,uniform,0,,,,,,,,,,,anthony,"personal to-do, not a forecast"
+17792596,uniform,0,,,,,,,,,,,anthony,
+8914856,uniform,0,,,,,,,,,,,anthony,
+10297725,uniform,0,,,,,,,,,,,anthony,
+2439258,uniform,0,,,,,,,,,,,anthony,
+1396478,uniform,0,,,,,,,,,,,anthony,
+8498171,uniform,0,,,,,,,,,,,anthony,
+16281505,uniform,0,,,,,,,,,,,anthony,
+5205797,uniform,0,,,,,,,,,,,anthony,
+15335372,uniform,0,,,,,,,,,,,anthony,
+10921995,uniform,0,,,,,,,,,,,anthony,
+1452578,enriched,0,,,,,,,,,,,anthony,"Analogy hypothetical, not a forecast"
+8786009,enriched,1,,,,,,,,,,,anthony,"Only if we get very, very lucky"
+5863961,uniform,0,,,,,,,,,,,anthony,
+4114921,uniform,0,,,,,,,,,,,anthony,"Current AWS behavior, not a later event"
+15076808,uniform,0,,,,,,,,,,,anthony,
+18981970,uniform,0,,,,,,,,,,,anthony,
+11301694,uniform,0,,,,,,,,,,,anthony,
+9412866,uniform,0,,,,,,,,,,,anthony,
+2231496,uniform,1,,,,,,,,,,,anthony,they'll pass the 30% down to user
+18208877,enriched,0,,,,,,,,,,,anthony,"Standing cost pattern, not a forecast"
+2910971,enriched,0,,,,,,,,,,,anthony,"Personal study advice, not a trend"
+6871760,uniform,0,,,,,,,,,,,anthony,
+15784693,enriched,0,,,,,,,,,,,anthony,we will drop next time on stocks | review: says the drop cannot be predicted
+11635215,enriched,0,,,,,,,,,,,anthony,"Current product behavior, not a forecast"
+5660757,enriched,0,,,,,,,,,,,anthony,"Code-review claim, not a trend"
+11317357,enriched,1,,,,,,,,,,,anthony,aren't going to score points with the jurors
+12955599,uniform,0,,,,,,,,,,,anthony,
+13288548,uniform,0,,,,,,,,,,,anthony,
+2199212,enriched,0,,,,,,,,,,,anthony,"This summer, or No, it won't | review: reports the event answer, does not forecast"
+1217776,uniform,0,,,,,,,,,,,anthony,
+16830321,uniform,0,,,,,,,,,,,anthony,
+14467923,uniform,0,,,,,,,,,,,anthony,
+6116928,uniform,0,,,,,,,,,,,anthony,
+19485523,uniform,0,,,,,,,,,,,anthony,"Quotes parent forecast, does not endorse"
+13600784,uniform,0,,,,,,,,,,,anthony,
+4669996,uniform,0,,,,,,,,,,,anthony,
+6766933,uniform,0,,,,,,,,,,,anthony,
+6340655,enriched,1,,,,,,,,,,,anthony,public computers will have a whole list
+18318203,enriched,1,,,,,,,,,,,anthony,Users simply won't pay
+5523794,enriched,0,,,,,,,,,,,anthony,"General cost comparison, not a forecast"
+15053508,uniform,0,,,,,,,,,,,anthony,
+12842996,uniform,0,,,,,,,,,,,anthony,
+11423036,enriched,0,,,,,,,,,,,anthony,"Counterfactual hiring, not a forecast"
+12039438,uniform,0,,,,,,,,,,,anthony,
+9095736,enriched,1,,,,,,,,,,,anthony,Quantum computers will never work
+21455707,uniform,0,,,,,,,,,,,anthony,
+9086905,uniform,1,,,,,,,,,,,anthony,appears poised to eclipse psychology completely
+763012,uniform,0,,,,,,,,,,,anthony,
+6662233,uniform,0,,,,,,,,,,,anthony,
+4455065,uniform,0,,,,,,,,,,,anthony,
+4144417,uniform,0,,,,,,,,,,,anthony,
+14909082,uniform,0,,,,,,,,,,,anthony,
+15020566,uniform,0,,,,,,,,,,,anthony,"one donor's planned bequest, not a trend"
+16308316,uniform,0,,,,,,,,,,,anthony,
+2903513,uniform,0,,,,,,,,,,,anthony,
+1851110,enriched,1,,,,,,,,,,,anthony,people are going to take any drugs once they're approved
+13680879,uniform,0,,,,,,,,,,,anthony,
+21433059,uniform,0,,,,,,,,,,,anthony,"quotes others' insult, not own forecast"
+4388275,uniform,0,,,,,,,,,,,anthony,
+11590598,uniform,0,,,,,,,,,,,anthony,
+3854063,uniform,0,,,,,,,,,,,anthony,
+19771269,uniform,0,,,,,,,,,,,anthony,
+16485136,uniform,0,,,,,,,,,,,anthony,personal plans and habitual client behavior
+15838685,enriched,1,,,,,,,,,,,anthony,That will be a waste of everyone's time and money
+19166979,enriched,0,,,,,,,,,,,anthony,"quotes parent phrase, makes no forecast"
+8295347,enriched,1,,,,,,,,,,,anthony,bubble that will pop when interest types rise
+12236565,uniform,0,,,,,,,,,,,anthony,
+808068,uniform,0,,,,,,,,,,,anthony,
+21606100,uniform,1,,,,,,,,,,,anthony,There will be no markets if civilization collapses
+20716149,uniform,0,,,,,,,,,,,anthony,
+8123922,uniform,0,,,,,,,,,,,anthony,
+15475389,enriched,0,,,,,,,,,,,anthony,"closing-process reaction, not a market forecast"
+21030934,uniform,0,,,,,,,,,,,anthony,
+5283269,uniform,0,,,,,,,,,,,anthony,
+13503787,uniform,0,,,,,,,,,,,anthony,does not claim whether it will survive
+6258066,uniform,0,,,,,,,,,,,anthony,
+15637374,uniform,1,,,,,,,,,,,anthony,unlikely that analyzing monopolys' data will explain
+19891870,uniform,0,,,,,,,,,,,anthony,"grammar example, not a forecast"
+7813459,enriched,0,,,,,,,,,,,anthony,"personal curiosity, no forecast"
+16899865,uniform,0,,,,,,,,,,,anthony,
+8442785,enriched,0,,,,,,,,,,,anthony,"hope, not a claimed forecast"
+14773647,uniform,1,,,,,,,,,,,anthony,vast majority of issues will arise from software defects
+8885534,uniform,0,,,,,,,,,,,anthony,
+20738901,enriched,1,,,,,,,,,,,anthony,will be put at a competitive disadvantage
+9290306,uniform,0,,,,,,,,,,,anthony,"existing tool behavior, not forecast"
+4320017,enriched,1,,,,,,,,,,,anthony,we'll see alumni fostering communities
+2211238,enriched,0,,,,,,,,,,,anthony,wonders if NYT is unsure
+13667909,uniform,0,,,,,,,,,,,anthony,
+5542372,enriched,1,,,,,,,,,,,anthony,effect is probably reasonably limited
+6468657,uniform,0,,,,,,,,,,,anthony,
+12751865,uniform,0,,,,,,,,,,,anthony,
+3605031,enriched,0,,,,,,,,,,,anthony,"question, no claim"
+7820830,uniform,1,,,,,,,,,,,anthony,happens without fail within the first three years
+18648821,uniform,0,,,,,,,,,,,anthony,
+15680486,enriched,1,,,,,,,,,,,anthony,town itself will probably just use the typical suburban sprawl model
+1213936,uniform,0,,,,,,,,,,,anthony,going to work means commuting
+11067051,uniform,0,,,,,,,,,,,anthony,
+9852726,uniform,0,,,,,,,,,,,anthony,
+4982579,enriched,1,,,,,,,,,,,anthony,big pharma will jump on the opportunities
+9713044,uniform,0,,,,,,,,,,,anthony,"rhetorical question, no claim"
+8194224,uniform,0,,,,,,,,,,,anthony,
+2961085,uniform,0,,,,,,,,,,,anthony,
+20062099,uniform,0,,,,,,,,,,,anthony,
+6831501,enriched,1,,,,,,,,,,,anthony,per unit cost will fall below $2000 within few years
+5760472,enriched,1,,,,,,,,,,,anthony,entrepreneurs will be able to take flight
+6597489,enriched,0,,,,,,,,,,,anthony,"personal skill, not a trend"
+9054911,uniform,0,,,,,,,,,,,anthony,
+20734645,uniform,0,,,,,,,,,,,anthony,
+581488,uniform,0,,,,,,,,,,,anthony,
+10848017,uniform,0,,,,,,,,,,,anthony,
+2774286,uniform,0,,,,,,,,,,,anthony,
+3187001,enriched,0,,,,,,,,,,,anthony,"Reports a fear, not speaker's forecast"
+16223492,enriched,0,,,,,,,,,,,anthony,"Math guarantee, not a temporal forecast"
+13432434,uniform,0,,,,,,,,,,,anthony,
+2511775,enriched,0,,,,,,,,,,,anthony,"Cites others' expectations, not own forecast"
+6537452,uniform,0,,,,,,,,,,,anthony,
+17296531,enriched,0,,,,,,,,,,,anthony,
+11346991,enriched,0,,,,,,,,,,,anthony,"Hypothetical physics, not a real forecast"
+12935389,uniform,0,,,,,,,,,,,anthony,
+20285818,enriched,1,,,,,,,,,,,anthony,Companies will just buy closed software instead
+16751174,enriched,0,,,,,,,,,,,anthony,Will is inside a rejected analogy
+21727436,uniform,0,,,,,,,,,,,anthony,
+13208234,enriched,1,,,,,,,,,,,anthony,So that will not be affected.
+6202409,uniform,0,,,,,,,,,,,anthony,
+938237,enriched,0,,,,,,,,,,,anthony,"Personal learning advice, out of scope"
+18452106,uniform,0,,,,,,,,,,,anthony,
+12485843,enriched,0,,,,,,,,,,,anthony,going to Mars names a destination
+575693,enriched,0,,,,,,,,,,,anthony,"Joke about a fake tweet, not a forecast"
+17295494,uniform,0,,,,,,,,,,,anthony,
+3764571,enriched,0,,,,,,,,,,,anthony,"Design critique of pagination, not a forecast"
+17395416,uniform,0,,,,,,,,,,,anthony,
+10614356,uniform,0,,,,,,,,,,,anthony,
+8047249,uniform,0,,,,,,,,,,,anthony,
+14256914,uniform,0,,,,,,,,,,,anthony,
+16346703,uniform,0,,,,,,,,,,,anthony,
+13380344,uniform,0,,,,,,,,,,,anthony,
+2146594,enriched,0,,,,,,,,,,,anthony,"Describes ranking mechanic, not a forecast"
+7728169,uniform,0,,,,,,,,,,,anthony,
+5749757,uniform,0,,,,,,,,,,,anthony,
+18906353,uniform,0,,,,,,,,,,,anthony,
+10010177,enriched,0,,,,,,,,,,,anthony,Will that help is a question
+9513329,uniform,0,,,,,,,,,,,anthony,"personal hope, not a scoped forecast"
+7405780,uniform,0,,,,,,,,,,,anthony,
+4161758,uniform,0,,,,,,,,,,,anthony,
+5405604,enriched,0,,,,,,,,,,,anthony,"feature's effect, not a forecast"
+594270,uniform,0,,,,,,,,,,,anthony,
+12796158,enriched,0,,,,,,,,,,,anthony,"habitual metaphor, not a later forecast"
+19315539,enriched,0,,,,,,,,,,,anthony,describes current plan rules
+6035017,uniform,0,,,,,,,,,,,anthony,
+4706281,uniform,0,,,,,,,,,,,anthony,
+6173150,uniform,0,,,,,,,,,,,anthony,
+2270266,uniform,0,,,,,,,,,,,anthony,
+2800590,uniform,0,,,,,,,,,,,anthony,
+1298551,uniform,0,,,,,,,,,,,anthony,
+21422374,enriched,0,,,,,,,,,,,anthony,
+20617549,enriched,1,,,,,,,,,,,anthony,"if history is anything to go by, unfortunately will get abused"
+19942282,uniform,0,,,,,,,,,,,anthony,personal demand for proof
+9046463,uniform,0,,,,,,,,,,,anthony,
+17481751,enriched,0,,,,,,,,,,,anthony,"cites others' belief, not own forecast"
+3191925,uniform,0,,,,,,,,,,,anthony,
+17368036,uniform,0,,,,,,,,,,,anthony,
+21133891,enriched,1,,,,,,,,,,,anthony,"If Go's wants to stay relevant it will eventually grow such features, no matter what."
+16210207,uniform,0,,,,,,,,,,,anthony,
+8377144,uniform,0,,,,,,,,,,,anthony,
+21279928,uniform,0,,,,,,,,,,,anthony,
+17103339,enriched,0,,,,,,,,,,,anthony,"personal to-do, not a forecast"
+4425348,uniform,0,,,,,,,,,,,anthony,
+17949490,uniform,0,,,,,,,,,,,anthony,"general claim, not a later forecast"
+8895560,uniform,0,,,,,,,,,,,anthony,
+2477920,uniform,0,,,,,,,,,,,anthony,
+13333385,uniform,1,,,,,,,,,,,anthony,"requirement, not an outcome forecast | review: hedged claim Social Security could fail"
+19640335,uniform,0,,,,,,,,,,,anthony,
+6459040,uniform,0,,,,,,,,,,,anthony,
+19956359,uniform,0,,,,,,,,,,,anthony,
+21422036,uniform,1,,,,,,,,,,,anthony,it will run into that ol' leverage chestnut
+19959404,uniform,0,,,,,,,,,,,anthony,
+13628833,uniform,0,,,,,,,,,,,anthony,"habitual consumer type, not a future claim"
+1687797,uniform,0,,,,,,,,,,,anthony,
+15130490,uniform,0,,,,,,,,,,,anthony,
+8509261,uniform,0,,,,,,,,,,,anthony,
+2291691,uniform,0,,,,,,,,,,,anthony,
+7701495,enriched,1,,,,,,,,,,,anthony,damage it will do to capitalism if their customers have no option to leave
+12969073,enriched,1,,,,,,,,,,,anthony,initial differences will perpetuate themselves for an indefinately long time
+15021290,uniform,0,,,,,,,,,,,anthony,
+13384368,uniform,0,,,,,,,,,,,anthony,
+7655931,uniform,0,,,,,,,,,,,anthony,
+11912287,enriched,0,,,,,,,,,,,anthony,"purchase criterion, not a market forecast"
+6391123,enriched,0,,,,,,,,,,,anthony,repeats heard suggestion without endorsing
+21527136,uniform,0,,,,,,,,,,,anthony,
+5408883,uniform,0,,,,,,,,,,,anthony,
+8999612,uniform,0,,,,,,,,,,,anthony,
+18791773,uniform,0,,,,,,,,,,,anthony,
+17459026,enriched,0,,,,,,,,,,,anthony,"personal incomprehension, not scoped forecast"
+5993843,uniform,0,,,,,,,,,,,anthony,
+1799616,uniform,0,,,,,,,,,,,anthony,
+5057003,uniform,0,,,,,,,,,,,anthony,
+2686802,enriched,0,,,,,,,,,,,anthony,"habitual behavior, not a future outcome"
+15941956,uniform,1,,,,,,,,,,,anthony,Trump will of course be reelected in 2020.
+19284678,uniform,0,,,,,,,,,,,anthony,
+2073990,uniform,0,,,,,,,,,,,anthony,
+9894659,uniform,0,,,,,,,,,,,anthony,
+16939822,uniform,0,,,,,,,,,,,anthony,
+13580632,uniform,0,,,,,,,,,,,anthony,
+15640139,enriched,1,,,,,,,,,,,anthony,the usual German contenders will build electric cars every bit as quick
+13525318,enriched,0,,,,,,,,,,,anthony,"describes current green-card procedure, not a forecast"
+5680157,uniform,0,,,,,,,,,,,anthony,
+3186956,uniform,0,,,,,,,,,,,anthony,
+7907473,uniform,0,,,,,,,,,,,anthony,
+2367562,uniform,0,,,,,,,,,,,anthony,
+14781425,uniform,0,,,,,,,,,,,anthony,
+10075231,uniform,0,,,,,,,,,,,anthony,
+5783077,uniform,0,,,,,,,,,,,anthony,
+2146265,uniform,0,,,,,,,,,,,anthony,
+9632166,uniform,1,,,,,,,,,,,anthony,that'll always be more functional and easier to use than any desktop linux
+5575603,uniform,0,,,,,,,,,,,anthony,
+13367942,uniform,0,,,,,,,,,,,anthony,
+18254279,uniform,0,,,,,,,,,,,anthony,
+5255081,uniform,0,,,,,,,,,,,anthony,
+17528775,uniform,1,,,,,,,,,,,anthony,this might actually become feasible
+3405640,enriched,0,,,,,,,,,,,anthony,"question about app capability, not a forecast"
+20643508,uniform,0,,,,,,,,,,,anthony,"personal investment plan, not a market forecast"
+8359255,uniform,0,,,,,,,,,,,anthony,
+10346053,uniform,0,,,,,,,,,,,anthony,
+20883609,uniform,0,,,,,,,,,,,anthony,
+11059945,uniform,0,,,,,,,,,,,anthony,"describes a racist's motive, not a forecast"
+1070896,enriched,1,,,,,,,,,,,anthony,no one is ever going to be going to work and working all day on their iPhone
+13593887,enriched,0,,,,,,,,,,,anthony,"describes FedEx program mechanics, not a forecast"
+10933533,uniform,0,,,,,,,,,,,anthony,
+21495439,uniform,0,,,,,,,,,,,anthony,
+20913863,enriched,1,,,,,,,,,,,anthony,"personal product todo, not a forecast | review: claims own product will be finished and solid"
+10605885,uniform,0,,,,,,,,,,,anthony,
+3644932,enriched,0,,,,,,,,,,,anthony,"question about rumored laptop, not an assertion"
+6112742,uniform,0,,,,,,,,,,,anthony,
+14600839,enriched,1,,,,,,,,,,,anthony,"no matter what the tools, there will be collateral damage"
+16848500,uniform,0,,,,,,,,,,,anthony,"design principle about incentives, not a forecast"
+11252789,enriched,1,,,,,,,,,,,anthony,otherwise it won't be able to survive
+7146132,uniform,0,,,,,,,,,,,anthony,"tool capability description, not a forecast"
+9087467,uniform,0,,,,,,,,,,,anthony,
+12205247,uniform,1,,,,,,,,,,,anthony,"bandwidth comparison and hypothetical, not a forecast | review: conditional claim prices would keep rising"
+631410,uniform,0,,,,,,,,,,,anthony,
+19289781,uniform,0,,,,,,,,,,,anthony,
+7735409,uniform,0,,,,,,,,,,,anthony,
+19569730,enriched,1,,,,,,,,,,,anthony,there will always be someone willing to sell off some capacity
+7358627,uniform,0,,,,,,,,,,,anthony,
+10855235,uniform,0,,,,,,,,,,,anthony,
+7467252,uniform,0,,,,,,,,,,,anthony,"immediate UI reading critique, not a forecast"
+21520789,uniform,0,,,,,,,,,,,anthony,
+15001606,uniform,0,,,,,,,,,,,anthony,
+13965476,enriched,0,,,,,,,,,,,anthony,"personal career advice, not a scoped forecast"
+12904104,uniform,0,,,,,,,,,,,anthony,
+19529008,uniform,0,,,,,,,,,,,anthony,
+6065977,enriched,0,,,,,,,,,,,anthony,"reports others' beliefs, not own forecast"
+14864561,enriched,1,,,,,,,,,,,anthony,It will become a race to the bottom.
+3043908,uniform,0,,,,,,,,,,,anthony,"hypothetical design, not an asserted outcome"
+13299458,uniform,0,,,,,,,,,,,anthony,
+4469941,uniform,0,,,,,,,,,,,anthony,"personal forgetfulness, not a scoped forecast"
+16872195,enriched,1,,,,,,,,,,,anthony,a webapp isn't going to be as good as a proper application.
+14393616,uniform,0,,,,,,,,,,,anthony,going to bed is not a future claim
+7438163,uniform,0,,,,,,,,,,,anthony,
+11479854,uniform,0,,,,,,,,,,,anthony,
+3674450,enriched,0,,,,,,,,,,,anthony,"sarcastic hope, not an asserted forecast"
+11913767,enriched,0,,,,,,,,,,,anthony,"sarcastic quote of FBI, not endorsed"
+5166394,uniform,0,,,,,,,,,,,anthony,
+9755296,uniform,0,,,,,,,,,,,anthony,
+3383334,enriched,1,,,,,,,,,,,anthony,the traditional desktop we've been using for the past 25 years is most certainly going to go away.
+9860849,enriched,1,,,,,,,,,,,anthony,attackers will be slowed down a bit from producing a functional exploit.
+10638358,uniform,0,,,,,,,,,,,anthony,
+10502643,uniform,0,,,,,,,,,,,anthony,"general learning comparison, not a forecast"
+19144103,uniform,0,,,,,,,,,,,anthony,
+11931474,uniform,0,,,,,,,,,,,anthony,
+5435291,uniform,0,,,,,,,,,,,anthony,
+9660446,uniform,0,,,,,,,,,,,anthony,
+18456776,uniform,0,,,,,,,,,,,anthony,
+13033434,uniform,1,,,,,,,,,,,anthony,Solving on 9x9 or larger is likely not possible.
+8010245,enriched,0,,,,,,,,,,,anthony,"habitual will, not a future outcome"
+2453267,uniform,0,,,,,,,,,,,anthony,
+11361828,enriched,0,,,,,,,,,,,anthony,"illustrative tax math, not a forecast"
+15977084,uniform,1,,,,,,,,,,,anthony,loopholes will get closed fast or at least eventually.
+18566011,uniform,0,,,,,,,,,,,anthony,
+15572842,uniform,1,,,,,,,,,,,anthony,Maybe someday this will be on by default for everyone.
+7278866,uniform,0,,,,,,,,,,,anthony,
+5586389,uniform,0,,,,,,,,,,,anthony,
+17830009,uniform,0,,,,,,,,,,,anthony,
+2256292,enriched,1,,,,,,,,,,,anthony,it is unlikely Apple will yank our app.
+5481197,enriched,0,,,,,,,,,,,anthony,"advice on rhetoric, not in-scope forecast"
+9485898,uniform,0,,,,,,,,,,,anthony,
+6391353,enriched,0,,,,,,,,,,,anthony,"quoted ask, not speaker's forecast"
+9450712,uniform,0,,,,,,,,,,,anthony,
+1383906,uniform,0,,,,,,,,,,,anthony,advice describing an advisor's job
+6630740,enriched,1,,,,,,,,,,,anthony,"Yes, you could. But you won't."
+11744063,uniform,0,,,,,,,,,,,anthony,"physiology, not in-scope forecast"
+16390658,uniform,0,,,,,,,,,,,anthony,
+2212340,uniform,0,,,,,,,,,,,anthony,
+4021715,uniform,0,,,,,,,,,,,anthony,
+8892518,uniform,0,,,,,,,,,,,anthony,
+12241723,uniform,1,,,,,,,,,,,anthony,people who want to rent their self-driving cars won't buy those
+528146,enriched,0,,,,,,,,,,,anthony,"suggestion with hypothetical, not a forecast"
+2117690,uniform,0,,,,,,,,,,,anthony,
+19105363,enriched,0,,,,,,,,,,,anthony,
+21829755,enriched,0,,,,,,,,,,,anthony,"I doubt they will really need a team of developers just to solve the Turkish language bugs. | review: local i18n judgment, not a company forecast"
+20212628,uniform,1,,,,,,,,,,,anthony,The next generation will be preoccupied with an entirely different model of programming.
+17604944,uniform,0,,,,,,,,,,,anthony,
+20560166,enriched,0,,,,,,,,,,,anthony,"he will be written about extensively in history books | review: hope and a personal legacy, not a domain forecast"
+21460239,uniform,0,,,,,,,,,,,anthony,
+15901024,enriched,0,,,,,,,,,,,anthony,"bodily coffee aside, not a scoped forecast"
+3693584,enriched,0,,,,,,,,,,,anthony,"project challenge phrasing, not a forecast"
+10635976,uniform,0,,,,,,,,,,,anthony,
+17802787,uniform,0,,,,,,,,,,,anthony,
+16711530,uniform,0,,,,,,,,,,,anthony,
+12176327,uniform,0,,,,,,,,,,,anthony,
+16191103,enriched,1,,,,,,,,,,,anthony,"""Machine kills human because human violated traffic law"" will never fly."
+4577418,uniform,0,,,,,,,,,,,anthony,
+18947637,uniform,0,,,,,,,,,,,anthony,
+432897,uniform,0,,,,,,,,,,,anthony,"learning advice, not a scoped forecast"
+6476166,enriched,1,,,,,,,,,,,anthony,it might change soon
+12295055,uniform,0,,,,,,,,,,,anthony,
+13571474,uniform,0,,,,,,,,,,,anthony,
+14840402,uniform,0,,,,,,,,,,,anthony,
+18413809,enriched,1,,,,,,,,,,,anthony,Building isn't expected to start until next year and generation some time in the mid 2020s.
+14175161,uniform,0,,,,,,,,,,,anthony,
+9021315,uniform,0,,,,,,,,,,,anthony,
+10192104,enriched,1,,,,,,,,,,,anthony,as long as Intel can deliver what they need they won’t.
+18843548,uniform,0,,,,,,,,,,,anthony,
+13639877,uniform,0,,,,,,,,,,,anthony,going to argue is a speech act
+514729,enriched,0,,,,,,,,,,,anthony,"career advice, not a market forecast"
+21300850,uniform,0,,,,,,,,,,,anthony,
+8889128,uniform,0,,,,,,,,,,,anthony,
+7088674,uniform,0,,,,,,,,,,,anthony,
+14798944,uniform,0,,,,,,,,,,,anthony,
+3420546,uniform,0,,,,,,,,,,,anthony,
+11132953,uniform,0,,,,,,,,,,,anthony,
+19754681,uniform,0,,,,,,,,,,,anthony,
+13680055,enriched,0,,,,,,,,,,,anthony,"current config behavior, not a future forecast"
+4153546,uniform,0,,,,,,,,,,,anthony,
+20567130,enriched,1,,,,,,,,,,,anthony,it will be more suitable for general purpose programming
+20603028,uniform,0,,,,,,,,,,,anthony,
+18484080,uniform,0,,,,,,,,,,,anthony,
+3493169,uniform,0,,,,,,,,,,,anthony,
+21317654,enriched,1,,,,,,,,,,,anthony,This may reduce salaries
+5508535,uniform,0,,,,,,,,,,,anthony,
+3492120,enriched,0,,,,,,,,,,,anthony,"present sports habit, not a scoped forecast"
+19235582,uniform,0,,,,,,,,,,,anthony,
+9372270,uniform,0,,,,,,,,,,,anthony,
+2087387,uniform,0,,,,,,,,,,,anthony,
+6250670,uniform,0,,,,,,,,,,,anthony,
+11606941,uniform,0,,,,,,,,,,,anthony,
+10156666,uniform,0,,,,,,,,,,,anthony,
+13318618,uniform,0,,,,,,,,,,,anthony,"predicts readers' reaction, not scoped outcome"
+13362192,enriched,0,,,,,,,,,,,anthony,
+13123068,uniform,0,,,,,,,,,,,anthony,
+14266255,uniform,0,,,,,,,,,,,anthony,
+8017480,uniform,0,,,,,,,,,,,anthony,
+8682930,enriched,0,,,,,,,,,,,anthony,"question about design, not an assertion"
+6183719,uniform,0,,,,,,,,,,,anthony,"individual effect claim, not a scoped forecast"
+3059839,enriched,0,,,,,,,,,,,anthony,
+1769603,uniform,0,,,,,,,,,,,anthony,
+2513923,uniform,0,,,,,,,,,,,anthony,
+3168311,uniform,0,,,,,,,,,,,anthony,
+7866115,enriched,0,,,,,,,,,,,anthony,local performance hope after a rollback
+10916332,enriched,1,,,,,,,,,,,anthony,will of course be impacted by such laws (if they pass)
+4294332,uniform,0,,,,,,,,,,,anthony,
+19011155,uniform,0,,,,,,,,,,,anthony,
+13100916,uniform,0,,,,,,,,,,,anthony,
+2915977,uniform,0,,,,,,,,,,,anthony,
+16057571,uniform,0,,,,,,,,,,,anthony,
+15265388,uniform,0,,,,,,,,,,,anthony,
+1721252,uniform,0,,,,,,,,,,,anthony,
+11548404,enriched,0,,,,,,,,,,,anthony,going to conferences is not a forecast
+19606772,uniform,0,,,,,,,,,,,anthony,
+12839853,uniform,0,,,,,,,,,,,anthony,
+14995509,uniform,0,,,,,,,,,,,anthony,
+15003696,uniform,0,,,,,,,,,,,anthony,"personal study advice, not a forecast"
+9261096,enriched,0,,,,,,,,,,,anthony,"death metaphysics, not a scoped forecast"
+4753851,uniform,1,,,,,,,,,,,anthony,It's pretty much inevitable that the country will move to the left
+17120723,uniform,1,,,,,,,,,,,anthony,I'm concerned that Microsoft is not going to stop here
+9183840,uniform,0,,,,,,,,,,,anthony,
+12927755,uniform,0,,,,,,,,,,,anthony,"describes current fade, not a forecast"
+15668752,enriched,0,,,,,,,,,,,anthony,hope is not an asserted forecast
+8217481,enriched,1,,,,,,,,,,,anthony,"""visual"" source code representations will also be a dead-end if it means propietary, mutually incompatible IDEs."
+10276137,uniform,0,,,,,,,,,,,anthony,
+6152835,uniform,0,,,,,,,,,,,anthony,
+17859021,uniform,0,,,,,,,,,,,anthony,
+8075277,enriched,1,,,,,,,,,,,anthony,I doubt it will involve more people having any of their apps on their phone tomorrow than today
+21773630,uniform,0,,,,,,,,,,,anthony,
+13049381,uniform,1,,,,,,,,,,,anthony,the link may break eventually
+3243091,uniform,0,,,,,,,,,,,anthony,
+19448021,enriched,0,,,,,,,,,,,anthony,"free will is philosophy, not a forecast"
+10405246,enriched,0,,,,,,,,,,,anthony,"parenting tradeoff, not a forecast"
+21173566,uniform,0,,,,,,,,,,,anthony,
+9225225,uniform,0,,,,,,,,,,,anthony,
+4599788,uniform,0,,,,,,,,,,,anthony,
+17034917,enriched,1,,,,,,,,,,,anthony,it will have a very real impact on people living in the affected jurisdiction
+7362253,uniform,0,,,,,,,,,,,anthony,
+19356661,uniform,1,,,,,,,,,,,anthony,they will spin another five flavours by tomorrow
+9936885,uniform,0,,,,,,,,,,,anthony,"physics of transits, not a future forecast"
+6277484,uniform,0,,,,,,,,,,,anthony,will say is not a forecast
+9184755,enriched,1,,,,,,,,,,,anthony,it may be fashionable/scientifically proven/theologically required to hate gays again
+3866185,uniform,0,,,,,,,,,,,anthony,
+12819468,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast"
+21250664,uniform,0,,,,,,,,,,,anthony,
+15832694,enriched,0,,,,,,,,,,,anthony,your S3 storage will keep growing indefinitely | review: question about one backup setup
+7320920,enriched,1,,,,,,,,,,,anthony,there will be a revolution
+11700118,uniform,0,,,,,,,,,,,anthony,
+21085997,uniform,0,,,,,,,,,,,anthony,
+9000268,uniform,1,,,,,,,,,,,anthony,Mr. Ulbricht will likely not see the maximum consecutive sentence
+15668646,enriched,1,,,,,,,,,,,anthony,"it will happen again, and the perpetrator will feel like they are doing good"
+9602466,enriched,0,,,,,,,,,,,anthony,"personal blogging plan, not a forecast"
+13184810,uniform,0,,,,,,,,,,,anthony,
+20144297,uniform,1,,,,,,,,,,,anthony,they just need a few years before they can stop supporting the “normal” computers.
+9765918,uniform,0,,,,,,,,,,,anthony,
+8947322,uniform,0,,,,,,,,,,,anthony,
+10600356,uniform,1,,,,,,,,,,,anthony,"If Google can provide a competitive service at a lower cost, they will gain traction"
+16034144,uniform,1,,,,,,,,,,,anthony,It's going to take more than just asking a couple basic questions.
+8662678,uniform,0,,,,,,,,,,,anthony,
+7359974,uniform,0,,,,,,,,,,,anthony,
+6490704,uniform,0,,,,,,,,,,,anthony,
+14083067,uniform,0,,,,,,,,,,,anthony,
+4218640,uniform,0,,,,,,,,,,,anthony,"personal schedule advice, not in scope"
+2849546,uniform,0,,,,,,,,,,,anthony,
+10981193,uniform,0,,,,,,,,,,,anthony,
+14441411,enriched,1,,,,,,,,,,,anthony,"Results will be ""assessable"" only when these kids will have a professional path."
+3828633,enriched,1,,,,,,,,,,,anthony,those high value time slots will be harder to come by as the service grows.
+14775621,uniform,0,,,,,,,,,,,anthony,
+14762717,uniform,0,,,,,,,,,,,anthony,
+19537618,enriched,1,,,,,,,,,,,anthony,a good one will breed complacency
+2215675,uniform,0,,,,,,,,,,,anthony,
+13460492,enriched,1,,,,,,,,,,,anthony,maybe they will start thinking about video on demand
+4724533,enriched,0,,,,,,,,,,,anthony,"physics claim, not tech/market/law/trend"
+6992214,uniform,0,,,,,,,,,,,anthony,
+16273079,uniform,0,,,,,,,,,,,anthony,
+16401582,uniform,0,,,,,,,,,,,anthony,
+6135551,uniform,1,,,,,,,,,,,anthony,We're definitely planning on adding Go.
+18108155,enriched,0,,,,,,,,,,,anthony,"quoted methods advice, not a forecast"
+474690,uniform,0,,,,,,,,,,,anthony,will only inside name Williams
+13992636,enriched,1,,,,,,,,,,,anthony,lessening the cognitive burden of the payment process will lead to higher taxes
+11984649,enriched,0,,,,,,,,,,,anthony,"hope about quality, not an asserted forecast"
+8768025,uniform,0,,,,,,,,,,,anthony,
+11493565,uniform,0,,,,,,,,,,,anthony,
+16868361,uniform,0,,,,,,,,,,,anthony,
+2384477,enriched,0,,,,,,,,,,,anthony,"past quoted diet advice, not a forecast"
+949506,uniform,0,,,,,,,,,,,anthony,
+17159572,uniform,1,,,,,,,,,,,anthony,the United States will create the opposite regime
+10318153,uniform,0,,,,,,,,,,,anthony,
+10392096,uniform,0,,,,,,,,,,,anthony,
+10417359,uniform,0,,,,,,,,,,,anthony,
+6788571,enriched,1,,,,,,,,,,,anthony,people will just worry about themselves than burning their own value
+6030636,enriched,1,,,,,,,,,,,anthony,FOSS will fragment because people have different opinions
+15878481,uniform,0,,,,,,,,,,,anthony,
+18622464,uniform,0,,,,,,,,,,,anthony,
+9591071,uniform,0,,,,,,,,,,,anthony,
+15675690,uniform,0,,,,,,,,,,,anthony,
+1894949,uniform,0,,,,,,,,,,,anthony,
+17071772,uniform,0,,,,,,,,,,,anthony,
+6014644,uniform,0,,,,,,,,,,,anthony,"hopeful wish, not an asserted forecast"
+417121,uniform,0,,,,,,,,,,,anthony,
+6398715,uniform,0,,,,,,,,,,,anthony,
+19026160,enriched,1,,,,,,,,,,,anthony,it will most likely involve autonomous machines
+7700016,uniform,0,,,,,,,,,,,anthony,"comparative productivity claim, not a future forecast"
+8938770,uniform,0,,,,,,,,,,,anthony,
+3327350,uniform,1,,,,,,,,,,,anthony,your hourly car rental rates will go up during peak usage
+1255722,enriched,1,,,,,,,,,,,anthony,I imagine this trend will continue
+11723042,enriched,1,,,,,,,,,,,anthony,it's going to be hard to get rid of now
+17560726,uniform,0,,,,,,,,,,,anthony,"describes current CLI behavior, not a forecast"
+5277386,uniform,0,,,,,,,,,,,anthony,
+8579629,uniform,0,,,,,,,,,,,anthony,
+11803908,uniform,0,,,,,,,,,,,anthony,
+2441246,uniform,0,,,,,,,,,,,anthony,
+11448423,uniform,0,,,,,,,,,,,anthony,
+8793001,enriched,1,,,,,,,,,,,anthony,Eventually you'll reach a point where it becomes economically feasible for a company to wholesale fire it's drivers
+21541786,uniform,0,,,,,,,,,,,anthony,
+16623518,enriched,1,,,,,,,,,,,anthony,Presumably a lot of that will get returned to investors or reinvested in some way
+2300587,uniform,0,,,,,,,,,,,anthony,
+2396766,uniform,0,,,,,,,,,,,anthony,
+14745402,enriched,0,,,,,,,,,,,anthony,"advice about current salary gap, not a forecast"
+6566411,uniform,0,,,,,,,,,,,anthony,
+12829130,uniform,0,,,,,,,,,,,anthony,
+20145464,uniform,0,,,,,,,,,,,anthony,
+6022714,uniform,0,,,,,,,,,,,anthony,
+17277650,uniform,0,,,,,,,,,,,anthony,"at will is employment status, not a forecast"
+12643826,uniform,0,,,,,,,,,,,anthony,
+13996140,enriched,0,,,,,,,,,,,anthony,"you will see prices for drugs like Insulin going up | review: will-see describes current pricing, not a forecast"
+11808429,uniform,0,,,,,,,,,,,anthony,
+21589507,uniform,0,,,,,,,,,,,anthony,
+3996836,uniform,0,,,,,,,,,,,anthony,
+3020407,uniform,1,,,,,,,,,,,anthony,a more open-minded company will quickly be there to capitalize on the value they offer
+13513653,uniform,1,,,,,,,,,,,anthony,I don't think that this is happening anytime soon
+7646468,enriched,1,,,,,,,,,,,anthony,"Recent numbers already out, not a later forecast | review: claims the numbers will be a nasty awakening"
+14398914,uniform,0,,,,,,,,,,,anthony,
+21785484,enriched,1,,,,,,,,,,,anthony,consumer spending will drop sharply if his tax plan is implemented
+7932014,enriched,0,,,,,,,,,,,anthony,"About the interlocutor, not a scoped forecast"
+7982342,uniform,0,,,,,,,,,,,anthony,
+10935850,enriched,0,,,,,,,,,,,anthony,"Personal to-do, not a scoped forecast"
+5636151,enriched,1,,,,,,,,,,,anthony,no rational individual is going to choose an alternative
+17968975,enriched,0,,,,,,,,,,,anthony,"Quotes parent claim, asks for source"
+20850968,uniform,0,,,,,,,,,,,anthony,
+18159857,enriched,1,,,,,,,,,,,anthony,the political class will begin locking down the capital and restricting access
+17502229,enriched,1,,,,,,,,,,,anthony,the results will be ever-changing and therefor unknowable
+3249664,enriched,1,,,,,,,,,,,anthony,a company won't think twice and back-stab you
+1691912,uniform,0,,,,,,,,,,,anthony,
+8129478,enriched,0,,,,,,,,,,,anthony,"Wonders whether, does not assert"
+14245174,uniform,0,,,,,,,,,,,anthony,
+12113226,uniform,0,,,,,,,,,,,anthony,"Habit and others' plans, not a forecast"
+11829156,uniform,1,,,,,,,,,,,anthony,I would expect Windows Pro to be that edition
+21462281,enriched,1,,,,,,,,,,,anthony,complete global warming and running out of oil will play out before nuclear fusion
+12285248,uniform,0,,,,,,,,,,,anthony,
+8299759,enriched,1,,,,,,,,,,,anthony,some configurations are probably going to go up to double and triple that
+12971360,enriched,0,,,,,,,,,,,anthony,"Imagines device function, not a later outcome"
+9101597,enriched,0,,,,,,,,,,,anthony,"Curious whether, no assertion"
+16247756,enriched,1,,,,,,,,,,,anthony,it would probably never be a profitable enterprise
+4343784,uniform,0,,,,,,,,,,,anthony,
+19157541,uniform,0,,,,,,,,,,,anthony,
+12082195,uniform,0,,,,,,,,,,,anthony,
+14490357,enriched,0,,,,,,,,,,,anthony,speaker's own dev to-do
+16436182,uniform,0,,,,,,,,,,,anthony,
+4476241,enriched,1,,,,,,,,,,,anthony,"Robots, being robots, are going to be inherently safer"
+7051993,uniform,0,,,,,,,,,,,anthony,
+14129017,uniform,1,,,,,,,,,,,anthony,cameras will look very different from what they look now
+5388905,uniform,0,,,,,,,,,,,anthony,
+14745506,uniform,0,,,,,,,,,,,anthony,
+5210885,uniform,0,,,,,,,,,,,anthony,
+4603969,enriched,0,,,,,,,,,,,anthony,"rhetorical question, not a forecast"
+4827457,uniform,0,,,,,,,,,,,anthony,
+19919417,enriched,1,,,,,,,,,,,anthony,free market capitalism will perform its function
+9003079,uniform,1,,,,,,,,,,,anthony,conservative banking will be back in vogue
+13968662,enriched,0,,,,,,,,,,,anthony,will fit means capacity not future
+15908607,uniform,0,,,,,,,,,,,anthony,
+11546030,uniform,0,,,,,,,,,,,anthony,
+4378047,uniform,0,,,,,,,,,,,anthony,
+11150266,uniform,0,,,,,,,,,,,anthony,
+12072825,uniform,0,,,,,,,,,,,anthony,
+13234013,uniform,0,,,,,,,,,,,anthony,
+13506491,uniform,0,,,,,,,,,,,anthony,
+4614775,uniform,0,,,,,,,,,,,anthony,
+10315185,enriched,0,,,,,,,,,,,anthony,"job post, not a forecast"
+8586747,enriched,0,,,,,,,,,,,anthony,"personal complaint, not a market forecast"
+9020139,enriched,0,,,,,,,,,,,anthony,SEO advice about current limits
+9933949,uniform,0,,,,,,,,,,,anthony,
+19261366,enriched,1,,,,,,,,,,,anthony,it’s the last thing they will address
+1680587,uniform,0,,,,,,,,,,,anthony,"habitual tendency, not a future claim"
+17955467,uniform,0,,,,,,,,,,,anthony,
+7687807,uniform,0,,,,,,,,,,,anthony,
+8261276,uniform,0,,,,,,,,,,,anthony,
+19904808,uniform,0,,,,,,,,,,,anthony,
+13176152,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast"
+6084393,enriched,0,,,,,,,,,,,anthony,"sarcastic slogan, not a forecast"
+19399477,enriched,0,,,,,,,,,,,anthony,"parenting behavior, not in scope"
+10089388,uniform,0,,,,,,,,,,,anthony,
+13015757,uniform,0,,,,,,,,,,,anthony,
+1702656,enriched,1,,,,,,,,,,,anthony,new code that will eventually become part of Google Me
+780391,enriched,0,,,,,,,,,,,anthony,"idiomatic willingness, not a forecast"
+5211928,uniform,0,,,,,,,,,,,anthony,
+19821210,uniform,0,,,,,,,,,,,anthony,
+21802804,uniform,0,,,,,,,,,,,anthony,
+21652215,uniform,0,,,,,,,,,,,anthony,
+1544721,uniform,0,,,,,,,,,,,anthony,
+4227471,uniform,0,,,,,,,,,,,anthony,
+7481376,enriched,1,,,,,,,,,,,anthony,will be a really good contribution to make btc spread amongst normal users
+15046236,enriched,0,,,,,,,,,,,anthony,"describes current traces, not a forecast"
+10478987,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast"
+3278706,uniform,0,,,,,,,,,,,anthony,
+13167294,enriched,0,,,,,,,,,,,anthony,"describes pipeline mechanics, not a forecast"
+19239216,uniform,0,,,,,,,,,,,anthony,
+5693553,uniform,0,,,,,,,,,,,anthony,
+18456583,uniform,0,,,,,,,,,,,anthony,
+14345227,enriched,1,,,,,,,,,,,anthony,maybe after those are done it will be the top of the docket
+8676086,enriched,0,,,,,,,,,,,anthony,"wondering and asking, not asserting"
+12940183,enriched,0,,,,,,,,,,,anthony,"career advice, not a scoped forecast"
+8007341,uniform,0,,,,,,,,,,,anthony,"quotes Apple's pitch, not a forecast"
+3625209,uniform,0,,,,,,,,,,,anthony,
+12146886,enriched,1,,,,,,,,,,,anthony,Functional Data Structures which are not going to change anytime soon
+7309109,uniform,0,,,,,,,,,,,anthony,
+7707576,enriched,1,,,,,,,,,,,anthony,I doubt it'd come back from the dead
+8009403,enriched,0,,,,,,,,,,,anthony,"Conversational, not a scoped forecast"
+14554647,uniform,0,,,,,,,,,,,anthony,
+19329296,enriched,1,,,,,,,,,,,anthony,I'm pretty certain the president will fetch a higher price for his art work.
+10391461,uniform,0,,,,,,,,,,,anthony,"Describes current tracking, not a later outcome"
+17252041,uniform,0,,,,,,,,,,,anthony,
+20509535,enriched,0,,,,,,,,,,,anthony,"Hypothetical cost math, not a forecast"
+10085757,uniform,0,,,,,,,,,,,anthony,
+629683,uniform,0,,,,,,,,,,,anthony,
+15863654,uniform,0,,,,,,,,,,,anthony,
+2283368,uniform,0,,,,,,,,,,,anthony,
+4852971,uniform,0,,,,,,,,,,,anthony,
+12497053,uniform,0,,,,,,,,,,,anthony,
+13025273,uniform,0,,,,,,,,,,,anthony,
+17593931,uniform,0,,,,,,,,,,,anthony,
+20086207,uniform,0,,,,,,,,,,,anthony,
+5342357,uniform,0,,,,,,,,,,,anthony,
+13196607,uniform,0,,,,,,,,,,,anthony,"Advice script, not the speaker's forecast"
+1903707,uniform,0,,,,,,,,,,,anthony,"Describes puzzle options, not a forecast"
+12447837,uniform,0,,,,,,,,,,,anthony,
+13073346,uniform,0,,,,,,,,,,,anthony,
+10317310,uniform,0,,,,,,,,,,,anthony,
+17974228,uniform,0,,,,,,,,,,,anthony,
+15444612,enriched,0,,,,,,,,,,,anthony,"Own roadmap wishes, not an asserted forecast"
+18912695,uniform,0,,,,,,,,,,,anthony,
+11209537,uniform,0,,,,,,,,,,,anthony,
+19992565,uniform,0,,,,,,,,,,,anthony,
+7277772,uniform,0,,,,,,,,,,,anthony,
+4604772,uniform,0,,,,,,,,,,,anthony,
+10241803,uniform,0,,,,,,,,,,,anthony,
+2061842,uniform,1,,,,,,,,,,,anthony,I think we'll see a Cambrian-explosion of art and tech objects.
+16189997,uniform,0,,,,,,,,,,,anthony,
+16442523,enriched,0,,,,,,,,,,,anthony,"current consumption estimate, not a future outcome"
+10625481,uniform,0,,,,,,,,,,,anthony,
+7487827,uniform,0,,,,,,,,,,,anthony,
+14879403,uniform,0,,,,,,,,,,,anthony,
+2123047,uniform,0,,,,,,,,,,,anthony,
+4056761,enriched,1,,,,,,,,,,,anthony,"personal lament about daughter, not a forecast | review: claims the next generation will not know dial-up"
+3786431,uniform,0,,,,,,,,,,,anthony,
+18184233,uniform,0,,,,,,,,,,,anthony,
+21885422,enriched,0,,,,,,,,,,,anthony,"describes tool capability, not future outcome"
+19360411,uniform,0,,,,,,,,,,,anthony,
+20863989,enriched,0,,,,,,,,,,,anthony,"data structure fact, not a forecast"
+21161140,enriched,0,,,,,,,,,,,anthony,"advice to applicant, not a forecast"
+14651643,uniform,0,,,,,,,,,,,anthony,
+5415563,enriched,1,,,,,,,,,,,anthony,"the subject on both ends will come out on social media, and the attacks will come"
+16473780,uniform,0,,,,,,,,,,,anthony,
+15424185,uniform,0,,,,,,,,,,,anthony,
+14543607,uniform,0,,,,,,,,,,,anthony,
+18478770,enriched,0,,,,,,,,,,,anthony,bug report about current app behavior
+2949179,uniform,0,,,,,,,,,,,anthony,
+7570417,uniform,0,,,,,,,,,,,anthony,
+9121851,uniform,1,,,,,,,,,,,anthony,Guides like this are going to mean a lot in the coming months
+13459398,uniform,1,,,,,,,,,,,anthony,It's chances are slim.
+6371898,uniform,0,,,,,,,,,,,anthony,
+14300551,enriched,0,,,,,,,,,,,anthony,"product capability claim, not a forecast"
+19057499,uniform,0,,,,,,,,,,,anthony,
+12645581,uniform,0,,,,,,,,,,,anthony,
+21878523,uniform,0,,,,,,,,,,,anthony,
+1985739,uniform,0,,,,,,,,,,,anthony,
+12423134,uniform,0,,,,,,,,,,,anthony,
+2569429,uniform,0,,,,,,,,,,,anthony,
+2283594,enriched,1,,,,,,,,,,,anthony,making HTML5 games with the 2D canvas is going to die
+6008297,uniform,0,,,,,,,,,,,anthony,
+20403361,uniform,0,,,,,,,,,,,anthony,
+956744,enriched,1,,,,,,,,,,,anthony,standard ML techniques are unlikely to outperform
+11492747,uniform,0,,,,,,,,,,,anthony,
+1610606,uniform,0,,,,,,,,,,,anthony,
+19238931,enriched,0,,,,,,,,,,,anthony,"personal advice, not a scoped forecast"
+6669247,uniform,0,,,,,,,,,,,anthony,
+5050688,uniform,0,,,,,,,,,,,anthony,
+13579477,enriched,1,,,,,,,,,,,anthony,You will fail.
+17787210,uniform,0,,,,,,,,,,,anthony,
+3400365,uniform,0,,,,,,,,,,,anthony,
+21281860,enriched,0,,,,,,,,,,,anthony,"questions, no asserted forecast"
+19546476,uniform,0,,,,,,,,,,,anthony,
+18374600,uniform,0,,,,,,,,,,,anthony,
+21527166,uniform,0,,,,,,,,,,,anthony,
+13356925,uniform,0,,,,,,,,,,,anthony,
+6712935,uniform,0,,,,,,,,,,,anthony,
+18704541,enriched,0,,,,,,,,,,,anthony,"task duration, not a trend forecast"
+14763536,uniform,1,,,,,,,,,,,anthony,Anything that would lower the cost of housing can't be done
+2001128,uniform,1,,,,,,,,,,,anthony,"phishers will just construct phishing sites that appear to use the ""secure"" password type but actually don't."
+8691646,enriched,1,,,,,,,,,,,anthony,there will be enough interest & momentum that we eventually see some sort of alignment between Docker and Rocket
+7066561,uniform,0,,,,,,,,,,,anthony,
+14395722,enriched,0,,,,,,,,,,,anthony,"question, no asserted forecast"
+21637904,uniform,0,,,,,,,,,,,anthony,
+8806205,enriched,0,,,,,,,,,,,anthony,"medical advice, not in forecast scope"
+20709758,enriched,0,,,,,,,,,,,anthony,"noun will, not a future claim"
+1245649,enriched,0,,,,,,,,,,,anthony,"habitual present, not a future claim"
+5548063,enriched,0,,,,,,,,,,,anthony,"current company intent, not a forecast"
+12932246,enriched,0,,,,,,,,,,,anthony,"rhetorical questions, no asserted outcome"
+19768461,enriched,1,,,,,,,,,,,anthony,it's probably going to be just fine for their use case
+19967854,uniform,0,,,,,,,,,,,anthony,
+16526575,enriched,0,,,,,,,,,,,anthony,"personal conviction, not a tech forecast"
+9417393,uniform,0,,,,,,,,,,,anthony,"role description, not a future outcome"
+18394887,uniform,0,,,,,,,,,,,anthony,
+11194931,uniform,0,,,,,,,,,,,anthony,
+21068397,uniform,1,,,,,,,,,,,anthony,tomorrow it is some scummy app
+1725984,uniform,0,,,,,,,,,,,anthony,
+951055,enriched,1,,,,,,,,,,,anthony,Google will keep putting money in to it

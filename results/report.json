@@ -1,0 +1,1093 @@
+{
+  "schema_version": "pilot-0.1",
+  "model": "jev-1.13.0",
+  "gates_config": {
+    "G1_recall_min": 0.85,
+    "G2_ece_max": 0.08,
+    "G3_gap_abs_max": 0.02,
+    "G4_f1_drop_max": 0.03,
+    "G4_brier_ratio_max": 1.1,
+    "G5_regex_margin": 0.15,
+    "G5_frontier_margin": 0.05,
+    "G6_nonce_median_max": 0.05,
+    "G7_cost_max_usd": 3000.0,
+    "G7_days_max": 7.0,
+    "stageB_ratio_min": 0.8,
+    "subject_other_max": 0.4
+  },
+  "inputs": {
+    "cmd": "score",
+    "labels": "data/labels_final.csv",
+    "second_labels": null,
+    "single": "data/raw_a_single_v1.jsonl",
+    "packed": [
+      "data/raw_a_packed8_v1.jsonl",
+      "data/raw_a_packed16_v1.jsonl"
+    ],
+    "nonce": "data/raw_a_nonce_v1.jsonl",
+    "stage_b": "data/raw_b_v1.jsonl",
+    "baseline_regex": "data/baseline_regex.jsonl",
+    "baseline_cheap": "data/baseline_cheap.jsonl",
+    "baseline_frontier": "data/baseline_frontier.jsonl",
+    "baseline_extra": null,
+    "gate": null,
+    "target_recall": 0.9,
+    "eligible": null,
+    "price": 0.042,
+    "rpm": 1200,
+    "tps": 250000,
+    "out": null
+  },
+  "label_provenance": [
+    {
+      "stratum": "enriched",
+      "source": "human_adjudicated",
+      "n": 164
+    },
+    {
+      "stratum": "enriched",
+      "source": "human_audit",
+      "n": 100
+    },
+    {
+      "stratum": "enriched",
+      "source": "panel",
+      "n": 136
+    },
+    {
+      "stratum": "uniform",
+      "source": "human",
+      "n": 600
+    }
+  ],
+  "panel_audit": {
+    "panel": [
+      "anthropic/claude-haiku-4.5",
+      "deepseek/deepseek-v4-flash",
+      "openai/gpt-5.6-luna"
+    ],
+    "rule": "is_prediction: unanimous -> panel label, any split -> human. Stage B: strict majority, median for scores.",
+    "audit_is_prediction": {
+      "n": 100,
+      "errors": 11,
+      "error_rate": 0.11,
+      "error_rate_ci95": [
+        0.06254131955225126,
+        0.18631463027903022
+      ],
+      "panel_false_positives": 5,
+      "panel_false_negatives": 6,
+      "kappa": 0.7566371681415929
+    },
+    "adjudicated": {
+      "n": 164,
+      "human_sided_with": {
+        "anthropic/claude-haiku-4.5": 91,
+        "deepseek/deepseek-v4-flash": 101,
+        "openai/gpt-5.6-luna": 82
+      }
+    },
+    "panel_unanimity_is_prediction": {
+      "n": 400,
+      "rate": 0.59,
+      "pairwise_agreement": {
+        "anthropic/claude-haiku-4.5 vs deepseek/deepseek-v4-flash": 0.795,
+        "anthropic/claude-haiku-4.5 vs openai/gpt-5.6-luna": 0.6825,
+        "deepseek/deepseek-v4-flash vs openai/gpt-5.6-luna": 0.7025
+      }
+    }
+  },
+  "stage_b_reference": "mean pairwise agreement between labeling-panel models",
+  "gate": {
+    "threshold": 0.52,
+    "chosen_by": "all labeled comments: highest threshold with recall >= 0.9",
+    "heldout_check": {
+      "folds": [
+        {
+          "gate": 0.51,
+          "uniform_recall": 1.0
+        },
+        {
+          "gate": 0.53,
+          "uniform_recall": 0.84
+        }
+      ],
+      "uniform_recall_mean": 0.9199999999999999
+    }
+  },
+  "stage_a_single": {
+    "uniform": {
+      "n": 600,
+      "positives": 50,
+      "base_rate": 0.08333333333333333,
+      "brier": 0.050798166666666665,
+      "brier_base_rate": 0.07638888888888887,
+      "ece": 0.10445,
+      "best_f1": 0.7652173913043478,
+      "best_f1_threshold": 0.61,
+      "at_gate": {
+        "threshold": 0.52,
+        "tp": 46,
+        "fp": 30,
+        "fn": 4,
+        "precision": 0.6052631578947368,
+        "recall": 0.92,
+        "f1": 0.7301587301587301,
+        "pass_rate": 0.12666666666666668
+      },
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 369,
+          "mean_p": 0.04525745257452575,
+          "frac_true": 0.0
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 77,
+          "mean_p": 0.13350649350649352,
+          "frac_true": 0.012987012987012988
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 42,
+          "mean_p": 0.24690476190476188,
+          "frac_true": 0.0
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 16,
+          "mean_p": 0.344375,
+          "frac_true": 0.0625
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 20,
+          "mean_p": 0.4375,
+          "frac_true": 0.1
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 11,
+          "mean_p": 0.5663636363636363,
+          "frac_true": 0.18181818181818182
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 9,
+          "mean_p": 0.6622222222222223,
+          "frac_true": 0.6666666666666666
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 8,
+          "mean_p": 0.73125,
+          "frac_true": 0.25
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 24,
+          "mean_p": 0.8487499999999999,
+          "frac_true": 0.6666666666666666
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 24,
+          "mean_p": 0.9404166666666667,
+          "frac_true": 0.8333333333333334
+        }
+      ]
+    },
+    "enriched": {
+      "n": 400,
+      "positives": 153,
+      "base_rate": 0.3825,
+      "brier": 0.11790825000000002,
+      "brier_base_rate": 0.23619374999999995,
+      "ece": 0.09867499999999998,
+      "best_f1": 0.8284023668639053,
+      "best_f1_threshold": 0.5,
+      "at_gate": {
+        "threshold": 0.52,
+        "tp": 138,
+        "fp": 44,
+        "fn": 15,
+        "precision": 0.7582417582417582,
+        "recall": 0.9019607843137255,
+        "f1": 0.8238805970149253,
+        "pass_rate": 0.455
+      },
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 83,
+          "mean_p": 0.05265060240963854,
+          "frac_true": 0.012048192771084338
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 46,
+          "mean_p": 0.13804347826086957,
+          "frac_true": 0.043478260869565216
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 38,
+          "mean_p": 0.25052631578947365,
+          "frac_true": 0.07894736842105263
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 22,
+          "mean_p": 0.345,
+          "frac_true": 0.09090909090909091
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 26,
+          "mean_p": 0.4411538461538462,
+          "frac_true": 0.19230769230769232
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 29,
+          "mean_p": 0.5493103448275862,
+          "frac_true": 0.6206896551724138
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 29,
+          "mean_p": 0.663793103448276,
+          "frac_true": 0.5517241379310345
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 22,
+          "mean_p": 0.7577272727272727,
+          "frac_true": 0.7272727272727273
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 38,
+          "mean_p": 0.8494736842105262,
+          "frac_true": 0.6842105263157895
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 67,
+          "mean_p": 0.9417910447761194,
+          "frac_true": 0.9552238805970149
+        }
+      ]
+    },
+    "all": {
+      "n": 1000,
+      "positives": 203,
+      "base_rate": 0.203,
+      "brier": 0.07764220000000001,
+      "brier_base_rate": 0.161791,
+      "ece": 0.09612000000000004,
+      "best_f1": 0.8017241379310345,
+      "best_f1_threshold": 0.5,
+      "at_gate": {
+        "threshold": 0.52,
+        "tp": 184,
+        "fp": 74,
+        "fn": 19,
+        "precision": 0.7131782945736435,
+        "recall": 0.9064039408866995,
+        "f1": 0.7982646420824295,
+        "pass_rate": 0.258
+      },
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 452,
+          "mean_p": 0.04661504424778761,
+          "frac_true": 0.0022123893805309734
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 123,
+          "mean_p": 0.13520325203252034,
+          "frac_true": 0.024390243902439025
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 80,
+          "mean_p": 0.248625,
+          "frac_true": 0.0375
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 38,
+          "mean_p": 0.3447368421052632,
+          "frac_true": 0.07894736842105263
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 46,
+          "mean_p": 0.4395652173913044,
+          "frac_true": 0.15217391304347827
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 40,
+          "mean_p": 0.554,
+          "frac_true": 0.5
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 38,
+          "mean_p": 0.663421052631579,
+          "frac_true": 0.5789473684210527
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 30,
+          "mean_p": 0.7506666666666668,
+          "frac_true": 0.6
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 62,
+          "mean_p": 0.8491935483870968,
+          "frac_true": 0.6774193548387096
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 91,
+          "mean_p": 0.9414285714285716,
+          "frac_true": 0.9230769230769231
+        }
+      ]
+    }
+  },
+  "recalibration_uniform": {
+    "raw": {
+      "ece": 0.10445,
+      "brier": 0.050798166666666665,
+      "prevalence": {
+        "estimated": 0.18765,
+        "labeled": 0.08333333333333333,
+        "gap": 0.10431666666666668,
+        "gap_ci95": [
+          0.08873083333333334,
+          0.1208695833333333
+        ],
+        "ci_includes_zero": false,
+        "n": 600
+      }
+    },
+    "temperature": {
+      "ece": 0.07171797167889579,
+      "brier": 0.04735365224157168,
+      "prevalence": {
+        "estimated": 0.15505130501222908,
+        "labeled": 0.08333333333333333,
+        "gap": 0.07171797167889575,
+        "gap_ci95": [
+          0.05608012522927924,
+          0.08887868898605093
+        ],
+        "ci_includes_zero": false,
+        "n": 600
+      },
+      "fold_params": [
+        0.6471958296579035,
+        0.6669107687729827
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 444,
+          "mean_p": 0.01798303032184434,
+          "frac_true": 0.0022522522522522522
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 36,
+          "mean_p": 0.1413020943704216,
+          "frac_true": 0.0
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 20,
+          "mean_p": 0.23830148775085594,
+          "frac_true": 0.05
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 12,
+          "mean_p": 0.3540704049920682,
+          "frac_true": 0.0
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 12,
+          "mean_p": 0.4336989528267581,
+          "frac_true": 0.16666666666666666
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 5,
+          "mean_p": 0.5614029805695362,
+          "frac_true": 0.2
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 7,
+          "mean_p": 0.6415461782507842,
+          "frac_true": 0.2857142857142857
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 10,
+          "mean_p": 0.7511808144515917,
+          "frac_true": 0.6
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 8,
+          "mean_p": 0.8440323759754558,
+          "frac_true": 0.375
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 46,
+          "mean_p": 0.9603972781595138,
+          "frac_true": 0.7391304347826086
+        }
+      ]
+    },
+    "isotonic": {
+      "ece": 0.017498183103446262,
+      "brier": 0.03560702042697173,
+      "prevalence": {
+        "estimated": 0.08379254371359635,
+        "labeled": 0.08333333333333333,
+        "gap": 0.0004592103802630171,
+        "gap_ci95": [
+          -0.014888862246428032,
+          0.015327151832086034
+        ],
+        "ci_includes_zero": true,
+        "n": 600
+      },
+      "fold_params": [
+        36,
+        22
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.1",
+          "n": 523,
+          "mean_p": 0.0038850820776955425,
+          "frac_true": 0.0076481835564053535
+        },
+        {
+          "bin": "0.1-0.2",
+          "n": 6,
+          "mean_p": 0.15384615384615385,
+          "frac_true": 0.16666666666666666
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 3,
+          "mean_p": 0.20000000000000004,
+          "frac_true": 0.3333333333333333
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 1,
+          "mean_p": 0.3333333333333333,
+          "frac_true": 1.0
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 0,
+          "mean_p": null,
+          "frac_true": null
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 31,
+          "mean_p": 0.5161290322580645,
+          "frac_true": 0.5806451612903226
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 0,
+          "mean_p": null,
+          "frac_true": null
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 16,
+          "mean_p": 0.738486842105263,
+          "frac_true": 0.5625
+        },
+        {
+          "bin": "0.8-0.9",
+          "n": 10,
+          "mean_p": 0.8571428571428571,
+          "frac_true": 0.7
+        },
+        {
+          "bin": "0.9-1.0",
+          "n": 10,
+          "mean_p": 1.0,
+          "frac_true": 0.9
+        }
+      ]
+    },
+    "temperature_full_fit": 0.6537018541726091,
+    "protocol": "two-fold, label-stratified cross-fit on the uniform stratum: fit on one half, report on the other, then swap, so every comment gets a held-out probability"
+  },
+  "prevalence_uniform_raw": {
+    "estimated": 0.18765,
+    "labeled": 0.08333333333333333,
+    "gap": 0.10431666666666668,
+    "gap_ci95": [
+      0.08873083333333334,
+      0.1208695833333333
+    ],
+    "ci_includes_zero": false,
+    "n": 600
+  },
+  "packing": {
+    "8": {
+      "n_common": 1000,
+      "n_missing": 0,
+      "best_f1_single": 0.8017241379310345,
+      "best_f1_packed": 0.7852193995381063,
+      "delta_f1": -0.01650473839292821,
+      "delta_f1_ci95": [
+        -0.04382713426086047,
+        0.010183940563830861
+      ],
+      "brier_single": 0.07764220000000001,
+      "brier_packed": 0.07161100000000001,
+      "brier_ratio": 0.9223205936977571,
+      "uniform_ece_packed": 0.09226666666666665,
+      "uniform_recall_at_gate_packed": 0.86,
+      "median_abs_dp_vs_single": 0.020000000000000004,
+      "passes": true
+    },
+    "16": {
+      "n_common": 1000,
+      "n_missing": 0,
+      "best_f1_single": 0.8017241379310345,
+      "best_f1_packed": 0.7709750566893424,
+      "delta_f1": -0.030749081241692067,
+      "delta_f1_ci95": [
+        -0.05544672562182067,
+        -0.0014027679959398764
+      ],
+      "brier_single": 0.07764220000000001,
+      "brier_packed": 0.07186369999999999,
+      "brier_ratio": 0.9255752670583778,
+      "uniform_ece_packed": 0.08678333333333335,
+      "uniform_recall_at_gate_packed": 0.86,
+      "median_abs_dp_vs_single": 0.029999999999999916,
+      "passes": false
+    }
+  },
+  "nonce_robustness": {
+    "n_comments": 100,
+    "n_pairs": 300,
+    "abs_dp_median": 0.009999999999999995,
+    "abs_dp_p95": 0.040000000000000036,
+    "range_median": 0.010000000000000002,
+    "range_p95": 0.06,
+    "abs_dp_vs_single_median": 0.009999999999999995,
+    "abs_dp_vs_single_p95": 0.04999999999999999
+  },
+  "baselines": {
+    "regex": {
+      "n": 600,
+      "scope": "uniform",
+      "baseline": {
+        "best_f1": 0.47619047619047616,
+        "best_f1_threshold": 0.01,
+        "f1_at_0.5": 0.47619047619047616,
+        "brier": 0.12833333333333333,
+        "ece": 0.12833333333333333
+      },
+      "jev_same_ids": {
+        "best_f1": 0.7652173913043478,
+        "best_f1_threshold": 0.61,
+        "brier": 0.050798166666666665,
+        "ece": 0.10445
+      },
+      "jev_minus_baseline_f1": 0.2890269151138717
+    },
+    "cheap_llm": {
+      "n": 864,
+      "scope": "all",
+      "baseline": {
+        "best_f1": 0.4857685009487666,
+        "best_f1_threshold": 0.66,
+        "f1_at_0.5": 0.43310344827586206,
+        "brier": 0.2582991898148148,
+        "ece": 0.34181712962962957
+      },
+      "jev_same_ids": {
+        "best_f1": 0.7634408602150538,
+        "best_f1_threshold": 0.5,
+        "brier": 0.08187488425925926,
+        "ece": 0.10001157407407409
+      },
+      "jev_minus_baseline_f1": 0.27767235926628714,
+      "uniform": {
+        "baseline_best_f1": 0.34951456310679613,
+        "jev_best_f1": 0.7652173913043478
+      }
+    },
+    "frontier_llm": {
+      "n": 864,
+      "scope": "all",
+      "baseline": {
+        "best_f1": 0.6914893617021277,
+        "best_f1_threshold": 0.13,
+        "f1_at_0.5": 0.6868131868131868,
+        "brier": 0.09842615740740739,
+        "ece": 0.06708333333333333
+      },
+      "jev_same_ids": {
+        "best_f1": 0.7634408602150538,
+        "best_f1_threshold": 0.5,
+        "brier": 0.08187488425925926,
+        "ece": 0.10001157407407409
+      },
+      "jev_minus_baseline_f1": 0.07195149851292604,
+      "uniform": {
+        "baseline_best_f1": 0.6666666666666666,
+        "jev_best_f1": 0.7652173913043478
+      }
+    }
+  },
+  "stage_b": {
+    "n_labeled_positives_with_stage_b": 203,
+    "fields": {
+      "is_checkable": {
+        "n": 202,
+        "accuracy": 0.7425742574257426,
+        "agreement": 0.7425742574257426,
+        "kappa": 0.37816717973004965,
+        "human_agreement": 0.7227722772277229,
+        "ratio_to_human": 1.0273972602739725,
+        "status": "pass"
+      },
+      "is_sarcastic": {
+        "n": 203,
+        "accuracy": 0.9408866995073891,
+        "agreement": 0.9408866995073891,
+        "kappa": 0.5118236472945892,
+        "human_agreement": 0.9669966996699669,
+        "ratio_to_human": 0.97299887355201,
+        "status": "pass"
+      },
+      "is_conditional": {
+        "n": 203,
+        "accuracy": 0.7733990147783252,
+        "agreement": 0.7733990147783252,
+        "kappa": 0.5460820532762979,
+        "human_agreement": 0.792079207920792,
+        "ratio_to_human": 0.9764162561576356,
+        "status": "pass"
+      },
+      "direction": {
+        "n": 193,
+        "accuracy": 0.7253886010362695,
+        "agreement": 0.7253886010362695,
+        "kappa": 0.6265698014018691,
+        "human_agreement": 0.6831683168316832,
+        "ratio_to_human": 1.0618007058646841,
+        "status": "pass"
+      },
+      "domain": {
+        "n": 186,
+        "accuracy": 0.7795698924731183,
+        "agreement": 0.7795698924731183,
+        "kappa": 0.7451799378487654,
+        "human_agreement": 0.6617161716171617,
+        "ratio_to_human": 1.1781031292735902,
+        "status": "pass"
+      },
+      "horizon": {
+        "n": 199,
+        "accuracy": 0.8542713567839196,
+        "agreement": 0.8542713567839196,
+        "kappa": 0.6435674139954295,
+        "human_agreement": 0.7706270627062706,
+        "ratio_to_human": 1.1085405614797759,
+        "status": "pass"
+      },
+      "stance_vs_thread": {
+        "n": 198,
+        "accuracy": 0.803030303030303,
+        "agreement": 0.803030303030303,
+        "kappa": 0.6277836691410393,
+        "human_agreement": 0.7673267326732672,
+        "ratio_to_human": 1.0465298142717498,
+        "status": "pass"
+      },
+      "certainty": {
+        "n": 203,
+        "mae_levels": 0.34571428571428575,
+        "agreement": 0.8847619047619047,
+        "exact": 0.7093596059113301,
+        "kappa_linear": 0.5674408693799275,
+        "human_agreement": 0.8283828382838284,
+        "ratio_to_human": 1.0680591918042117,
+        "status": "pass"
+      },
+      "specificity": {
+        "n": 203,
+        "mae_levels": 0.3268472906403941,
+        "agreement": 0.8910509031198687,
+        "exact": 0.7783251231527094,
+        "kappa_linear": 0.48866498740554143,
+        "human_agreement": 0.8503850385038504,
+        "ratio_to_human": 1.0478205316118507,
+        "status": "pass"
+      }
+    },
+    "score_level_rule": [
+      "legend"
+    ],
+    "subject_other_share": {
+      "n": 203,
+      "share": 0.6798029556650246,
+      "roster_needs_buildout": true
+    }
+  },
+  "economics": {
+    "eligible_comments": 17950609,
+    "eligible_source": "data/eligible.json (2006-2020, 80-4000 chars)",
+    "price_per_m_input": 0.042,
+    "rpm": 1200,
+    "tps": 250000,
+    "stage_b_tokens_per_comment": 1731.6173285198556,
+    "stage_b_tokens_source": "measured",
+    "usage": {
+      "single": {
+        "file": "raw_a_single_v1.jsonl",
+        "requests": 1000,
+        "comments": 1000,
+        "comments_per_request": 1.0,
+        "input_tokens_total": 566650,
+        "input_tokens_per_request": 566.65,
+        "input_tokens_per_comment": 566.65,
+        "input_tokens_max_request": 1130,
+        "latency_ms_p50": 179.73009997513145,
+        "latency_ms_p95": 241.14440003759228,
+        "retried_requests": 0
+      },
+      "packed8": {
+        "file": "raw_a_packed8_v1.jsonl",
+        "requests": 125,
+        "comments": 1000,
+        "comments_per_request": 8.0,
+        "input_tokens_total": 354900,
+        "input_tokens_per_request": 2839.2,
+        "input_tokens_per_comment": 354.9,
+        "input_tokens_max_request": 3690,
+        "latency_ms_p50": 195.31919993460178,
+        "latency_ms_p95": 415.29820000287145,
+        "retried_requests": 0
+      },
+      "packed16": {
+        "file": "raw_a_packed16_v1.jsonl",
+        "requests": 63,
+        "comments": 1000,
+        "comments_per_request": 15.873015873015873,
+        "input_tokens_total": 338904,
+        "input_tokens_per_request": 5379.428571428572,
+        "input_tokens_per_comment": 338.904,
+        "input_tokens_max_request": 6285,
+        "latency_ms_p50": 218.4329000301659,
+        "latency_ms_p95": 648.6984899383968,
+        "retried_requests": 0
+      },
+      "stage_b": {
+        "file": "raw_b_v1.jsonl",
+        "requests": 277,
+        "comments": 277,
+        "comments_per_request": 1.0,
+        "input_tokens_total": 479658,
+        "input_tokens_per_request": 1731.6173285198556,
+        "input_tokens_per_comment": 1731.6173285198556,
+        "input_tokens_max_request": 2273,
+        "latency_ms_p50": 212.1787000214681,
+        "latency_ms_p95": 353.7306000245735,
+        "retried_requests": 3
+      }
+    },
+    "projections": {
+      "single": {
+        "comments": 17950609,
+        "stage_b_pass_rate": 0.12666666666666668,
+        "stage_b_comments": 2273743,
+        "requests": 20224352,
+        "input_tokens": 14108966766,
+        "cost_usd": 592.5766041757255,
+        "cost_usd_stage_a": 427.21192877370004,
+        "hours_request_limit": 280.89378898148146,
+        "hours_token_limit": 15.676629740098557,
+        "hours": 280.89378898148146,
+        "days": 11.703907874228394,
+        "binding_limit": "requests"
+      },
+      "packed8": {
+        "comments": 17950609,
+        "stage_b_pass_rate": 0.10666666666666667,
+        "stage_b_comments": 1914731,
+        "requests": 4158557,
+        "input_tokens": 9686253598,
+        "cost_usd": 406.8226511286424,
+        "cost_usd_stage_a": 267.56818763219997,
+        "hours_request_limit": 57.75774655092593,
+        "hours_token_limit": 10.762503998112233,
+        "hours": 57.75774655092593,
+        "days": 2.406572772955247,
+        "binding_limit": "requests"
+      },
+      "packed16": {
+        "comments": 17950609,
+        "stage_b_pass_rate": 0.10666666666666667,
+        "stage_b_comments": 1914731,
+        "requests": 3045619,
+        "input_tokens": 9399115656,
+        "cost_usd": 394.7628575829545,
+        "cost_usd_stage_a": 255.50839408651203,
+        "hours_request_limit": 42.30027768981481,
+        "hours_token_limit": 10.443461840818902,
+        "hours": 42.30027768981481,
+        "days": 1.7625115704089505,
+        "binding_limit": "requests"
+      }
+    },
+    "design": "packed8"
+  },
+  "gates": {
+    "G1_recall": {
+      "status": "pass",
+      "value": 0.92,
+      "threshold": 0.85,
+      "detail": "uniform recall at gate 0.52; held-out (gate chosen on the other half): 0.920"
+    },
+    "G2_calibration": {
+      "status": "pass",
+      "value": 0.017498183103446262,
+      "threshold": 0.08,
+      "detail": "raw ECE 0.1045; best recalibrated: isotonic"
+    },
+    "G3_prevalence": {
+      "status": "pass",
+      "value": 0.0004592103802630171,
+      "threshold": 0.02,
+      "detail": "isotonic-recalibrated gap, 95% CI [-0.015, +0.015]"
+    },
+    "G4_packing": {
+      "status": "pass",
+      "value": 8,
+      "threshold": "F1 drop <= 0.03 and Brier <= 1.10x single",
+      "detail": "largest passing N goes into the full-run design"
+    },
+    "G5_baselines": {
+      "status": "pass",
+      "value": "vs regex (uniform) +0.289; vs frontier (all) +0.072",
+      "threshold": "regex +0.15, frontier -0.05",
+      "detail": ""
+    },
+    "G6_robustness": {
+      "status": "pass",
+      "value": 0.009999999999999995,
+      "threshold": 0.05,
+      "detail": "p95 0.040"
+    },
+    "G7_economics": {
+      "status": "pass",
+      "value": {
+        "cost_usd": 406.82,
+        "days": 2.41
+      },
+      "threshold": {
+        "cost_usd": 3000.0,
+        "days": 7.0
+      },
+      "detail": "design packed8, binding limit: requests"
+    },
+    "stageB_fields": {
+      "status": "pass",
+      "value": {
+        "is_checkable": 1.027,
+        "is_sarcastic": 0.973,
+        "is_conditional": 0.976,
+        "direction": 1.062,
+        "domain": 1.178,
+        "horizon": 1.109,
+        "stance_vs_thread": 1.047,
+        "certainty": 1.068,
+        "specificity": 1.048
+      },
+      "threshold": 0.8,
+      "detail": "failing fields are dropped or marked experimental; this does not block Go"
+    }
+  },
+  "decision": {
+    "result": "go",
+    "rule": "Go if G1, G2, G4 and G7 pass. G3, G5, G6 shape the public framing.",
+    "framing": {
+      "prevalence": "estimates"
+    }
+  },
+  "failure_cases": {
+    "misses": [
+      {
+        "id": 13301263,
+        "stratum": "enriched",
+        "p": 0.09,
+        "story_title": "$2T in Proceeds of Corruption Removed from China and Taken to US, AUS, CAN, NL",
+        "comment": "QE is not resulting in enough growth in the Western world, because there are just not enough profitable businesses for investors to pour their cheap money into. The central bankers created QE as a way to add liquidity into the markets to allow banks to lend, to allow small businesses to grow, to help economies to generate growth. Unfortunately that money was lent to the big bankers and they realiz\u2026"
+      },
+      {
+        "id": 14773647,
+        "stratum": "uniform",
+        "p": 0.13,
+        "story_title": "The Internet of Things \u2013 A Disaster",
+        "comment": "The vast majority of issues will arise from software defects, not hardware defects. Exactly. The last thing I want in my house is a smoke alarm with software written by idiots like me."
+      },
+      {
+        "id": 16872195,
+        "stratum": "enriched",
+        "p": 0.17,
+        "story_title": "I built a progressive web app and published it in three app stores",
+        "comment": "Almost literally by definition, a webapp isn't going to be as good as a proper application. If one of the advantages is \"front end guys don't have to learn another language\" I'm starting to be of the opinion that that's their reticence to use the proper tools, rather than the inherent superiority of JS. People visit websites because many of them don't need to be apps. I don't need an app (webapp o\u2026"
+      },
+      {
+        "id": 6630740,
+        "stratum": "enriched",
+        "p": 0.19,
+        "story_title": "April 5, 2007: \"Show HN, Dropbox\"",
+        "comment": "Came here to post this. No, seriously, exactly this. That was my favorite quote out of the entire comments! FTP with curlftpfs and SVN/CVS isn't \"trivial\" to 99.9% of the population! It's the same reason that sites like SlashDot were filled with all sorts of reasons why the iPad would never work. Why would you use that?!? You could do the same thing with ______. Yes, you could. But you won't."
+      },
+      {
+        "id": 21317654,
+        "stratum": "enriched",
+        "p": 0.22,
+        "story_title": "Google attempted to shut down a unionization meeting in Zurich",
+        "comment": "I'd vote for everyone who has a reasonable plan of more scrutiny towards 40 hour work weeks. This may reduce salaries but oh God most of us make too much money anyhow. Let's have a life now! When are you going to enjoy life, after retirement? Would you wait with sex till after retirement, too, if that offered a salary increase?"
+      },
+      {
+        "id": 19768461,
+        "stratum": "enriched",
+        "p": 0.25,
+        "story_title": "Could ImGUI Be the Future of GUIs?",
+        "comment": "Sorry if I misinterpreted your post but I don't think that changes my response much. You can absolutely use Win32 Forms and WPF (and probably Qt) with a game. They can be overlaid on top of a DirectX or OpenGL window (with a transparent background) -- I've done it before! I don't think it would have any of the downsides you mentioned, either, except that it wouldn't be GPU accelerated or actually \u2026"
+      },
+      {
+        "id": 8786009,
+        "stratum": "enriched",
+        "p": 0.28,
+        "story_title": "Is Homo Economicus a Psychopath?",
+        "comment": "> Note on Nietzche: In Thus Spake Zarathrusa, the \"uberman\" concept is (maybe) considered a positive that humanity should work towards in the absence of belief in God, and I think it can still be understood as such. The problem is that, in the absence of God, there is no absolute morality that is not the result of an arbitrary choice. When the \"uberman\" arises, he/she creates a new morality, which\u2026"
+      },
+      {
+        "id": 6340655,
+        "stratum": "enriched",
+        "p": 0.31,
+        "story_title": "Has the time come to kill the Remember Me checkbox? (2009)",
+        "comment": "but isn't what's being asked? If the box is checked by default, then public computers will have a whole list of email address and logins to steal"
+      },
+      {
+        "id": 19329296,
+        "stratum": "enriched",
+        "p": 0.33,
+        "story_title": "The $2M Urinal: Why Hard Work Doesn\u2019t Cut It (2018)",
+        "comment": "Not really. The lottery (unless cheating) should provide real randomness. ie: A president has the same chance as the next guy. If both a former president and the next guy do an art piece, I'm pretty certain the president will fetch a higher price for his art work. That's the network effect."
+      },
+      {
+        "id": 16034144,
+        "stratum": "uniform",
+        "p": 0.33,
+        "story_title": "Call of Duty gaming community points to \u2018swatting\u2019 in Wichita police shooting",
+        "comment": "> For example, while SWAT is gearing up, the operator could ask who is calling and how they learned of the issue. How exactly would that help? Swatting is by definition fraudulent callers claiming to have firsthand knowledge of an issue -- in this case, he pretended to be a hostage taker.[1] Better hoax detection training is a fine idea but swatters are determined adversaries. It's going to take m\u2026"
+      }
+    ],
+    "false_positives": [
+      {
+        "id": 10426384,
+        "stratum": "enriched",
+        "p": 0.97,
+        "story_title": "Teen Who Hacked CIA Director\u2019s Email Tells How He Did It",
+        "comment": "Two things. 1) This kid just got at least one person fired from his job (though he may deserve it). 2) This kid WILL be caught and regret it the rest of his life."
+      },
+      {
+        "id": 417121,
+        "stratum": "uniform",
+        "p": 0.95,
+        "story_title": "Math pastebin with LaTeX math equation rendering",
+        "comment": "Superb! Just what I wanted some months backs and had given up on.. I am surely gonna send you visitors by the truckload in coming weeks."
+      },
+      {
+        "id": 2970135,
+        "stratum": "uniform",
+        "p": 0.94,
+        "story_title": "Replacing a Development VPS with Linux on OSX",
+        "comment": "> Not true for Rackspace. You're right. From what I hear, it may become a feature once they convert everything to openstack."
+      },
+      {
+        "id": 20560166,
+        "stratum": "enriched",
+        "p": 0.91,
+        "story_title": "Megapack: Utility-Scale Energy Storage",
+        "comment": "I sincerely hope that Tesla can increase cell production to keep up with demand for all their products. When you look at product lines like this it makes you realise the scale and breadth of Elon Musk's influence and even if only half of his endeavours prove to be as successful as they seem like they will be he will be written about extensively in history books."
+      },
+      {
+        "id": 8594594,
+        "stratum": "uniform",
+        "p": 0.91,
+        "story_title": "Rosetta comet landing \u2013 live stream",
+        "comment": "They received the confirmation that the lander separation was successful. EDIT: First lander data expected in about 2 hours from now."
+      },
+      {
+        "id": 7866115,
+        "stratum": "enriched",
+        "p": 0.9,
+        "story_title": "Show HN: Dominus \u2013 Multiplayer browser strategy game made with Meteor",
+        "comment": "Yeah, some things were messed up and the database was rolled back. It will hopefully be faster now."
+      },
+      {
+        "id": 6014644,
+        "stratum": "uniform",
+        "p": 0.9,
+        "story_title": "Netflix dumps Exchange, other on-premise software in cloud-first strategy",
+        "comment": "I don't think it's just about SSO. Exchange isn't cheap to license or keep operational. If you switch to exchange in cloud it doesn't reduce the costs that much. Hopefully soon Microsoft will realize the value some of their products (SQL Server and Exchange) isn't nearly what it used to be and that they need to adjust prices and licensing requirements."
+      },
+      {
+        "id": 19239216,
+        "stratum": "uniform",
+        "p": 0.89,
+        "story_title": "Ask HN: Pros and cons of working at a startup in 2019?",
+        "comment": "Plus the opportunity to get promoted and make significantly more in a couple years."
+      },
+      {
+        "id": 7487827,
+        "stratum": "uniform",
+        "p": 0.89,
+        "story_title": "Tesla Adds Titanium Underbody Shield and Aluminum Deflector Plates to Model S",
+        "comment": "I just had a thought that Elon Musk owning both Tesla and SpaceX, the next logical step would be an electric powered airplane or a chopper. It could be an airplane/chopper that would glide down to safety in case of a mechanical failure, or crash land on rough terrain without fear of catching fire. That would disrupt aviation industry like never before."
+      },
+      {
+        "id": 12064590,
+        "stratum": "uniform",
+        "p": 0.88,
+        "story_title": "Silicon Valley-Driven Hype for Self-Driving Cars",
+        "comment": "What surprises me is that last-mile and local transportation of non-living cargo hasn't gotten more attention. I can't wait to get cheap delivery from practically anywhere in town and nearly on demand."
+      }
+    ]
+  }
+}

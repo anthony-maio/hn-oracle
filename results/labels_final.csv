@@ -1,0 +1,1001 @@
+id,stratum,is_prediction,is_checkable,is_sarcastic,is_conditional,direction,domain,horizon,stance_vs_thread,certainty,specificity,subject_text,labeler,notes,source
+2300587,uniform,0,,,,,,,,,,,anthony,,human
+18184233,uniform,0,,,,,,,,,,,anthony,,human
+9412866,uniform,0,,,,,,,,,,,anthony,,human
+9660446,uniform,0,,,,,,,,,,,anthony,,human
+18297242,uniform,0,,,,,,,,,,,anthony,,human
+17277650,uniform,0,,,,,,,,,,,anthony,"at will is employment status, not a forecast",human
+10297725,uniform,0,,,,,,,,,,,anthony,,human
+21520789,uniform,0,,,,,,,,,,,anthony,,human
+12295055,uniform,0,,,,,,,,,,,anthony,,human
+10075231,uniform,0,,,,,,,,,,,anthony,,human
+19904808,uniform,0,,,,,,,,,,,anthony,,human
+7608491,uniform,0,,,,,,,,,,,anthony,"reader motivation, not a tech forecast",human
+3493169,uniform,0,,,,,,,,,,,anthony,,human
+17159572,uniform,1,1,0,0,change,policy_law,unstated,contrarian,1.0,1.0,"United States internet regulation, EU regulatory influence",anthony,the United States will create the opposite regime,human
+14840402,uniform,0,,,,,,,,,,,anthony,,human
+5388905,uniform,0,,,,,,,,,,,anthony,,human
+10855235,uniform,0,,,,,,,,,,,anthony,,human
+11829156,uniform,1,1,0,0,change,infrastructure,1_to_5y,agrees,1.0,1.0,Windows Pro edition,anthony,I would expect Windows Pro to be that edition,human
+19992565,uniform,0,,,,,,,,,,,anthony,,human
+2283368,uniform,0,,,,,,,,,,,anthony,,human
+9054911,uniform,0,,,,,,,,,,,anthony,,human
+8885534,uniform,0,,,,,,,,,,,anthony,,human
+17391148,uniform,0,,,,,,,,,,,anthony,,human
+2569429,uniform,0,,,,,,,,,,,anthony,,human
+6398715,uniform,0,,,,,,,,,,,anthony,,human
+20630004,uniform,0,,,,,,,,,,,anthony,,human
+15920677,uniform,0,,,,,,,,,,,anthony,"present language behavior, not forecast",human
+19057499,uniform,0,,,,,,,,,,,anthony,,human
+9183840,uniform,0,,,,,,,,,,,anthony,,human
+14775621,uniform,0,,,,,,,,,,,anthony,,human
+6135551,uniform,1,1,0,0,change,language_or_framework,unstated,agrees,2.0,1.0,Go programming language on Bitcast.io,anthony,We're definitely planning on adding Go.,human
+12317972,uniform,0,,,,,,,,,,,anthony,,human
+14129017,uniform,1,0,0,0,change,,unstated,agrees,2.0,1.0,cameras,anthony,cameras will look very different from what they look now,human
+13288548,uniform,0,,,,,,,,,,,anthony,,human
+432897,uniform,0,,,,,,,,,,,anthony,"learning advice, not a scoped forecast",human
+11546030,uniform,0,,,,,,,,,,,anthony,,human
+16868361,uniform,0,,,,,,,,,,,anthony,,human
+6712935,uniform,0,,,,,,,,,,,anthony,,human
+10391461,uniform,0,,,,,,,,,,,anthony,"Describes current tracking, not a later outcome",human
+8898332,uniform,0,,,,,,,,,,,anthony,,human
+1903707,uniform,0,,,,,,,,,,,anthony,"Describes puzzle options, not a forecast",human
+10374670,uniform,0,,,,,,,,,,,anthony,,human
+12285248,uniform,0,,,,,,,,,,,anthony,,human
+7277772,uniform,0,,,,,,,,,,,anthony,,human
+5993843,uniform,0,,,,,,,,,,,anthony,,human
+6014644,uniform,0,,,,,,,,,,,anthony,"hopeful wish, not an asserted forecast",human
+8844779,uniform,0,,,,,,,,,,,anthony,,human
+13513653,uniform,1,1,0,0,no_change,,under_1y,contrarian,1.0,2.0,Washington Post,anthony,I don't think that this is happening anytime soon,human
+18912695,uniform,0,,,,,,,,,,,anthony,,human
+14909082,uniform,0,,,,,,,,,,,anthony,,human
+20144297,uniform,1,1,0,0,change,infrastructure,1_to_5y,agrees,1.0,2.0,"Apple T2 chip, Hackintosh support",anthony,they just need a few years before they can stop supporting the “normal” computers.,human
+8768025,uniform,0,,,,,,,,,,,anthony,,human
+17120723,uniform,1,1,0,0,change,policy_law,unstated,agrees,1.0,1.0,Microsoft GDPR compliance,anthony,I'm concerned that Microsoft is not going to stop here,human
+2291691,uniform,0,,,,,,,,,,,anthony,,human
+16210207,uniform,0,,,,,,,,,,,anthony,,human
+9513329,uniform,0,,,,,,,,,,,anthony,"personal hope, not a scoped forecast",human
+15821946,uniform,0,,,,,,,,,,,anthony,,human
+21433059,uniform,0,,,,,,,,,,,anthony,"quotes others' insult, not own forecast",human
+10318153,uniform,0,,,,,,,,,,,anthony,,human
+3996836,uniform,0,,,,,,,,,,,anthony,,human
+2316141,uniform,0,,,,,,,,,,,anthony,,human
+17295494,uniform,0,,,,,,,,,,,anthony,,human
+2961085,uniform,0,,,,,,,,,,,anthony,,human
+11376338,uniform,1,1,0,0,success,language_or_framework,unstated,agrees,2.0,1.0,Electron,anthony,Electron is the future of desktop software,human
+8261276,uniform,0,,,,,,,,,,,anthony,,human
+12927755,uniform,0,,,,,,,,,,,anthony,"describes current fade, not a forecast",human
+20908911,uniform,0,,,,,,,,,,,anthony,,human
+13299458,uniform,0,,,,,,,,,,,anthony,,human
+10156666,uniform,0,,,,,,,,,,,anthony,,human
+18981970,uniform,0,,,,,,,,,,,anthony,,human
+12039438,uniform,0,,,,,,,,,,,anthony,,human
+7146132,uniform,0,,,,,,,,,,,anthony,"tool capability description, not a forecast",human
+4852971,uniform,0,,,,,,,,,,,anthony,,human
+11480460,uniform,0,,,,,,,,,,,anthony,,human
+16485136,uniform,0,,,,,,,,,,,anthony,personal plans and habitual client behavior,human
+13025273,uniform,0,,,,,,,,,,,anthony,,human
+19157541,uniform,0,,,,,,,,,,,anthony,,human
+5749757,uniform,0,,,,,,,,,,,anthony,,human
+949506,uniform,0,,,,,,,,,,,anthony,,human
+6008297,uniform,0,,,,,,,,,,,anthony,,human
+1725984,uniform,0,,,,,,,,,,,anthony,,human
+19546476,uniform,0,,,,,,,,,,,anthony,,human
+6116928,uniform,0,,,,,,,,,,,anthony,,human
+8047249,uniform,0,,,,,,,,,,,anthony,,human
+629683,uniform,0,,,,,,,,,,,anthony,,human
+13318618,uniform,0,,,,,,,,,,,anthony,"predicts readers' reaction, not scoped outcome",human
+5408883,uniform,0,,,,,,,,,,,anthony,,human
+9212890,uniform,0,,,,,,,,,,,anthony,,human
+21455707,uniform,0,,,,,,,,,,,anthony,,human
+12423134,uniform,0,,,,,,,,,,,anthony,,human
+2061842,uniform,1,1,0,1,success,product_adoption,unstated,agrees,1.0,1.0,3D printing tools and amateur 3D object creation,anthony,I think we'll see a Cambrian-explosion of art and tech objects.,human
+21068397,uniform,1,1,0,0,change,infrastructure,under_1y,agrees,2.0,1.0,macOS app notarization requirements,anthony,tomorrow it is some scummy app,human
+12064590,uniform,0,,,,,,,,,,,anthony,,human
+11590598,uniform,0,,,,,,,,,,,anthony,,human
+13639877,uniform,0,,,,,,,,,,,anthony,going to argue is a speech act,human
+8341500,uniform,0,,,,,,,,,,,anthony,,human
+13306505,uniform,0,,,,,,,,,,,anthony,,human
+12751865,uniform,0,,,,,,,,,,,anthony,,human
+6036988,uniform,0,,,,,,,,,,,anthony,,human
+10933533,uniform,0,,,,,,,,,,,anthony,,human
+19821210,uniform,0,,,,,,,,,,,anthony,,human
+2774286,uniform,0,,,,,,,,,,,anthony,,human
+12839853,uniform,0,,,,,,,,,,,anthony,,human
+19356661,uniform,1,1,0,0,change,product_adoption,unstated,agrees,1.0,1.0,e-liquid flavorings and vaping regulation,anthony,they will spin another five flavours by tomorrow,human
+9239334,uniform,0,,,,,,,,,,,anthony,,human
+12241723,uniform,1,1,0,0,,,unstated,contrarian,2.0,1.0,vehicle manufacturers' restrictive ToS enforcement,anthony,people who want to rent their self-driving cars won't buy those,human
+3420546,uniform,0,,,,,,,,,,,anthony,,human
+14670774,uniform,0,,,,,,,,,,,anthony,,human
+20145464,uniform,0,,,,,,,,,,,anthony,,human
+1213936,uniform,0,,,,,,,,,,,anthony,going to work means commuting,human
+10317310,uniform,0,,,,,,,,,,,anthony,,human
+2513923,uniform,0,,,,,,,,,,,anthony,,human
+19606772,uniform,0,,,,,,,,,,,anthony,,human
+7467252,uniform,0,,,,,,,,,,,anthony,"immediate UI reading critique, not a forecast",human
+10625481,uniform,0,,,,,,,,,,,anthony,,human
+4706281,uniform,0,,,,,,,,,,,anthony,,human
+2212340,uniform,0,,,,,,,,,,,anthony,,human
+4388275,uniform,0,,,,,,,,,,,anthony,,human
+13667909,uniform,0,,,,,,,,,,,anthony,,human
+14554647,uniform,0,,,,,,,,,,,anthony,,human
+15053508,uniform,0,,,,,,,,,,,anthony,,human
+5211827,uniform,0,,,,,,,,,,,anthony,,human
+11803908,uniform,0,,,,,,,,,,,anthony,,human
+13759643,uniform,0,,,,,,,,,,,anthony,,human
+14256914,uniform,0,,,,,,,,,,,anthony,,human
+20403361,uniform,0,,,,,,,,,,,anthony,,human
+9225225,uniform,0,,,,,,,,,,,anthony,,human
+9852726,uniform,0,,,,,,,,,,,anthony,,human
+6871760,uniform,0,,,,,,,,,,,anthony,,human
+4387363,uniform,0,,,,,,,,,,,anthony,"Uncertainty, no stated forecast",human
+631410,uniform,0,,,,,,,,,,,anthony,,human
+3786431,uniform,0,,,,,,,,,,,anthony,,human
+7309109,uniform,0,,,,,,,,,,,anthony,,human
+14651643,uniform,0,,,,,,,,,,,anthony,,human
+21726858,uniform,0,,,,,,,,,,,anthony,,human
+2682375,uniform,0,,,,,,,,,,,anthony,,human
+7735409,uniform,0,,,,,,,,,,,anthony,,human
+20062099,uniform,0,,,,,,,,,,,anthony,,human
+21878523,uniform,0,,,,,,,,,,,anthony,,human
+19284678,uniform,0,,,,,,,,,,,anthony,,human
+14763536,uniform,1,1,0,0,no_change,policy_law,unstated,contrarian,3.0,1.0,housing cost reduction in San Francisco,anthony,Anything that would lower the cost of housing can't be done,human
+12082195,uniform,0,,,,,,,,,,,anthony,,human
+13459398,uniform,1,1,0,0,failure,policy_law,unstated,agrees,1.0,1.0,H.R.193 American Sovereignty Restoration Act,anthony,It's chances are slim.,human
+9284895,uniform,0,,,,,,,,,,,anthony,,human
+15892976,uniform,0,,,,,,,,,,,anthony,,human
+5693553,uniform,0,,,,,,,,,,,anthony,,human
+7655931,uniform,0,,,,,,,,,,,anthony,,human
+19959404,uniform,0,,,,,,,,,,,anthony,,human
+10827238,uniform,0,,,,,,,,,,,anthony,,human
+12230585,uniform,1,1,0,1,success,language_or_framework,unstated,agrees,1.0,1.0,Microsoft VS/VSCode development team,anthony,they might reach a point where the competition looks very bad,human
+21030934,uniform,0,,,,,,,,,,,anthony,,human
+10981193,uniform,0,,,,,,,,,,,anthony,,human
+7051993,uniform,0,,,,,,,,,,,anthony,,human
+6766933,uniform,0,,,,,,,,,,,anthony,,human
+11931474,uniform,0,,,,,,,,,,,anthony,,human
+11067051,uniform,0,,,,,,,,,,,anthony,,human
+4614775,uniform,0,,,,,,,,,,,anthony,,human
+21173566,uniform,0,,,,,,,,,,,anthony,,human
+8498171,uniform,0,,,,,,,,,,,anthony,,human
+21773630,uniform,0,,,,,,,,,,,anthony,,human
+13073346,uniform,0,,,,,,,,,,,anthony,,human
+12205247,uniform,1,1,0,1,change,infrastructure,unstated,agrees,2.0,1.0,bandwidth management and encryption,anthony,"bandwidth comparison and hypothetical, not a forecast | review: conditional claim prices would keep rising",human
+2073990,uniform,0,,,,,,,,,,,anthony,,human
+18254279,uniform,0,,,,,,,,,,,anthony,,human
+13093882,uniform,0,,,,,,,,,,,anthony,"I wonder if they would change the law | review: question, no assertion",human
+594270,uniform,0,,,,,,,,,,,anthony,,human
+9087467,uniform,0,,,,,,,,,,,anthony,,human
+21802804,uniform,0,,,,,,,,,,,anthony,,human
+6764541,uniform,0,,,,,,,,,,,anthony,,human
+19485523,uniform,0,,,,,,,,,,,anthony,"Quotes parent forecast, does not endorse",human
+6173150,uniform,0,,,,,,,,,,,anthony,,human
+12955599,uniform,0,,,,,,,,,,,anthony,,human
+11150266,uniform,0,,,,,,,,,,,anthony,,human
+12904104,uniform,0,,,,,,,,,,,anthony,,human
+1799616,uniform,0,,,,,,,,,,,anthony,,human
+8889128,uniform,0,,,,,,,,,,,anthony,,human
+21541786,uniform,0,,,,,,,,,,,anthony,,human
+3024841,uniform,1,1,0,0,success,product_adoption,1_to_5y,contrarian,2.0,2.0,web platform vs proprietary platforms,anthony,"will be assimilated, in a few years' time",human
+10089388,uniform,0,,,,,,,,,,,anthony,,human
+2970135,uniform,0,,,,,,,,,,,anthony,"it may become a feature once they convert | review: hearsay, not an endorsed forecast",human
+6258066,uniform,0,,,,,,,,,,,anthony,,human
+17395416,uniform,0,,,,,,,,,,,anthony,,human
+21250664,uniform,0,,,,,,,,,,,anthony,,human
+11502046,uniform,0,,,,,,,,,,,anthony,,human
+18906353,uniform,0,,,,,,,,,,,anthony,,human
+3625209,uniform,0,,,,,,,,,,,anthony,,human
+13049381,uniform,1,1,0,1,failure,product_adoption,over_10y,agrees,1.0,2.0,Google AMP,anthony,the link may break eventually,human
+1342285,uniform,0,,,,,,,,,,,anthony,,human
+10450472,uniform,0,,,,,,,,,,,anthony,"how-to necessity, not a forecast",human
+11391679,uniform,0,,,,,,,,,,,anthony,quoted joke about closing a window,human
+15003696,uniform,0,,,,,,,,,,,anthony,"personal study advice, not a forecast",human
+21012358,uniform,0,,,,,,,,,,,anthony,,human
+17792596,uniform,0,,,,,,,,,,,anthony,,human
+9591071,uniform,0,,,,,,,,,,,anthony,,human
+5166394,uniform,0,,,,,,,,,,,anthony,,human
+15001606,uniform,0,,,,,,,,,,,anthony,,human
+6183719,uniform,0,,,,,,,,,,,anthony,"individual effect claim, not a scoped forecast",human
+11700118,uniform,0,,,,,,,,,,,anthony,,human
+1298551,uniform,0,,,,,,,,,,,anthony,,human
+19144103,uniform,0,,,,,,,,,,,anthony,,human
+2117690,uniform,0,,,,,,,,,,,anthony,,human
+3415752,uniform,0,,,,,,,,,,,anthony,,human
+21305090,uniform,0,,,,,,,,,,,anthony,,human
+14781425,uniform,0,,,,,,,,,,,anthony,,human
+14393616,uniform,0,,,,,,,,,,,anthony,going to bed is not a future claim,human
+21727436,uniform,0,,,,,,,,,,,anthony,,human
+11448423,uniform,0,,,,,,,,,,,anthony,,human
+8194224,uniform,0,,,,,,,,,,,anthony,,human
+7687807,uniform,0,,,,,,,,,,,anthony,,human
+21300850,uniform,0,,,,,,,,,,,anthony,,human
+16772822,uniform,0,,,,,,,,,,,anthony,,human
+9046463,uniform,0,,,,,,,,,,,anthony,,human
+7362253,uniform,0,,,,,,,,,,,anthony,,human
+19235582,uniform,0,,,,,,,,,,,anthony,,human
+18040922,uniform,0,,,,,,,,,,,anthony,,human
+17955467,uniform,0,,,,,,,,,,,anthony,,human
+9372270,uniform,0,,,,,,,,,,,anthony,,human
+8640816,uniform,0,,,,,,,,,,,anthony,,human
+19942282,uniform,0,,,,,,,,,,,anthony,personal demand for proof,human
+8999612,uniform,0,,,,,,,,,,,anthony,,human
+10848017,uniform,0,,,,,,,,,,,anthony,,human
+1217776,uniform,0,,,,,,,,,,,anthony,,human
+4021715,uniform,0,,,,,,,,,,,anthony,,human
+6537452,uniform,0,,,,,,,,,,,anthony,,human
+15863654,uniform,0,,,,,,,,,,,anthony,,human
+4378047,uniform,0,,,,,,,,,,,anthony,,human
+2396766,uniform,0,,,,,,,,,,,anthony,,human
+19360411,uniform,0,,,,,,,,,,,anthony,,human
+3866185,uniform,0,,,,,,,,,,,anthony,,human
+5586389,uniform,0,,,,,,,,,,,anthony,,human
+15021290,uniform,0,,,,,,,,,,,anthony,,human
+21527166,uniform,0,,,,,,,,,,,anthony,,human
+13580287,uniform,0,,,,,,,,,,,anthony,,human
+10417359,uniform,0,,,,,,,,,,,anthony,,human
+16034144,uniform,1,1,0,0,failure,policy_law,unstated,agrees,2.0,1.0,swatting hoax detection and prevention,anthony,It's going to take more than just asking a couple basic questions.,human
+1746791,uniform,0,,,,,,,,,,,anthony,,human
+7066561,uniform,0,,,,,,,,,,,anthony,,human
+7278866,uniform,0,,,,,,,,,,,anthony,,human
+14762717,uniform,0,,,,,,,,,,,anthony,,human
+10549425,uniform,1,1,0,0,no_change,society_work,1_to_5y,contrarian,1.0,2.0,automobiles and designer clothing demand,anthony,I doubt the same is going to happen,human
+16308316,uniform,0,,,,,,,,,,,anthony,,human
+12072825,uniform,0,,,,,,,,,,,anthony,,human
+11492747,uniform,0,,,,,,,,,,,anthony,,human
+10510388,uniform,0,,,,,,,,,,,anthony,,human
+3243091,uniform,0,,,,,,,,,,,anthony,,human
+6371898,uniform,0,,,,,,,,,,,anthony,,human
+8579629,uniform,0,,,,,,,,,,,anthony,,human
+3697420,uniform,0,,,,,,,,,,,anthony,,human
+16473780,uniform,0,,,,,,,,,,,anthony,,human
+6566411,uniform,0,,,,,,,,,,,anthony,,human
+11474680,uniform,1,1,0,1,success,product_adoption,unstated,unclear,1.0,1.0,hoverboards with safe batteries and protection circuitry,anthony,they could be popular again,human
+19754681,uniform,0,,,,,,,,,,,anthony,,human
+13015757,uniform,0,,,,,,,,,,,anthony,,human
+7820830,uniform,1,1,0,0,failure,company_fate,,contrarian,2.0,2.0,Bill Gates' charitable investments and mosquito control project,anthony,happens without fail within the first three years,human
+1687797,uniform,0,,,,,,,,,,,anthony,,human
+12262775,uniform,0,,,,,,,,,,,anthony,"review: present-tense benchmark claims, not a forecast",human
+8938770,uniform,0,,,,,,,,,,,anthony,,human
+14773647,uniform,1,0,1,0,failure,product_adoption,unstated,agrees,2.0,1.0,smart smoke alarms with poor software,anthony,vast majority of issues will arise from software defects,human
+5863961,uniform,0,,,,,,,,,,,anthony,,human
+11828305,uniform,0,,,,,,,,,,,anthony,,human
+12643826,uniform,0,,,,,,,,,,,anthony,,human
+5211928,uniform,0,,,,,,,,,,,anthony,,human
+9632166,uniform,1,0,0,0,no_change,infrastructure,unstated,contrarian,3.0,1.0,Linux on the desktop,anthony,that'll always be more functional and easier to use than any desktop linux,human
+9121851,uniform,1,0,0,0,success,language_or_framework,under_1y,agrees,1.0,1.0,Rust,anthony,Guides like this are going to mean a lot in the coming months,human
+13196607,uniform,0,,,,,,,,,,,anthony,"Advice script, not the speaker's forecast",human
+5518375,uniform,0,,,,,,,,,,,anthony,,human
+18566011,uniform,0,,,,,,,,,,,anthony,,human
+6035017,uniform,0,,,,,,,,,,,anthony,,human
+15637374,uniform,1,1,0,0,no_change,ai_ml,over_10y,contrarian,1.0,1.0,ML and AutoML solving most AI problems,anthony,unlikely that analyzing monopolys' data will explain,human
+18394887,uniform,0,,,,,,,,,,,anthony,,human
+5575603,uniform,0,,,,,,,,,,,anthony,,human
+14994043,uniform,0,,,,,,,,,,,anthony,,human
+7978343,uniform,0,,,,,,,,,,,anthony,,human
+4604772,uniform,0,,,,,,,,,,,anthony,,human
+910998,uniform,0,,,,,,,,,,,anthony,,human
+16189997,uniform,0,,,,,,,,,,,anthony,,human
+15977084,uniform,1,1,0,0,change,policy_law,,agrees,2.0,1.0,cryptocurrency regulation and KYC/AML requirements,anthony,loopholes will get closed fast or at least eventually.,human
+13571474,uniform,0,,,,,,,,,,,anthony,,human
+963607,uniform,1,1,0,0,success,language_or_framework,under_1y,agrees,2.0,1.0,Static type systems and functional languages like Haskell,anthony,They will (soon) have type/proof systems,human
+13628833,uniform,0,,,,,,,,,,,anthony,"habitual consumer type, not a future claim",human
+3186956,uniform,0,,,,,,,,,,,anthony,,human
+14798944,uniform,0,,,,,,,,,,,anthony,,human
+2439258,uniform,0,,,,,,,,,,,anthony,,human
+15424185,uniform,0,,,,,,,,,,,anthony,,human
+1769603,uniform,0,,,,,,,,,,,anthony,,human
+17528775,uniform,1,1,0,0,success,language_or_framework,unstated,agrees,0.0,1.0,Python compiled to WebAssembly,anthony,this might actually become feasible,human
+7982342,uniform,0,,,,,,,,,,,anthony,,human
+18947637,uniform,0,,,,,,,,,,,anthony,,human
+12935389,uniform,0,,,,,,,,,,,anthony,,human
+13600784,uniform,0,,,,,,,,,,,anthony,,human
+19011155,uniform,0,,,,,,,,,,,anthony,,human
+10605885,uniform,0,,,,,,,,,,,anthony,,human
+9086905,uniform,1,1,0,0,success,science_space,unstated,agrees,1.0,1.0,psychology as an academic discipline,anthony,appears poised to eclipse psychology completely,human
+11301694,uniform,0,,,,,,,,,,,anthony,,human
+19529008,uniform,0,,,,,,,,,,,anthony,,human
+808068,uniform,0,,,,,,,,,,,anthony,,human
+18791773,uniform,0,,,,,,,,,,,anthony,,human
+18378379,uniform,0,,,,,,,,,,,anthony,,human
+8568073,uniform,0,,,,,,,,,,,anthony,"restates parent, not own forecast",human
+2231496,uniform,1,1,0,1,change,product_adoption,unstated,agrees,2.0,1.0,iOS app ecosystem,anthony,they'll pass the 30% down to user,human
+20716149,uniform,0,,,,,,,,,,,anthony,,human
+5057003,uniform,0,,,,,,,,,,,anthony,,human
+14398914,uniform,0,,,,,,,,,,,anthony,,human
+17974228,uniform,0,,,,,,,,,,,anthony,,human
+9755296,uniform,0,,,,,,,,,,,anthony,,human
+9167474,uniform,0,,,,,,,,,,,anthony,,human
+13432434,uniform,0,,,,,,,,,,,anthony,,human
+3284174,uniform,0,,,,,,,,,,,anthony,,human
+10276137,uniform,0,,,,,,,,,,,anthony,,human
+13330322,uniform,1,1,0,1,failure,company_fate,unstated,contrarian,2.0,2.0,AppNexus,anthony,They will not be part of any adtech renaissance,human
+2270266,uniform,0,,,,,,,,,,,anthony,,human
+3854063,uniform,0,,,,,,,,,,,anthony,,human
+20850968,uniform,0,,,,,,,,,,,anthony,,human
+11808429,uniform,0,,,,,,,,,,,anthony,,human
+1544721,uniform,0,,,,,,,,,,,anthony,,human
+16848500,uniform,0,,,,,,,,,,,anthony,"design principle about incentives, not a forecast",human
+7661704,uniform,0,,,,,,,,,,,anthony,,human
+642911,uniform,1,1,1,0,success,society_work,under_1y,contrarian,2.0,2.0,high-paying teacher salaries improving student outcomes,anthony,The kids will love school in a way that no one thought possible,human
+11059945,uniform,0,,,,,,,,,,,anthony,"describes a racist's motive, not a forecast",human
+14175161,uniform,0,,,,,,,,,,,anthony,,human
+7358627,uniform,0,,,,,,,,,,,anthony,,human
+8007341,uniform,0,,,,,,,,,,,anthony,"quotes Apple's pitch, not a forecast",human
+4599788,uniform,0,,,,,,,,,,,anthony,,human
+2215675,uniform,0,,,,,,,,,,,anthony,,human
+4250927,uniform,0,,,,,,,,,,,anthony,,human
+12808510,uniform,1,0,0,0,no_change,,unstated,agrees,2.0,1.0,ad-supported web,anthony,it'll exist and be great if ads die off,human
+6669247,uniform,0,,,,,,,,,,,anthony,,human
+18484080,uniform,0,,,,,,,,,,,anthony,,human
+7487827,uniform,0,,,,,,,,,,,anthony,,human
+13333385,uniform,1,1,0,0,no_change,policy_law,unstated,agrees,1.0,1.0,Social Security sustainability,anthony,"requirement, not an outcome forecast | review: hedged claim Social Security could fail",human
+19289781,uniform,0,,,,,,,,,,,anthony,,human
+8526901,uniform,0,,,,,,,,,,,anthony,,human
+9417393,uniform,0,,,,,,,,,,,anthony,"role description, not a future outcome",human
+10208482,uniform,1,1,0,0,failure,society_work,unstated,contrarian,1.0,1.0,Open source women initiative,anthony,"plan critique, not an outcome forecast | review: asserts a policy change will happen",human
+4819607,uniform,0,,,,,,,,,,,anthony,,human
+2949179,uniform,0,,,,,,,,,,,anthony,,human
+581488,uniform,0,,,,,,,,,,,anthony,,human
+11194931,uniform,0,,,,,,,,,,,anthony,,human
+10085757,uniform,0,,,,,,,,,,,anthony,,human
+20883609,uniform,0,,,,,,,,,,,anthony,,human
+13420909,uniform,0,,,,,,,,,,,anthony,,human
+16524293,uniform,0,,,,,,,,,,,anthony,,human
+17604944,uniform,0,,,,,,,,,,,anthony,,human
+13506491,uniform,0,,,,,,,,,,,anthony,,human
+16224198,uniform,0,,,,,,,,,,,anthony,,human
+3020407,uniform,1,0,0,0,success,society_work,unstated,contrarian,1.0,0.0,creative workers and unconventional work styles,anthony,a more open-minded company will quickly be there to capitalize on the value they offer,human
+9894659,uniform,0,,,,,,,,,,,anthony,,human
+10502643,uniform,0,,,,,,,,,,,anthony,"general learning comparison, not a forecast",human
+18843548,uniform,0,,,,,,,,,,,anthony,,human
+13380344,uniform,0,,,,,,,,,,,anthony,,human
+474690,uniform,0,,,,,,,,,,,anthony,will only inside name Williams,human
+6986468,uniform,0,,,,,,,,,,,anthony,,human
+2903513,uniform,0,,,,,,,,,,,anthony,,human
+15130490,uniform,0,,,,,,,,,,,anthony,,human
+17859021,uniform,0,,,,,,,,,,,anthony,,human
+14864119,uniform,0,,,,,,,,,,,anthony,,human
+4469941,uniform,0,,,,,,,,,,,anthony,"personal forgetfulness, not a scoped forecast",human
+17830009,uniform,0,,,,,,,,,,,anthony,,human
+2453267,uniform,0,,,,,,,,,,,anthony,,human
+2915977,uniform,0,,,,,,,,,,,anthony,,human
+8599484,uniform,0,,,,,,,,,,,anthony,going to is hypothetical courtroom procedure,human
+1110871,uniform,0,,,,,,,,,,,anthony,,human
+18456583,uniform,0,,,,,,,,,,,anthony,,human
+1985739,uniform,0,,,,,,,,,,,anthony,,human
+15265388,uniform,0,,,,,,,,,,,anthony,,human
+5003787,uniform,0,,,,,,,,,,,anthony,,human
+8947322,uniform,0,,,,,,,,,,,anthony,,human
+19239216,uniform,0,,,,,,,,,,,anthony,,human
+2849546,uniform,0,,,,,,,,,,,anthony,,human
+11124259,uniform,0,,,,,,,,,,,anthony,,human
+1610606,uniform,0,,,,,,,,,,,anthony,,human
+12176327,uniform,0,,,,,,,,,,,anthony,,human
+6459040,uniform,0,,,,,,,,,,,anthony,,human
+1383906,uniform,0,,,,,,,,,,,anthony,advice describing an advisor's job,human
+16830321,uniform,0,,,,,,,,,,,anthony,,human
+9999897,uniform,0,,,,,,,,,,,anthony,,human
+8577442,uniform,0,,,,,,,,,,,anthony,,human
+18456776,uniform,0,,,,,,,,,,,anthony,,human
+9200286,uniform,0,,,,,,,,,,,anthony,,human
+6992214,uniform,0,,,,,,,,,,,anthony,,human
+17593931,uniform,0,,,,,,,,,,,anthony,,human
+1755553,uniform,0,,,,,,,,,,,anthony,,human
+4534162,uniform,0,,,,,,,,,,,anthony,,human
+12113226,uniform,0,,,,,,,,,,,anthony,"Habit and others' plans, not a forecast",human
+15675690,uniform,0,,,,,,,,,,,anthony,,human
+20086207,uniform,0,,,,,,,,,,,anthony,,human
+6152835,uniform,0,,,,,,,,,,,anthony,,human
+20016297,uniform,0,,,,,,,,,,,anthony,personal refusal; habitual present behavior,human
+13100916,uniform,0,,,,,,,,,,,anthony,,human
+4153546,uniform,0,,,,,,,,,,,anthony,,human
+7438163,uniform,0,,,,,,,,,,,anthony,,human
+17802787,uniform,0,,,,,,,,,,,anthony,,human
+17806301,uniform,0,,,,,,,,,,,anthony,,human
+21822166,uniform,0,,,,,,,,,,,anthony,,human
+4144417,uniform,0,,,,,,,,,,,anthony,,human
+5147479,uniform,0,,,,,,,,,,,anthony,"Describes current bundler behavior, not forecast",human
+13033434,uniform,1,1,0,0,no_change,other,unstated,agrees,1.0,2.0,Go on 9x9 or larger boards,anthony,Solving on 9x9 or larger is likely not possible.,human
+3349785,uniform,0,,,,,,,,,,,anthony,,human
+13503787,uniform,0,,,,,,,,,,,anthony,does not claim whether it will survive,human
+8328488,uniform,0,,,,,,,,,,,anthony,,human
+14467923,uniform,0,,,,,,,,,,,anthony,,human
+6490704,uniform,0,,,,,,,,,,,anthony,,human
+4114921,uniform,0,,,,,,,,,,,anthony,"Current AWS behavior, not a later event",human
+9003079,uniform,1,1,0,1,change,policy_law,unstated,agrees,2.0,1.0,capital gains tax on real estate,anthony,conservative banking will be back in vogue,human
+1894949,uniform,0,,,,,,,,,,,anthony,,human
+8292853,uniform,0,,,,,,,,,,,anthony,,human
+16057571,uniform,0,,,,,,,,,,,anthony,,human
+2146265,uniform,0,,,,,,,,,,,anthony,,human
+3400365,uniform,0,,,,,,,,,,,anthony,,human
+2367562,uniform,0,,,,,,,,,,,anthony,,human
+4161758,uniform,0,,,,,,,,,,,anthony,,human
+19891870,uniform,0,,,,,,,,,,,anthony,"grammar example, not a forecast",human
+15878481,uniform,0,,,,,,,,,,,anthony,,human
+11567113,uniform,0,,,,,,,,,,,anthony,,human
+14995509,uniform,0,,,,,,,,,,,anthony,,human
+9765918,uniform,0,,,,,,,,,,,anthony,,human
+21637904,uniform,0,,,,,,,,,,,anthony,,human
+8017480,uniform,0,,,,,,,,,,,anthony,,human
+12497053,uniform,0,,,,,,,,,,,anthony,,human
+15223101,uniform,0,,,,,,,,,,,anthony,,human
+16281505,uniform,0,,,,,,,,,,,anthony,,human
+11606941,uniform,0,,,,,,,,,,,anthony,,human
+6250670,uniform,0,,,,,,,,,,,anthony,,human
+10346053,uniform,0,,,,,,,,,,,anthony,,human
+5205797,uniform,0,,,,,,,,,,,anthony,,human
+15020566,uniform,0,,,,,,,,,,,anthony,"one donor's planned bequest, not a trend",human
+6022714,uniform,0,,,,,,,,,,,anthony,,human
+12236565,uniform,0,,,,,,,,,,,anthony,,human
+12447837,uniform,0,,,,,,,,,,,anthony,,human
+14266255,uniform,0,,,,,,,,,,,anthony,,human
+16899865,uniform,0,,,,,,,,,,,anthony,,human
+3191925,uniform,0,,,,,,,,,,,anthony,,human
+10635976,uniform,0,,,,,,,,,,,anthony,,human
+10638358,uniform,0,,,,,,,,,,,anthony,,human
+18153093,uniform,0,,,,,,,,,,,anthony,,human
+14745506,uniform,0,,,,,,,,,,,anthony,,human
+5283269,uniform,0,,,,,,,,,,,anthony,,human
+2292330,uniform,0,,,,,,,,,,,anthony,,human
+14083067,uniform,0,,,,,,,,,,,anthony,,human
+7570417,uniform,0,,,,,,,,,,,anthony,,human
+9021315,uniform,0,,,,,,,,,,,anthony,,human
+12645581,uniform,0,,,,,,,,,,,anthony,,human
+15760353,uniform,0,,,,,,,,,,,anthony,,human
+10241803,uniform,0,,,,,,,,,,,anthony,,human
+16298109,uniform,0,,,,,,,,,,,anthony,"the govt will just be adding in traffic surveillance cameras | review: question, no assertion",human
+9485898,uniform,0,,,,,,,,,,,anthony,,human
+3278706,uniform,0,,,,,,,,,,,anthony,,human
+19771269,uniform,0,,,,,,,,,,,anthony,,human
+19477301,uniform,0,,,,,,,,,,,anthony,,human
+13384368,uniform,0,,,,,,,,,,,anthony,,human
+15908607,uniform,0,,,,,,,,,,,anthony,,human
+9000268,uniform,1,1,0,0,change,policy_law,unstated,agrees,1.0,1.0,Ross Ulbricht sentencing,anthony,Mr. Ulbricht will likely not see the maximum consecutive sentence,human
+5342357,uniform,0,,,,,,,,,,,anthony,,human
+15941956,uniform,1,1,1,0,change,society_work,1_to_5y,agrees,2.0,3.0,reality TV stars as U.S. presidents,anthony,Trump will of course be reelected in 2020.,human
+16939822,uniform,0,,,,,,,,,,,anthony,,human
+6662233,uniform,0,,,,,,,,,,,anthony,,human
+13367942,uniform,0,,,,,,,,,,,anthony,,human
+8377144,uniform,0,,,,,,,,,,,anthony,,human
+8892518,uniform,0,,,,,,,,,,,anthony,,human
+1691912,uniform,0,,,,,,,,,,,anthony,,human
+14245174,uniform,0,,,,,,,,,,,anthony,,human
+1396478,uniform,0,,,,,,,,,,,anthony,,human
+21085997,uniform,0,,,,,,,,,,,anthony,,human
+15829718,uniform,1,0,0,0,,policy_law,unstated,contrarian,1.0,1.0,housing policy and urban planning reform,anthony,nobody will ever turn it into a workable policy,human
+7142885,uniform,0,,,,,,,,,,,anthony,,human
+2123047,uniform,0,,,,,,,,,,,anthony,,human
+13123068,uniform,0,,,,,,,,,,,anthony,,human
+5255081,uniform,0,,,,,,,,,,,anthony,,human
+18374600,uniform,0,,,,,,,,,,,anthony,,human
+12829130,uniform,0,,,,,,,,,,,anthony,,human
+5435291,uniform,0,,,,,,,,,,,anthony,,human
+7700016,uniform,0,,,,,,,,,,,anthony,"comparative productivity claim, not a future forecast",human
+10690610,uniform,0,,,,,,,,,,,anthony,,human
+8359255,uniform,0,,,,,,,,,,,anthony,,human
+21606100,uniform,1,0,0,1,failure,,unstated,agrees,2.0,1.0,civilization collapse from industrial processes,anthony,There will be no markets if civilization collapses,human
+19640335,uniform,0,,,,,,,,,,,anthony,,human
+9713044,uniform,0,,,,,,,,,,,anthony,"rhetorical question, no claim",human
+17368036,uniform,0,,,,,,,,,,,anthony,,human
+18622464,uniform,0,,,,,,,,,,,anthony,,human
+4577418,uniform,0,,,,,,,,,,,anthony,,human
+7088674,uniform,0,,,,,,,,,,,anthony,,human
+8895560,uniform,0,,,,,,,,,,,anthony,,human
+12382195,uniform,0,,,,,,,,,,,anthony,,human
+17949490,uniform,0,,,,,,,,,,,anthony,"general claim, not a later forecast",human
+20643508,uniform,0,,,,,,,,,,,anthony,"personal investment plan, not a market forecast",human
+7609265,uniform,0,,,,,,,,,,,anthony,,human
+13184810,uniform,0,,,,,,,,,,,anthony,,human
+417121,uniform,0,,,,,,,,,,,anthony,,human
+4669996,uniform,0,,,,,,,,,,,anthony,,human
+8662678,uniform,0,,,,,,,,,,,anthony,,human
+18452106,uniform,0,,,,,,,,,,,anthony,,human
+17560726,uniform,0,,,,,,,,,,,anthony,"describes current CLI behavior, not a forecast",human
+13680879,uniform,0,,,,,,,,,,,anthony,,human
+17252041,uniform,0,,,,,,,,,,,anthony,,human
+6093684,uniform,0,,,,,,,,,,,anthony,describes current Google behavior,human
+13235423,uniform,0,,,,,,,,,,,anthony,,human
+14543607,uniform,0,,,,,,,,,,,anthony,,human
+14321409,uniform,0,,,,,,,,,,,anthony,,human
+5210885,uniform,0,,,,,,,,,,,anthony,,human
+4294332,uniform,0,,,,,,,,,,,anthony,,human
+5783077,uniform,0,,,,,,,,,,,anthony,,human
+13356925,uniform,0,,,,,,,,,,,anthony,,human
+21460239,uniform,0,,,,,,,,,,,anthony,,human
+8594594,uniform,0,,,,,,,,,,,anthony,,human
+17787210,uniform,0,,,,,,,,,,,anthony,,human
+4827457,uniform,0,,,,,,,,,,,anthony,,human
+9933949,uniform,0,,,,,,,,,,,anthony,,human
+11493565,uniform,0,,,,,,,,,,,anthony,,human
+18204938,uniform,0,,,,,,,,,,,anthony,,human
+11209537,uniform,0,,,,,,,,,,,anthony,,human
+8914856,uniform,0,,,,,,,,,,,anthony,,human
+4343784,uniform,0,,,,,,,,,,,anthony,,human
+19956359,uniform,0,,,,,,,,,,,anthony,,human
+1975391,uniform,0,,,,,,,,,,,anthony,,human
+20734645,uniform,0,,,,,,,,,,,anthony,,human
+16401582,uniform,0,,,,,,,,,,,anthony,,human
+15076808,uniform,0,,,,,,,,,,,anthony,,human
+4455065,uniform,0,,,,,,,,,,,anthony,,human
+4227471,uniform,0,,,,,,,,,,,anthony,,human
+7030996,uniform,0,,,,,,,,,,,anthony,,human
+6277484,uniform,0,,,,,,,,,,,anthony,will say is not a forecast,human
+8509261,uniform,0,,,,,,,,,,,anthony,,human
+9290306,uniform,0,,,,,,,,,,,anthony,"existing tool behavior, not forecast",human
+21422036,uniform,1,1,0,1,failure,company_fate,unstated,contrarian,1.0,1.0,Netflix theaters,anthony,it will run into that ol' leverage chestnut,human
+1721252,uniform,0,,,,,,,,,,,anthony,,human
+11132953,uniform,0,,,,,,,,,,,anthony,,human
+5680157,uniform,0,,,,,,,,,,,anthony,,human
+4218640,uniform,0,,,,,,,,,,,anthony,"personal schedule advice, not in scope",human
+7728169,uniform,0,,,,,,,,,,,anthony,,human
+13234013,uniform,0,,,,,,,,,,,anthony,,human
+6481074,uniform,0,,,,,,,,,,,anthony,,human
+763012,uniform,0,,,,,,,,,,,anthony,,human
+5508535,uniform,0,,,,,,,,,,,anthony,,human
+6112742,uniform,0,,,,,,,,,,,anthony,,human
+10600356,uniform,1,1,0,1,success,infrastructure,unstated,contrarian,1.0,1.0,Google Cloud Engine,anthony,"If Google can provide a competitive service at a lower cost, they will gain traction",human
+16390658,uniform,0,,,,,,,,,,,anthony,,human
+10921995,uniform,0,,,,,,,,,,,anthony,,human
+8639406,uniform,0,,,,,,,,,,,anthony,,human
+11479854,uniform,0,,,,,,,,,,,anthony,,human
+13580632,uniform,0,,,,,,,,,,,anthony,,human
+4885178,uniform,0,,,,,,,,,,,anthony,,human
+15572842,uniform,1,1,1,0,change,infrastructure,over_10y,agrees,1.0,1.0,privacy.firstparty.isolate and privacy.resistFingerprinting preferences,anthony,Maybe someday this will be on by default for everyone.,human
+16812911,uniform,0,,,,,,,,,,,anthony,,human
+9450712,uniform,0,,,,,,,,,,,anthony,,human
+3168311,uniform,0,,,,,,,,,,,anthony,,human
+10614356,uniform,0,,,,,,,,,,,anthony,,human
+2001128,uniform,1,1,0,0,failure,other,unstated,agrees,2.0,1.0,secure password input type,anthony,"phishers will just construct phishing sites that appear to use the ""secure"" password type but actually don't.",human
+5277386,uniform,0,,,,,,,,,,,anthony,,human
+16346703,uniform,0,,,,,,,,,,,anthony,,human
+7282947,uniform,0,,,,,,,,,,,anthony,"personal to-do, not a forecast",human
+8583234,uniform,0,,,,,,,,,,,anthony,,human
+21495439,uniform,0,,,,,,,,,,,anthony,,human
+18648821,uniform,0,,,,,,,,,,,anthony,,human
+7405780,uniform,0,,,,,,,,,,,anthony,,human
+16884249,uniform,0,,,,,,,,,,,anthony,,human
+1680587,uniform,0,,,,,,,,,,,anthony,"habitual tendency, not a future claim",human
+2405458,uniform,0,,,,,,,,,,,anthony,"Own app memory guess, not a forecast",human
+6011379,uniform,0,,,,,,,,,,,anthony,,human
+16273079,uniform,0,,,,,,,,,,,anthony,,human
+4425348,uniform,0,,,,,,,,,,,anthony,,human
+3327350,uniform,1,1,0,0,change,infrastructure,over_10y,contrarian,2.0,2.0,self-driving cars and public transportation integration,anthony,your hourly car rental rates will go up during peak usage,human
+17164225,uniform,0,,,,,,,,,,,anthony,,human
+19719631,uniform,0,,,,,,,,,,,anthony,,human
+6532430,uniform,0,,,,,,,,,,,anthony,,human
+7907473,uniform,0,,,,,,,,,,,anthony,,human
+21279928,uniform,0,,,,,,,,,,,anthony,,human
+21527136,uniform,0,,,,,,,,,,,anthony,,human
+4024331,uniform,0,,,,,,,,,,,anthony,,human
+12842996,uniform,0,,,,,,,,,,,anthony,,human
+13087762,uniform,0,,,,,,,,,,,anthony,,human
+2800590,uniform,0,,,,,,,,,,,anthony,,human
+6202409,uniform,0,,,,,,,,,,,anthony,,human
+6468657,uniform,0,,,,,,,,,,,anthony,,human
+3043908,uniform,0,,,,,,,,,,,anthony,"hypothetical design, not an asserted outcome",human
+2087387,uniform,0,,,,,,,,,,,anthony,,human
+10392096,uniform,0,,,,,,,,,,,anthony,,human
+15335372,uniform,0,,,,,,,,,,,anthony,,human
+21652215,uniform,0,,,,,,,,,,,anthony,,human
+2441246,uniform,0,,,,,,,,,,,anthony,,human
+5050688,uniform,0,,,,,,,,,,,anthony,,human
+14879403,uniform,0,,,,,,,,,,,anthony,,human
+7359974,uniform,0,,,,,,,,,,,anthony,,human
+2477920,uniform,0,,,,,,,,,,,anthony,,human
+19967854,uniform,0,,,,,,,,,,,anthony,,human
+20968028,uniform,0,,,,,,,,,,,anthony,,human
+16436182,uniform,0,,,,,,,,,,,anthony,,human
+11744063,uniform,0,,,,,,,,,,,anthony,"physiology, not in-scope forecast",human
+20603028,uniform,0,,,,,,,,,,,anthony,,human
+9181052,uniform,0,,,,,,,,,,,anthony,,human
+16711530,uniform,0,,,,,,,,,,,anthony,,human
+17071772,uniform,0,,,,,,,,,,,anthony,,human
+9936885,uniform,0,,,,,,,,,,,anthony,"physics of transits, not a future forecast",human
+20212628,uniform,1,0,1,0,change,language_or_framework,unstated,contrarian,2.0,0.0,programming paradigms and generational preferences,anthony,The next generation will be preoccupied with an entirely different model of programming.,human
+15388897,uniform,0,,,,,,,,,,,anthony,,human
+8123922,uniform,0,,,,,,,,,,,anthony,,human
+18591245,uniform,0,,,,,,,,,,,anthony,,human
+21589507,uniform,0,,,,,,,,,,,anthony,,human
+11944930,uniform,0,,,,,,,,,,,anthony,,human
+9811051,uniform,0,,,,,,,,,,,anthony,,human
+4753851,uniform,1,1,0,0,change,policy_law,over_10y,agrees,2.0,2.0,"Republican and Democratic party positions on healthcare, gay marriage, transgender rights, cannabis",anthony,It's pretty much inevitable that the country will move to the left,human
+11548404,enriched,0,,,,,,,,,,,anthony,going to conferences is not a forecast,human_audit
+4982579,enriched,1,0,0,1,change,policy_law,unstated,contrarian,1.0,1.0,Methamphetamine legalization and pharmaceutical industry response,anthony,big pharma will jump on the opportunities,human_adjudicated
+15838685,enriched,1,1,0,1,failure,crypto_finance,unstated,contrarian,1.0,1.0,financial sanctions on digital currencies,anthony,That will be a waste of everyone's time and money,human_audit
+14864561,enriched,1,0,0,0,change,science_space,unstated,contrarian,2.0,0.0,genetic modification of human embryos,anthony,It will become a race to the bottom.,human_adjudicated
+20513055,enriched,0,,,,,,,,,,,panel,,panel
+13122449,enriched,1,1,0,0,change,,unstated,contrarian,1.0,1.0,airline overhead locker fees and boarding process,anthony,might encourage more people to sign up for United credit cards,human_adjudicated
+10010177,enriched,0,,,,,,,,,,,anthony,Will that help is a question,human_audit
+14066908,enriched,0,,,,,,,,,,,anthony,"hypothetical mechanism, not a forecast",human_adjudicated
+15868012,enriched,1,1,0,0,change,crypto_finance,unstated,contrarian,0.0,1.0,Bitcoin,panel,,panel
+14745402,enriched,0,,,,,,,,,,,anthony,"advice about current salary gap, not a forecast",human_adjudicated
+13968662,enriched,0,,,,,,,,,,,anthony,will fit means capacity not future,human_audit
+5760472,enriched,1,0,0,0,change,society_work,unstated,agrees,0.0,0.0,Western workforce structure and entrepreneurship,anthony,entrepreneurs will be able to take flight,human_adjudicated
+21469569,enriched,0,,,,,,,,,,,panel,,panel
+14406705,enriched,0,,,,,,,,,,,panel,,panel
+16062232,enriched,0,,,,,,,,,,,panel,,panel
+18771292,enriched,0,,,,,,,,,,,panel,,panel
+12471001,enriched,0,,,,,,,,,,,panel,,panel
+17968975,enriched,0,,,,,,,,,,,anthony,"Quotes parent claim, asks for source",human_audit
+20508848,enriched,1,1,0,0,no_change,infrastructure,unstated,agrees,2.0,1.0,end-to-end encryption on Android phones,anthony,that will never happen,human_adjudicated
+6084393,enriched,0,,,,,,,,,,,anthony,"sarcastic slogan, not a forecast",human_audit
+16328648,enriched,0,,,,,,,,,,,panel,,panel
+12373323,enriched,1,1,0,0,change,policy_law,over_10y,contrarian,2.0,1.0,Italian/Spanish/Greek governments and young citizens,panel,,panel
+8009403,enriched,0,,,,,,,,,,,anthony,"Conversational, not a scoped forecast",human_adjudicated
+11723042,enriched,1,1,0,0,no_change,policy_law,unstated,agrees,2.0,1.0,TSA elimination,anthony,it's going to be hard to get rid of now,human_adjudicated
+13362192,enriched,0,,,,,,,,,,,anthony,,human_audit
+21317654,enriched,1,0,0,0,change,society_work,unstated,agrees,0.0,1.0,40 hour work weeks and work-life balance,anthony,This may reduce salaries,human_audit
+15475389,enriched,0,,,,,,,,,,,anthony,"closing-process reaction, not a market forecast",human_adjudicated
+21816930,enriched,0,,,,,,,,,,,panel,,panel
+18800880,enriched,0,,,,,,,,,,,panel,,panel
+15668752,enriched,0,,,,,,,,,,,anthony,hope is not an asserted forecast,human_audit
+10775471,enriched,1,1,0,1,no_change,language_or_framework,unstated,contrarian,2.0,1.0,SSL/TLS acronym adoption,panel,,panel
+6476166,enriched,1,0,0,0,change,infrastructure,unstated,agrees,1.0,1.0,Linux OS suitability for different use cases,anthony,it might change soon,human_adjudicated
+19453429,enriched,0,,,,,,,,,,,anthony,"Habitual will, not a forecast",human_adjudicated
+19919417,enriched,1,1,0,0,change,policy_law,unstated,contrarian,2.0,1.0,free market capitalism and regulatory reform,anthony,free market capitalism will perform its function,human_adjudicated
+1872112,enriched,0,,,,,,,,,,,anthony,personal end of own Gmail use,human_adjudicated
+10192104,enriched,1,1,0,1,no_change,infrastructure,unstated,contrarian,1.0,1.0,Apple and Intel relationship,anthony,as long as Intel can deliver what they need they won’t.,human_adjudicated
+4320017,enriched,1,1,0,0,success,society_work,over_10y,agrees,1.0,1.0,hackNY program alumni,anthony,we'll see alumni fostering communities,human_audit
+10542024,enriched,0,,,,,,,,,,,panel,,panel
+4056761,enriched,1,0,0,0,,society_work,over_10y,agrees,2.0,1.0,knowledge of dial-up modem sounds,anthony,"personal lament about daughter, not a forecast | review: claims the next generation will not know dial-up",human_adjudicated
+16952466,enriched,1,1,0,0,failure,policy_law,over_10y,unclear,2.0,1.0,piracetam FDA approval,panel,,panel
+20567130,enriched,1,1,0,1,success,language_or_framework,unstated,agrees,1.0,1.0,Julia programming language,anthony,it will be more suitable for general purpose programming,human_adjudicated
+17372246,enriched,0,,,,,,,,,,,anthony,"Question asking who will, no claim",human_audit
+20709758,enriched,0,,,,,,,,,,,anthony,"noun will, not a future claim",human_audit
+13846780,enriched,0,,,,,,,,,,,panel,,panel
+5405604,enriched,0,,,,,,,,,,,anthony,"feature's effect, not a forecast",human_adjudicated
+19448021,enriched,0,,,,,,,,,,,anthony,"free will is philosophy, not a forecast",human_audit
+21772981,enriched,0,,,,,,,,,,,panel,,panel
+17546781,enriched,1,1,0,1,no_change,infrastructure,unstated,agrees,1.0,1.0,memristor-based neural architectures,panel,,panel
+15046236,enriched,0,,,,,,,,,,,anthony,"describes current traces, not a forecast",human_audit
+5462781,enriched,0,,,,,,,,,,,panel,,panel
+8913309,enriched,0,,,,,,,,,,,panel,,panel
+19329296,enriched,1,1,0,1,success,society_work,unstated,contrarian,2.0,1.0,art prices for famous people,anthony,I'm pretty certain the president will fetch a higher price for his art work.,human_adjudicated
+13356428,enriched,0,,,,,,,,,,,anthony,notes they didn't say; no own claim,human_audit
+13579477,enriched,1,1,0,0,failure,product_adoption,unstated,contrarian,2.0,1.0,restaurant ingredient sourcing platform,anthony,You will fail.,human_audit
+4223311,enriched,0,,,,,,,,,,,panel,,panel
+4775146,enriched,0,,,,,,,,,,,panel,,panel
+20285818,enriched,1,1,0,0,change,product_adoption,unstated,contrarian,2.0,1.0,companies switching to closed-source software due to OSS liability,anthony,Companies will just buy closed software instead,human_adjudicated
+528146,enriched,0,,,,,,,,,,,anthony,"suggestion with hypothetical, not a forecast",human_adjudicated
+15232768,enriched,1,1,0,0,change,product_adoption,over_10y,agrees,1.0,2.0,Apple Watch cellular independence,panel,,panel
+14027504,enriched,0,,,,,,,,,,,panel,,panel
+6675258,enriched,0,,,,,,,,,,,anthony,"maybe some day someone will come along and help | review: advice, maybe-someday is not a forecast",human_adjudicated
+19026160,enriched,1,1,0,1,change,ai_ml,unstated,,1.0,1.0,"autonomous machines, machine vision, Tesla custom chips",anthony,it will most likely involve autonomous machines,human_audit
+3644932,enriched,0,,,,,,,,,,,anthony,"question about rumored laptop, not an assertion",human_adjudicated
+10139891,enriched,0,,,,,,,,,,,anthony,"local deploy claim, not a trend",human_audit
+6901396,enriched,1,1,0,0,no_change,society_work,unstated,contrarian,1.0,1.0,VR negative side effects and addiction,anthony,I don't think it will prove much worse,human_adjudicated
+21133891,enriched,1,1,0,0,change,language_or_framework,over_10y,contrarian,2.0,1.0,Go programming language,anthony,"If Go's wants to stay relevant it will eventually grow such features, no matter what.",human_audit
+5636151,enriched,1,1,0,0,,product_adoption,unstated,contrarian,3.0,1.0,Craigslist clone,anthony,no rational individual is going to choose an alternative,human_adjudicated
+1230330,enriched,1,1,0,0,change,,unstated,contrarian,1.0,1.0,computers/workstations and end-user computing,panel,,panel
+16191103,enriched,1,1,0,0,no_change,policy_law,unstated,contrarian,2.0,1.0,autonomous vehicles killing humans for traffic violations,anthony,"""Machine kills human because human violated traffic law"" will never fly.",human_audit
+8676086,enriched,0,,,,,,,,,,,anthony,"wondering and asking, not asserting",human_adjudicated
+13230386,enriched,0,,,,,,,,,,,panel,,panel
+14004795,enriched,0,,,,,,,,,,,panel,,panel
+16325588,enriched,0,,,,,,,,,,,panel,,panel
+3249664,enriched,1,0,0,1,change,company_fate,unstated,agrees,1.0,0.0,companies backing SOPA,anthony,a company won't think twice and back-stab you,human_adjudicated
+13176152,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast",human_adjudicated
+4085694,enriched,0,,,,,,,,,,,anthony,"Technique effectiveness, not a future event",human_adjudicated
+10418280,enriched,0,,,,,,,,,,,anthony,free will is not a forecast,human_audit
+19315539,enriched,0,,,,,,,,,,,anthony,describes current plan rules,human_audit
+13933449,enriched,0,,,,,,,,,,,panel,,panel
+15644325,enriched,1,1,0,1,failure,society_work,5_to_10y,contrarian,2.0,2.0,American universities,anthony,Give it ten years. Less if you elect Trump again,human_audit
+2118894,enriched,0,,,,,,,,,,,panel,,panel
+9860849,enriched,1,1,0,0,success,infrastructure,under_1y,agrees,1.0,2.0,security patching delay,anthony,attackers will be slowed down a bit from producing a functional exploit.,human_adjudicated
+21422374,enriched,0,,,,,,,,,,,anthony,,human_audit
+4582716,enriched,0,,,,,,,,,,,panel,,panel
+18413809,enriched,1,1,0,0,change,infrastructure,unstated,contrarian,2.0,1.0,"nuclear power grid transition, renewable energy adoption",anthony,Building isn't expected to start until next year and generation some time in the mid 2020s.,human_adjudicated
+6630740,enriched,1,1,0,0,success,product_adoption,unstated,agrees,2.0,1.0,iPad and similar consumer products,anthony,"Yes, you could. But you won't.",human_adjudicated
+15827703,enriched,0,,,,,,,,,,,panel,,panel
+11525385,enriched,1,0,1,0,no_change,infrastructure,over_10y,contrarian,3.0,1.0,Google CDN,panel,,panel
+6831501,enriched,1,1,0,1,success,product_adoption,1_to_5y,contrarian,1.0,3.0,Amazon Prime Air drones,anthony,per unit cost will fall below $2000 within few years,human_audit
+3405640,enriched,0,,,,,,,,,,,anthony,"question about app capability, not a forecast",human_audit
+15784693,enriched,0,,,,,,,,,,,anthony,we will drop next time on stocks | review: says the drop cannot be predicted,human_adjudicated
+16623518,enriched,1,1,0,0,change,company_fate,unstated,agrees,1.0,3.0,Apple cash repatriation and investor returns,anthony,Presumably a lot of that will get returned to investors or reinvested in some way,human_adjudicated
+9098963,enriched,1,1,0,1,change,policy_law,unstated,agrees,2.0,1.0,China-Russia military conflict,panel,,panel
+8824178,enriched,1,1,0,1,failure,company_fate,unstated,contrarian,2.0,2.0,Xiaomi US market entry,panel,,panel
+15680486,enriched,1,1,0,1,change,infrastructure,unstated,agrees,1.0,1.0,Bill Gates' Arizona smart city,anthony,town itself will probably just use the typical suburban sprawl model,human_audit
+7813459,enriched,0,,,,,,,,,,,anthony,"personal curiosity, no forecast",human_audit
+16751174,enriched,0,,,,,,,,,,,anthony,Will is inside a rejected analogy,human_audit
+7967558,enriched,1,1,0,1,failure,crypto_finance,over_10y,contrarian,2.0,1.0,US economy and debt-to-GDP ratio,anthony,GDP is going to end up going the same direction,human_adjudicated
+17459026,enriched,0,,,,,,,,,,,anthony,"personal incomprehension, not scoped forecast",human_audit
+8176452,enriched,1,1,0,0,,product_adoption,unstated,agrees,2.0,1.0,Oracle database migration,anthony,,human_adjudicated
+8793001,enriched,1,1,0,0,change,ai_ml,over_10y,contrarian,2.0,2.0,driverless cars and taxi driver employment,anthony,Eventually you'll reach a point where it becomes economically feasible for a company to wholesale fire it's drivers,human_audit
+3832576,enriched,0,,,,,,,,,,,panel,,panel
+19775877,enriched,0,,,,,,,,,,,anthony,going to need is startup advice,human_audit
+17481751,enriched,0,,,,,,,,,,,anthony,"cites others' belief, not own forecast",human_adjudicated
+13167294,enriched,0,,,,,,,,,,,anthony,"describes pipeline mechanics, not a forecast",human_adjudicated
+20738901,enriched,1,1,0,0,failure,policy_law,unstated,agrees,3.0,1.0,self-regulation and corporate ethics statements,anthony,will be put at a competitive disadvantage,human_adjudicated
+2910971,enriched,0,,,,,,,,,,,anthony,"Personal study advice, not a trend",human_adjudicated
+5018363,enriched,0,,,,,,,,,,,panel,,panel
+17502229,enriched,1,0,0,1,change,policy_law,unstated,contrarian,2.0,1.0,UBI implementation and market outcomes,anthony,the results will be ever-changing and therefor unknowable,human_adjudicated
+1664021,enriched,0,,,,,,,,,,,panel,,panel
+11252789,enriched,1,0,0,1,failure,,unstated,unclear,2.0,1.0,China's command economy,anthony,otherwise it won't be able to survive,human_adjudicated
+11400152,enriched,1,0,0,0,no_change,company_fate,unstated,contrarian,2.0,0.0,Microsoft's public perception and reputation,anthony,they will never be cool,human_adjudicated
+8736955,enriched,0,,,,,,,,,,,panel,,panel
+14345227,enriched,1,1,0,1,change,language_or_framework,unstated,contrarian,1.0,1.0,Rust REPL,anthony,maybe after those are done it will be the top of the docket,human_audit
+575693,enriched,0,,,,,,,,,,,anthony,"Joke about a fake tweet, not a forecast",human_adjudicated
+15151441,enriched,0,,,,,,,,,,,anthony,"gerund going-to, not a forecast",human_audit
+10438218,enriched,0,,,,,,,,,,,panel,,panel
+20509535,enriched,0,,,,,,,,,,,anthony,"Hypothetical cost math, not a forecast",human_adjudicated
+14884762,enriched,0,,,,,,,,,,,anthony,"Personal to-do, not a forecast",human_adjudicated
+8442785,enriched,0,,,,,,,,,,,anthony,"hope, not a claimed forecast",human_adjudicated
+2283594,enriched,1,1,0,0,failure,language_or_framework,under_1y,contrarian,2.0,2.0,HTML5 2D canvas games,anthony,making HTML5 games with the 2D canvas is going to die,human_audit
+514729,enriched,0,,,,,,,,,,,anthony,"career advice, not a market forecast",human_audit
+2686802,enriched,0,,,,,,,,,,,anthony,"habitual behavior, not a future outcome",human_audit
+20768120,enriched,0,,,,,,,,,,,anthony,"Advice about one employee, not a trend",human_audit
+15832694,enriched,0,,,,,,,,,,,anthony,your S3 storage will keep growing indefinitely | review: question about one backup setup,human_adjudicated
+20431014,enriched,0,,,,,,,,,,,panel,,panel
+6391123,enriched,0,,,,,,,,,,,anthony,repeats heard suggestion without endorsing,human_adjudicated
+12265392,enriched,0,,,,,,,,,,,panel,,panel
+3674450,enriched,0,,,,,,,,,,,anthony,"sarcastic hope, not an asserted forecast",human_adjudicated
+8566612,enriched,1,1,0,1,change,policy_law,unstated,agrees,0.0,1.0,keystroke dynamics biometric authentication and privacy,panel,,panel
+7184724,enriched,1,1,0,1,change,policy_law,unstated,unclear,1.0,1.0,health insurance guarantees and risk corridors,anthony,guarantees will put less pressure on insurance companies,human_adjudicated
+11913767,enriched,0,,,,,,,,,,,anthony,"sarcastic quote of FBI, not endorsed",human_audit
+9541188,enriched,0,,,,,,,,,,,panel,,panel
+4197954,enriched,0,,,,,,,,,,,anthony,"math logic claim, not a trend",human_adjudicated
+19166979,enriched,0,,,,,,,,,,,anthony,"quotes parent phrase, makes no forecast",human_audit
+7707576,enriched,1,1,0,1,,product_adoption,unstated,contrarian,0.0,1.0,Google Reader or similar RSS service,anthony,I doubt it'd come back from the dead,human_audit
+15319164,enriched,0,,,,,,,,,,,panel,,panel
+13208234,enriched,1,1,0,0,no_change,language_or_framework,unstated,agrees,2.0,1.0,OpenJDK and GPL-licensed Java,anthony,So that will not be affected.,human_adjudicated
+6340655,enriched,1,1,0,1,failure,policy_law,unstated,contrarian,2.0,1.0,default checked Remember Me checkbox on public computers,anthony,public computers will have a whole list,human_audit
+7866115,enriched,0,,,,,,,,,,,anthony,local performance hope after a rollback,human_adjudicated
+10995053,enriched,1,1,0,1,success,product_adoption,unstated,contrarian,1.0,1.0,Dragon 2 spacecraft landing,panel,,panel
+6597489,enriched,0,,,,,,,,,,,anthony,"personal skill, not a trend",human_adjudicated
+4071434,enriched,0,,,,,,,,,,,panel,,panel
+18133517,enriched,0,,,,,,,,,,,anthony,"personal hope, not a forecast",human_audit
+10673510,enriched,1,1,0,0,change,language_or_framework,under_1y,agrees,2.0,2.0,Swift 3 ABI stability,anthony,Swift 3 will be ABI stable,human_audit
+2519505,enriched,0,,,,,,,,,,,anthony,"Quoted going-to is rejected, not endorsed",human_audit
+8295347,enriched,1,1,0,1,failure,crypto_finance,under_1y,contrarian,2.0,1.0,stock market bubble and interest rates,anthony,bubble that will pop when interest types rise,human_audit
+17348825,enriched,1,1,0,1,success,crypto_finance,unstated,agrees,2.0,1.0,"fraction of world's inhabitants with net worth over $1,000,000",panel,,panel
+11317357,enriched,1,0,0,0,failure,policy_law,unstated,agrees,2.0,1.0,Hulk Hogan's case against Gawker,anthony,aren't going to score points with the jurors,human_adjudicated
+12971360,enriched,0,,,,,,,,,,,anthony,"Imagines device function, not a later outcome",human_adjudicated
+16965093,enriched,0,,,,,,,,,,,anthony,Wills are quoted; no own forecast,human_adjudicated
+2954135,enriched,0,,,,,,,,,,,anthony,"hope, not a claimed forecast",human_audit
+10218852,enriched,0,,,,,,,,,,,panel,,panel
+14298601,enriched,0,,,,,,,,,,,panel,,panel
+10426384,enriched,0,,,,,,,,,,,anthony,"one person's fate, not a trend",human_audit
+8682930,enriched,0,,,,,,,,,,,anthony,"question about design, not an assertion",human_adjudicated
+9095736,enriched,1,1,0,0,failure,science_space,unstated,agrees,2.0,1.0,classical model of photon / quantum physics,anthony,Quantum computers will never work,human_adjudicated
+6189413,enriched,0,,,,,,,,,,,panel,,panel
+19481373,enriched,1,1,0,1,success,society_work,under_1y,,1.0,2.0,Mathigon/Primer course platform,panel,,panel
+12574131,enriched,1,1,0,1,failure,society_work,unstated,agrees,1.0,1.0,automation and wealth inequality,anthony,the big biz will save themselves by going overseas,human_audit
+13115317,enriched,1,1,0,1,failure,policy_law,unstated,contrarian,2.0,1.0,George Hotz's self-driving software release,anthony,won't stand up in a court of law,human_adjudicated
+14395722,enriched,0,,,,,,,,,,,anthony,"question, no asserted forecast",human_adjudicated
+18318203,enriched,1,1,0,1,change,product_adoption,unstated,agrees,2.0,1.0,trust and reputation platforms,anthony,Users simply won't pay,human_adjudicated
+600558,enriched,1,0,0,0,no_change,product_adoption,unstated,contrarian,2.0,1.0,Safari and Firefox browser update adoption,anthony,won't get a 3.x update,human_audit
+1245649,enriched,0,,,,,,,,,,,anthony,"habitual present, not a future claim",human_audit
+12940183,enriched,0,,,,,,,,,,,anthony,"career advice, not a scoped forecast",human_adjudicated
+6218885,enriched,0,,,,,,,,,,,panel,,panel
+20315810,enriched,1,1,1,0,failure,ai_ml,unstated,contrarian,3.0,1.0,Face-Reading AI for lie detection,panel,,panel
+951055,enriched,1,1,0,1,no_change,company_fate,unstated,contrarian,2.0,1.0,Google Adsense account after death,anthony,Google will keep putting money in to it,human_adjudicated
+10916332,enriched,1,1,0,1,change,policy_law,unstated,agrees,1.0,1.0,encryption decryption laws in rural areas,anthony,will of course be impacted by such laws (if they pass),human_adjudicated
+8299759,enriched,1,0,0,0,change,product_adoption,unstated,agrees,1.0,1.0,Apple Watch pricing,anthony,some configurations are probably going to go up to double and triple that,human_adjudicated
+16664240,enriched,1,1,0,0,change,policy_law,unstated,agrees,2.0,1.0,companies firing employees when threatened with legal action,anthony,A company will always err on the side of firing,human_adjudicated
+2156591,enriched,0,,,,,,,,,,,panel,,panel
+16247756,enriched,1,0,0,1,failure,crypto_finance,unstated,unclear,1.0,1.0,market manipulation via retail commodity buyouts,anthony,it would probably never be a profitable enterprise,human_adjudicated
+17296531,enriched,0,,,,,,,,,,,anthony,,human_adjudicated
+14441411,enriched,1,1,0,1,change,society_work,unstated,contrarian,2.0,1.0,Finnish education system innovation and PISA rankings,anthony,"Results will be ""assessable"" only when these kids will have a professional path.",human_adjudicated
+14300551,enriched,0,,,,,,,,,,,anthony,"product capability claim, not a forecast",human_adjudicated
+6391353,enriched,0,,,,,,,,,,,anthony,"quoted ask, not speaker's forecast",human_audit
+11346991,enriched,0,,,,,,,,,,,anthony,"Hypothetical physics, not a real forecast",human_adjudicated
+9590859,enriched,0,,,,,,,,,,,panel,,panel
+20863989,enriched,0,,,,,,,,,,,anthony,"data structure fact, not a forecast",human_audit
+1702656,enriched,1,1,0,0,change,product_adoption,unstated,agrees,1.0,1.0,orkut / Google Me,anthony,new code that will eventually become part of Google Me,human_audit
+12969073,enriched,1,0,0,0,no_change,society_work,unstated,contrarian,2.0,1.0,systemic inequality and path dependence,anthony,initial differences will perpetuate themselves for an indefinately long time,human_adjudicated
+6893558,enriched,1,1,0,0,failure,society_work,unstated,contrarian,1.0,1.0,employment and social outcomes from automation,panel,,panel
+8806205,enriched,0,,,,,,,,,,,anthony,"medical advice, not in forecast scope",human_adjudicated
+14490357,enriched,0,,,,,,,,,,,anthony,speaker's own dev to-do,human_adjudicated
+10935850,enriched,0,,,,,,,,,,,anthony,"Personal to-do, not a scoped forecast",human_adjudicated
+21161140,enriched,0,,,,,,,,,,,anthony,"advice to applicant, not a forecast",human_audit
+19537618,enriched,1,1,0,0,failure,ai_ml,unstated,agrees,2.0,1.0,self-driving systems,anthony,a good one will breed complacency,human_adjudicated
+3605031,enriched,0,,,,,,,,,,,anthony,"question, no claim",human_adjudicated
+20602734,enriched,0,,,,,,,,,,,panel,,panel
+20432034,enriched,0,,,,,,,,,,,panel,,panel
+12952466,enriched,1,1,0,1,change,product_adoption,unstated,contrarian,1.0,1.0,body heat powered watches and watch winders,anthony,manufacturers will have to add little heating pads,human_adjudicated
+21462281,enriched,1,1,0,0,,science_space,unstated,contrarian,1.0,1.0,nuclear fusion,anthony,complete global warming and running out of oil will play out before nuclear fusion,human_audit
+20916596,enriched,1,1,0,1,change,policy_law,unstated,agrees,2.0,1.0,vaping bans and drug enforcement,anthony,people will always get around things like that,human_adjudicated
+18405019,enriched,1,1,0,0,success,society_work,over_10y,agrees,1.0,2.0,North Coast of Canada,panel,,panel
+9602466,enriched,0,,,,,,,,,,,anthony,"personal blogging plan, not a forecast",human_adjudicated
+19238931,enriched,0,,,,,,,,,,,anthony,"personal advice, not a scoped forecast",human_audit
+20141908,enriched,0,,,,,,,,,,,panel,,panel
+7577340,enriched,0,,,,,,,,,,,panel,,panel
+5523794,enriched,0,,,,,,,,,,,anthony,"General cost comparison, not a forecast",human_audit
+10405246,enriched,0,,,,,,,,,,,anthony,"parenting tradeoff, not a forecast",human_adjudicated
+17992319,enriched,0,,,,,,,,,,,panel,,panel
+21829755,enriched,0,,,,,,,,,,,anthony,"I doubt they will really need a team of developers just to solve the Turkish language bugs. | review: local i18n judgment, not a company forecast",human_adjudicated
+4683117,enriched,0,,,,,,,,,,,panel,,panel
+12819468,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast",human_adjudicated
+599873,enriched,1,1,0,1,change,policy_law,unstated,agrees,2.0,1.0,automatic speed enforcement systems,panel,,panel
+2211238,enriched,0,,,,,,,,,,,anthony,wonders if NYT is unsure,human_adjudicated
+8217481,enriched,1,1,0,1,failure,language_or_framework,unstated,contrarian,2.0,1.0,visual source code representations with proprietary IDEs,anthony,"""visual"" source code representations will also be a dead-end if it means propietary, mutually incompatible IDEs.",human_adjudicated
+4504462,enriched,1,1,0,0,no_change,company_fate,unstated,contrarian,2.0,1.0,Apple's legal actions and consumer impact,anthony,I don't see how this is going to harm the bottom line,human_adjudicated
+20224300,enriched,0,,,,,,,,,,,panel,,panel
+18451181,enriched,1,0,0,1,change,policy_law,unstated,,0.0,0.0,legal system response to encryption policy,panel,,panel
+16215514,enriched,0,,,,,,,,,,,anthony,"Maybe the next one will be | review: conversational filler, not a product forecast",human_adjudicated
+5386214,enriched,0,,,,,,,,,,,panel,,panel
+6329885,enriched,0,,,,,,,,,,,panel,,panel
+21617175,enriched,0,,,,,,,,,,,anthony,"personal encouragement, not a trend",human_audit
+9541596,enriched,0,,,,,,,,,,,anthony,"habitual behavior, not a forecast",human_adjudicated
+12796158,enriched,0,,,,,,,,,,,anthony,"habitual metaphor, not a later forecast",human_adjudicated
+11423036,enriched,0,,,,,,,,,,,anthony,"Counterfactual hiring, not a forecast",human_audit
+9184755,enriched,1,1,0,0,success,society_work,unstated,agrees,1.0,1.0,Alan Turing's legacy and contributions,anthony,it may be fashionable/scientifically proven/theologically required to hate gays again,human_adjudicated
+12932246,enriched,0,,,,,,,,,,,anthony,"rhetorical questions, no asserted outcome",human_adjudicated
+4187821,enriched,0,,,,,,,,,,,panel,,panel
+21017722,enriched,0,,,,,,,,,,,anthony,"Interview advice, not a forecast",human_audit
+5660757,enriched,0,,,,,,,,,,,anthony,"Code-review claim, not a trend",human_audit
+17806496,enriched,0,,,,,,,,,,,panel,,panel
+2511775,enriched,0,,,,,,,,,,,anthony,"Cites others' expectations, not own forecast",human_adjudicated
+15640139,enriched,1,1,0,1,change,,5_to_10y,contrarian,2.0,2.0,German luxury electric cars,anthony,the usual German contenders will build electric cars every bit as quick,human_audit
+11984649,enriched,0,,,,,,,,,,,anthony,"hope about quality, not an asserted forecast",human_audit
+4724533,enriched,0,,,,,,,,,,,anthony,"physics claim, not tech/market/law/trend",human_adjudicated
+20617549,enriched,1,1,0,0,failure,policy_law,unstated,agrees,2.0,1.0,Popper's tolerance paradox applied to content moderation,anthony,"if history is anything to go by, unfortunately will get abused",human_adjudicated
+18720595,enriched,0,,,,,,,,,,,panel,,panel
+2038912,enriched,1,1,0,0,no_change,infrastructure,unstated,agrees,1.0,1.0,HN scaling and performance,anthony,It will probably be hard to scale indefinitely,human_audit
+19105363,enriched,0,,,,,,,,,,,anthony,,human_adjudicated
+13525318,enriched,0,,,,,,,,,,,anthony,"describes current green-card procedure, not a forecast",human_adjudicated
+18202485,enriched,1,1,0,0,change,,5_to_10y,contrarian,2.0,2.0,document delivery and PDF usage,panel,,panel
+4476241,enriched,1,1,0,0,success,ai_ml,unstated,agrees,2.0,1.0,autonomous vehicles on highways,anthony,"Robots, being robots, are going to be inherently safer",human_adjudicated
+5415563,enriched,1,1,0,0,change,society_work,unstated,agrees,2.0,1.0,women reporting harassment at tech conventions,anthony,"the subject on both ends will come out on social media, and the attacks will come",human_adjudicated
+13460492,enriched,1,0,0,1,change,product_adoption,unstated,agrees,0.0,1.0,Netflix video on demand,anthony,maybe they will start thinking about video on demand,human_adjudicated
+19261366,enriched,1,0,0,0,,policy_law,unstated,contrarian,2.0,0.0,corporate environmental action,anthony,it’s the last thing they will address,human_adjudicated
+12485843,enriched,0,,,,,,,,,,,anthony,going to Mars names a destination,human_adjudicated
+8075277,enriched,1,1,0,0,failure,company_fate,unstated,contrarian,0.0,2.0,Foursquare,anthony,I doubt it will involve more people having any of their apps on their phone tomorrow than today,human_audit
+11669063,enriched,1,1,0,1,change,company_fate,unstated,agrees,1.0,1.0,BitKeeper open source licensing,anthony,we'll fork it and relicense it under the GPL,human_adjudicated
+11361828,enriched,0,,,,,,,,,,,anthony,"illustrative tax math, not a forecast",human_adjudicated
+18478770,enriched,0,,,,,,,,,,,anthony,bug report about current app behavior,human_audit
+11635215,enriched,0,,,,,,,,,,,anthony,"Current product behavior, not a forecast",human_adjudicated
+510085,enriched,0,,,,,,,,,,,anthony,"Quoted question, not a forecast",human_audit
+6030636,enriched,1,0,0,0,change,,unstated,agrees,2.0,1.0,FOSS fragmentation,anthony,FOSS will fragment because people have different opinions,human_adjudicated
+21624845,enriched,1,1,0,1,success,crypto_finance,unstated,contrarian,2.0,1.0,cryptocurrency as store of value,panel,,panel
+20358746,enriched,1,1,0,0,success,ai_ml,unstated,agrees,2.0,1.0,autonomous vehicle fail-safe systems,panel,,panel
+19164709,enriched,0,,,,,,,,,,,panel,,panel
+907756,enriched,0,,,,,,,,,,,panel,,panel
+21785484,enriched,1,1,0,1,failure,policy_law,unstated,agrees,2.0,2.0,Yang's VAT-funded UBI plan,anthony,consumer spending will drop sharply if his tax plan is implemented,human_audit
+5542372,enriched,1,1,0,0,no_change,infrastructure,unstated,contrarian,1.0,1.0,WordPress botnet attack impact,anthony,effect is probably reasonably limited,human_adjudicated
+19569730,enriched,1,1,0,0,no_change,infrastructure,unstated,contrarian,1.0,1.0,undersea internet cable cartel formation,anthony,there will always be someone willing to sell off some capacity,human_adjudicated
+9739290,enriched,0,,,,,,,,,,,panel,,panel
+11905590,enriched,0,,,,,,,,,,,anthony,"algorithm behavior, not a forecast",human_audit
+19190045,enriched,0,,,,,,,,,,,panel,,panel
+19399477,enriched,0,,,,,,,,,,,anthony,"parenting behavior, not in scope",human_adjudicated
+11414081,enriched,0,,,,,,,,,,,anthony,"going to Apple is travel, not future",human_audit
+956744,enriched,1,1,0,0,failure,ai_ml,unstated,agrees,1.0,1.0,machine learning for trading,anthony,standard ML techniques are unlikely to outperform,human_adjudicated
+16223492,enriched,0,,,,,,,,,,,anthony,"Math guarantee, not a temporal forecast",human_audit
+9881604,enriched,0,,,,,,,,,,,panel,,panel
+8021814,enriched,0,,,,,,,,,,,panel,,panel
+12647501,enriched,0,,,,,,,,,,,anthony,"Rhetorical question, not a stated forecast",human_adjudicated
+1070896,enriched,1,1,0,0,no_change,product_adoption,unstated,agrees,3.0,1.0,iPhone as primary work device,anthony,no one is ever going to be going to work and working all day on their iPhone,human_adjudicated
+15699748,enriched,1,1,0,0,change,,under_1y,agrees,2.0,1.0,augmented viewing in sports,panel,,panel
+10336851,enriched,1,1,0,0,failure,policy_law,unstated,agrees,2.0,1.0,Trans-Pacific Partnership,panel,,panel
+5658676,enriched,0,,,,,,,,,,,panel,,panel
+10478987,enriched,0,,,,,,,,,,,anthony,"question, not an asserted forecast",human_audit
+12374636,enriched,1,1,0,1,failure,infrastructure,unstated,contrarian,0.0,1.0,US automated manufacturing capabilities,panel,,panel
+3059839,enriched,0,,,,,,,,,,,anthony,,human_adjudicated
+3383334,enriched,1,1,0,0,change,infrastructure,unstated,contrarian,2.0,1.0,traditional desktop UI,anthony,the traditional desktop we've been using for the past 25 years is most certainly going to go away.,human_audit
+20913863,enriched,1,1,0,0,success,language_or_framework,under_1y,agrees,2.0,2.0,UserDashboard companion web app,anthony,"personal product todo, not a forecast | review: claims own product will be finished and solid",human_adjudicated
+17034917,enriched,1,1,0,0,change,policy_law,unstated,contrarian,2.0,1.0,government regulatory overreach and restriction of freedoms,anthony,it will have a very real impact on people living in the affected jurisdiction,human_audit
+13593887,enriched,0,,,,,,,,,,,anthony,"describes FedEx program mechanics, not a forecast",human_adjudicated
+7701495,enriched,1,0,0,0,failure,,unstated,contrarian,2.0,1.0,capitalism and ISP market competition,anthony,damage it will do to capitalism if their customers have no option to leave,human_audit
+4241980,enriched,1,1,0,1,,product_adoption,unstated,agrees,2.0,1.0,"Airbnb, Homeaway/VRBO, peer-to-peer rental platforms",panel,,panel
+9410271,enriched,0,,,,,,,,,,,panel,,panel
+3943166,enriched,0,,,,,,,,,,,panel,,panel
+5830582,enriched,0,,,,,,,,,,,panel,,panel
+8626165,enriched,0,,,,,,,,,,,panel,,panel
+18588371,enriched,1,1,0,0,no_change,crypto_finance,unstated,contrarian,2.0,1.0,bitcoin death spiral,anthony,All this is going to do is shuffle out the miners,human_adjudicated
+16442523,enriched,0,,,,,,,,,,,anthony,"current consumption estimate, not a future outcome",human_audit
+13965476,enriched,0,,,,,,,,,,,anthony,"personal career advice, not a scoped forecast",human_adjudicated
+2208169,enriched,1,1,0,0,success,company_fate,unstated,agrees,1.0,1.0,Nokia Windows Phone 7,panel,,panel
+15901024,enriched,0,,,,,,,,,,,anthony,"bodily coffee aside, not a scoped forecast",human_audit
+18159857,enriched,1,1,0,0,change,policy_law,unstated,agrees,3.0,1.0,US Government security lockdown and protest restrictions,anthony,the political class will begin locking down the capital and restricting access,human_adjudicated
+5481197,enriched,0,,,,,,,,,,,anthony,"advice on rhetoric, not in-scope forecast",human_adjudicated
+8586747,enriched,0,,,,,,,,,,,anthony,"personal complaint, not a market forecast",human_adjudicated
+2884830,enriched,0,,,,,,,,,,,panel,,panel
+5714391,enriched,0,,,,,,,,,,,panel,,panel
+2256292,enriched,1,1,0,0,success,product_adoption,unstated,contrarian,1.0,1.0,DrChrono iPad app on Apple App Store,anthony,it is unlikely Apple will yank our app.,human_adjudicated
+21797033,enriched,0,,,,,,,,,,,panel,,panel
+13340570,enriched,0,,,,,,,,,,,anthony,"I won't have to worry about renewing certs anymore | review: current product behavior, not a forecast",human_adjudicated
+4776216,enriched,1,1,0,0,change,crypto_finance,unstated,agrees,1.0,1.0,algorithmic trading systems and market manipulation,panel,,panel
+4298171,enriched,1,1,0,0,failure,,unstated,agrees,0.0,1.0,App Store comments quality,panel,,panel
+6710190,enriched,0,,,,,,,,,,,panel,,panel
+13992636,enriched,1,1,0,1,change,policy_law,unstated,contrarian,1.0,1.0,simplified tax filing system (ReadyReturn),anthony,lessening the cognitive burden of the payment process will lead to higher taxes,human_adjudicated
+1348595,enriched,0,,,,,,,,,,,anthony,"Quotes Google's plan, not own forecast",human_adjudicated
+15753933,enriched,0,,,,,,,,,,,panel,,panel
+2199212,enriched,0,,,,,,,,,,,anthony,"This summer, or No, it won't | review: reports the event answer, does not forecast",human_audit
+19179580,enriched,1,1,0,0,change,infrastructure,unstated,agrees,2.0,1.0,RISC-V SweRV core for RPi-type applications,panel,,panel
+10540889,enriched,0,,,,,,,,,,,panel,,panel
+6065977,enriched,0,,,,,,,,,,,anthony,"reports others' beliefs, not own forecast",human_adjudicated
+17103339,enriched,0,,,,,,,,,,,anthony,"personal to-do, not a forecast",human_adjudicated
+11912287,enriched,0,,,,,,,,,,,anthony,"purchase criterion, not a market forecast",human_adjudicated
+7481376,enriched,1,1,0,0,success,crypto_finance,unstated,agrees,1.0,1.0,Bitcoin adoption through Stripe integration,anthony,will be a really good contribution to make btc spread amongst normal users,human_adjudicated
+6118083,enriched,0,,,,,,,,,,,anthony,"Coding advice, not a forecast",human_audit
+780391,enriched,0,,,,,,,,,,,anthony,"idiomatic willingness, not a forecast",human_audit
+3701700,enriched,1,1,0,0,success,infrastructure,over_10y,agrees,2.0,2.0,physical encyclopedias vs hard drives,panel,,panel
+4532159,enriched,1,1,0,0,success,society_work,over_10y,contrarian,1.0,2.0,Chinese language adoption in business and science,panel,,panel
+20316395,enriched,0,,,,,,,,,,,panel,,panel
+7646468,enriched,1,1,0,0,change,company_fate,unstated,unclear,2.0,1.0,Google,anthony,"Recent numbers already out, not a later forecast | review: claims the numbers will be a nasty awakening",human_adjudicated
+18534478,enriched,1,1,0,0,success,infrastructure,unstated,agrees,1.0,1.0,"Lisp machines, RISC-V chips",panel,,panel
+16563392,enriched,0,,,,,,,,,,,panel,,panel
+2384477,enriched,0,,,,,,,,,,,anthony,"past quoted diet advice, not a forecast",human_audit
+12272953,enriched,1,1,0,1,failure,language_or_framework,unstated,contrarian,1.0,1.0,Rust async thread pool ecosystem standardization,panel,,panel
+18544987,enriched,1,1,0,0,failure,company_fate,unstated,agrees,3.0,1.0,Google's recruiting and reputation,panel,,panel
+15668646,enriched,1,1,0,1,change,policy_law,unstated,contrarian,3.0,0.0,use of data from unethical research,anthony,"it will happen again, and the perpetrator will feel like they are doing good",human_adjudicated
+1452578,enriched,0,,,,,,,,,,,anthony,"Analogy hypothetical, not a forecast",human_adjudicated
+12146886,enriched,1,1,0,0,no_change,language_or_framework,under_1y,agrees,2.0,1.0,Functional Data Structures,anthony,Functional Data Structures which are not going to change anytime soon,human_audit
+13765819,enriched,1,1,0,0,success,infrastructure,unstated,agrees,2.0,2.0,"supercomputers, exascale computing",panel,,panel
+10315185,enriched,0,,,,,,,,,,,anthony,"job post, not a forecast",human_adjudicated
+938237,enriched,0,,,,,,,,,,,anthony,"Personal learning advice, out of scope",human_adjudicated
+8010245,enriched,0,,,,,,,,,,,anthony,"habitual will, not a future outcome",human_audit
+2146594,enriched,0,,,,,,,,,,,anthony,"Describes ranking mechanic, not a forecast",human_adjudicated
+3764571,enriched,0,,,,,,,,,,,anthony,"Design critique of pagination, not a forecast",human_audit
+5514897,enriched,1,1,0,1,success,company_fate,unstated,agrees,2.0,1.0,Google Fiber,anthony,they will also know every customers web habbits,human_adjudicated
+18704541,enriched,0,,,,,,,,,,,anthony,"task duration, not a trend forecast",human_adjudicated
+7364808,enriched,0,,,,,,,,,,,panel,,panel
+1837674,enriched,0,,,,,,,,,,,anthony,"career advice, not a trend forecast",human_adjudicated
+7320920,enriched,1,0,0,1,change,policy_law,unstated,contrarian,2.0,0.0,electoral system reform and citizen revolution,anthony,there will be a revolution,human_audit
+10996714,enriched,1,1,0,0,no_change,crypto_finance,over_10y,contrarian,1.0,2.0,interest rates and central bank policy,anthony,I doubt the rate raise will stick,human_audit
+15444612,enriched,0,,,,,,,,,,,anthony,"Own roadmap wishes, not an asserted forecast",human_adjudicated
+18909688,enriched,0,,,,,,,,,,,panel,,panel
+5548063,enriched,0,,,,,,,,,,,anthony,"current company intent, not a forecast",human_audit
+13868519,enriched,0,,,,,,,,,,,anthony,"current customs duty, not a forecast",human_audit
+21885422,enriched,0,,,,,,,,,,,anthony,"describes tool capability, not future outcome",human_audit
+20560166,enriched,0,,,,,,,,,,,anthony,"he will be written about extensively in history books | review: hope and a personal legacy, not a domain forecast",human_adjudicated
+18750882,enriched,0,,,,,,,,,,,panel,,panel
+10078482,enriched,1,1,0,1,success,,unstated,agrees,1.0,1.0,solid-state batteries in electric vehicles,panel,,panel
+13680055,enriched,0,,,,,,,,,,,anthony,"current config behavior, not a future forecast",human_adjudicated
+1582614,enriched,0,,,,,,,,,,,anthony,"quoted principle, not a forecast",human_adjudicated
+9020139,enriched,0,,,,,,,,,,,anthony,SEO advice about current limits,human_adjudicated
+8799917,enriched,0,,,,,,,,,,,panel,,panel
+3828633,enriched,1,1,0,1,success,product_adoption,unstated,agrees,2.0,1.0,Ohours networking platform,anthony,those high value time slots will be harder to come by as the service grows.,human_adjudicated
+1851110,enriched,1,1,0,0,change,policy_law,unstated,contrarian,2.0,1.0,Orexigen's Contrave obesity drug FDA approval,anthony,people are going to take any drugs once they're approved,human_adjudicated
+15165136,enriched,0,,,,,,,,,,,panel,,panel
+7592491,enriched,0,,,,,,,,,,,panel,,panel
+11248010,enriched,0,,,,,,,,,,,panel,,panel
+15282428,enriched,1,1,0,0,success,language_or_framework,unstated,contrarian,2.0,2.0,Fresh IDE v3.0 with portable GUI toolkit,panel,,panel
+3693584,enriched,0,,,,,,,,,,,anthony,"project challenge phrasing, not a forecast",human_adjudicated
+6788571,enriched,1,0,0,0,,crypto_finance,unstated,contrarian,1.0,0.0,Bitcoin adoption and collective action against early adopters,anthony,people will just worry about themselves than burning their own value,human_adjudicated
+3187001,enriched,0,,,,,,,,,,,anthony,"Reports a fear, not speaker's forecast",human_adjudicated
+8129478,enriched,0,,,,,,,,,,,anthony,"Wonders whether, does not assert",human_adjudicated
+15015756,enriched,0,,,,,,,,,,,anthony,"One person's conduct, not a listed topic",human_adjudicated
+17271092,enriched,0,,,,,,,,,,,panel,,panel
+12959010,enriched,0,,,,,,,,,,,panel,,panel
+19348530,enriched,0,,,,,,,,,,,panel,,panel
+16872195,enriched,1,0,0,0,failure,product_adoption,unstated,contrarian,2.0,1.0,web apps vs native applications,anthony,a webapp isn't going to be as good as a proper application.,human_adjudicated
+10712554,enriched,0,,,,,,,,,,,panel,,panel
+8236298,enriched,0,,,,,,,,,,,anthony,"quoted spec steps, not a forecast",human_audit
+19768461,enriched,1,1,0,0,no_change,language_or_framework,unstated,contrarian,1.0,1.0,ImGUI and retained mode GUIs,anthony,it's probably going to be just fine for their use case,human_adjudicated
+16526575,enriched,0,,,,,,,,,,,anthony,"personal conviction, not a tech forecast",human_audit
+16896599,enriched,0,,,,,,,,,,,panel,,panel
+4462105,enriched,1,1,0,0,success,product_adoption,unstated,contrarian,1.0,1.0,Linux on consumer desktops/laptops,panel,,panel
+2778401,enriched,1,1,0,0,no_change,policy_law,over_10y,agrees,1.0,1.0,autonomous drone targeting systems,panel,,panel
+17913245,enriched,0,,,,,,,,,,,panel,,panel
+4603969,enriched,0,,,,,,,,,,,anthony,"rhetorical question, not a forecast",human_audit
+15325288,enriched,1,1,0,1,change,policy_law,unstated,contrarian,2.0,1.0,territorial independence movements and government enforcement,panel,,panel
+5947415,enriched,0,,,,,,,,,,,anthony,"will is capability or refusal, not forecast",human_adjudicated
+1812160,enriched,0,,,,,,,,,,,anthony,"advice, not a product forecast",human_adjudicated
+21450942,enriched,0,,,,,,,,,,,panel,,panel
+3979092,enriched,1,1,0,1,success,infrastructure,unstated,agrees,1.0,1.0,Rails deployment on Linux,anthony,Chances are high that it will be Linux,human_audit
+7702083,enriched,0,,,,,,,,,,,panel,,panel
+3492120,enriched,0,,,,,,,,,,,anthony,"present sports habit, not a scoped forecast",human_audit
+10761795,enriched,1,1,0,0,change,infrastructure,over_10y,agrees,2.0,1.0,personal cloud devices and homomorphic encryption,panel,,panel
+17987371,enriched,0,,,,,,,,,,,panel,,panel
+8162424,enriched,0,,,,,,,,,,,panel,,panel
+18471937,enriched,1,1,0,1,success,,unstated,agrees,2.0,1.0,Google Cloud Platform support and customer service,panel,,panel
+7932014,enriched,0,,,,,,,,,,,anthony,"About the interlocutor, not a scoped forecast",human_audit
+13996140,enriched,0,,,,,,,,,,,anthony,"you will see prices for drugs like Insulin going up | review: will-see describes current pricing, not a forecast",human_adjudicated
+14600839,enriched,1,1,0,0,change,product_adoption,unstated,contrarian,2.0,1.0,Twitch chat moderation,anthony,"no matter what the tools, there will be collateral damage",human_adjudicated
+7201228,enriched,0,,,,,,,,,,,panel,,panel
+7253241,enriched,0,,,,,,,,,,,panel,,panel
+13301263,enriched,1,1,0,0,no_change,crypto_finance,unstated,agrees,2.0,1.0,carry trade and financial regulation,anthony,billions lost will be covered by someone else,human_adjudicated
+8691646,enriched,1,1,0,0,change,language_or_framework,over_10y,agrees,1.0,1.0,Docker and Rocket,anthony,there will be enough interest & momentum that we eventually see some sort of alignment between Docker and Rocket,human_audit
+17132890,enriched,0,,,,,,,,,,,panel,,panel
+18108155,enriched,0,,,,,,,,,,,anthony,"quoted methods advice, not a forecast",human_adjudicated
+20041764,enriched,0,,,,,,,,,,,anthony,going to is advice about concern,human_audit
+9101597,enriched,0,,,,,,,,,,,anthony,"Curious whether, no assertion",human_adjudicated
+1255722,enriched,1,,0,0,change,language_or_framework,,contrarian,1.0,1.5,iPhone SDK porting to Windows,anthony,I imagine this trend will continue,human_adjudicated
+3658243,enriched,1,0,0,1,failure,science_space,over_10y,,2.0,1.0,alien contact via radio signals,panel,,panel
+21496134,enriched,1,1,0,0,no_change,,,contrarian,2.0,3.0,US healthcare costs as percentage of GDP,anthony,shows falling costs as a percentage of GDP,human_adjudicated
+18208877,enriched,0,,,,,,,,,,,anthony,"Standing cost pattern, not a forecast",human_adjudicated
+8786009,enriched,1,0,0,1,change,society_work,unstated,,1.0,0.0,uberman morality and societal outcomes,anthony,"Only if we get very, very lucky",human_audit
+9261096,enriched,0,,,,,,,,,,,anthony,"death metaphysics, not a scoped forecast",human_adjudicated
+16137821,enriched,1,0,1,1,failure,society_work,unstated,contrarian,2.0,0.0,human race,anthony,human race shrivelling up and going extinct,human_audit
+7774474,enriched,0,,,,,,,,,,,panel,,panel
+21281860,enriched,0,,,,,,,,,,,anthony,"questions, no asserted forecast",human_adjudicated

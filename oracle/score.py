@@ -47,6 +47,18 @@ def load_labels(path) -> pd.DataFrame:
     return df
 
 
+def rel_paths(v):
+    """Input paths relative to the repo, so the published report doesn't carry a local drive layout."""
+    if isinstance(v, (list, tuple)):
+        return [rel_paths(x) for x in v]
+    if isinstance(v, (str, Path)):
+        try:
+            return Path(v).resolve().relative_to(C.ROOT).as_posix()
+        except (ValueError, OSError):
+            return str(v)
+    return v
+
+
 def gate_result(passed: bool | None, value, threshold, detail: str = "") -> dict:
     status = "not_evaluated" if passed is None else ("pass" if passed else "fail")
     return {"status": status, "value": value, "threshold": threshold, "detail": detail}
@@ -325,7 +337,7 @@ def failure_cases(single: pd.DataFrame, gate: float, k: int = 10) -> dict:
 def cmd_score(args) -> None:
     labels = load_labels(args.labels)
     report: dict = {"schema_version": C.SCHEMA_VERSION, "model": C.MODEL, "gates_config": GATES,
-                    "inputs": {k: v for k, v in vars(args).items() if k != "func"}}
+                    "inputs": {k: rel_paths(v) for k, v in vars(args).items() if k != "func"}}
     gates: dict = {}
 
     # Label provenance (plan amendment A1) and the stage B reference ceiling

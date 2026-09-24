@@ -24,7 +24,7 @@ def load_dotenv(path: Path = ROOT / ".env") -> None:
 load_dotenv()
 
 DATA = ROOT / "data"
-PUBLISH = ROOT / "publish"
+PUBLISH = ROOT / "results"  # committed: public artifacts, usernames removed
 QUESTIONS_PATH = ROOT / "questions.json"
 
 QUESTIONS = json.loads(QUESTIONS_PATH.read_text(encoding="utf-8"))

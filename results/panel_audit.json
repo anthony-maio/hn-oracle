@@ -1,0 +1,142 @@
+{
+  "panel": [
+    "anthropic/claude-haiku-4.5",
+    "deepseek/deepseek-v4-flash",
+    "openai/gpt-5.6-luna"
+  ],
+  "rule": "is_prediction: unanimous -> panel label, any split -> human. Stage B: strict majority, median for scores.",
+  "provenance": [
+    {
+      "stratum": "enriched",
+      "source": "human_adjudicated",
+      "n": 164
+    },
+    {
+      "stratum": "enriched",
+      "source": "human_audit",
+      "n": 100
+    },
+    {
+      "stratum": "enriched",
+      "source": "panel",
+      "n": 136
+    },
+    {
+      "stratum": "uniform",
+      "source": "human",
+      "n": 600
+    }
+  ],
+  "audit_is_prediction": {
+    "n": 100,
+    "errors": 11,
+    "error_rate": 0.11,
+    "error_rate_ci95": [
+      0.06254131955225126,
+      0.18631463027903022
+    ],
+    "panel_false_positives": 5,
+    "panel_false_negatives": 6,
+    "kappa": 0.7566371681415929
+  },
+  "adjudicated": {
+    "n": 164,
+    "human_sided_with": {
+      "anthropic/claude-haiku-4.5": 91,
+      "deepseek/deepseek-v4-flash": 101,
+      "openai/gpt-5.6-luna": 82
+    }
+  },
+  "panel_unanimity_is_prediction": {
+    "n": 400,
+    "rate": 0.59,
+    "pairwise_agreement": {
+      "anthropic/claude-haiku-4.5 vs deepseek/deepseek-v4-flash": 0.795,
+      "anthropic/claude-haiku-4.5 vs openai/gpt-5.6-luna": 0.6825,
+      "deepseek/deepseek-v4-flash vs openai/gpt-5.6-luna": 0.7025
+    }
+  },
+  "stage_b_panel_agreement": {
+    "is_checkable": {
+      "n": 202,
+      "agreement": 0.7227722772277229,
+      "pairwise": [
+        0.7079207920792079,
+        0.6584158415841584,
+        0.801980198019802
+      ]
+    },
+    "is_sarcastic": {
+      "n": 202,
+      "agreement": 0.9669966996699669,
+      "pairwise": [
+        0.9702970297029703,
+        0.9752475247524752,
+        0.9554455445544554
+      ]
+    },
+    "is_conditional": {
+      "n": 202,
+      "agreement": 0.792079207920792,
+      "pairwise": [
+        0.7673267326732673,
+        0.7475247524752475,
+        0.8613861386138614
+      ]
+    },
+    "direction": {
+      "n": 202,
+      "agreement": 0.6831683168316832,
+      "pairwise": [
+        0.6732673267326733,
+        0.6732673267326733,
+        0.7029702970297029
+      ]
+    },
+    "domain": {
+      "n": 202,
+      "agreement": 0.6617161716171617,
+      "pairwise": [
+        0.6534653465346535,
+        0.7079207920792079,
+        0.6237623762376238
+      ]
+    },
+    "horizon": {
+      "n": 202,
+      "agreement": 0.7706270627062706,
+      "pairwise": [
+        0.7821782178217822,
+        0.7178217821782178,
+        0.8118811881188119
+      ]
+    },
+    "stance_vs_thread": {
+      "n": 202,
+      "agreement": 0.7673267326732672,
+      "pairwise": [
+        0.7425742574257426,
+        0.7970297029702971,
+        0.7623762376237624
+      ]
+    },
+    "certainty": {
+      "n": 202,
+      "agreement": 0.8283828382838284,
+      "pairwise": [
+        0.8234323432343235,
+        0.7904290429042904,
+        0.8712871287128713
+      ]
+    },
+    "specificity": {
+      "n": 202,
+      "agreement": 0.8503850385038504,
+      "pairwise": [
+        0.8679867986798679,
+        0.801980198019802,
+        0.8811881188118812
+      ]
+    }
+  }
+}

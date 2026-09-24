@@ -67,7 +67,7 @@ python pilot.py score --labels data/labels_final.csv \
 python pilot.py publish
 ```
 
-`score` writes `data/report.json` and `data/report.md`. Together they hold the gate table, the decision, per-stratum metrics, reliability tables, recalibration, packing penalty, nonce robustness, baselines, human agreement, stage B fields, cost and speed with a full-run projection, and 10 misses and 10 false positives with their text. It also writes `data/disagreements.csv` for adjudication. `publish` copies the public artifacts to `publish/` without HN usernames, adds a SHA-256 manifest, and refuses to publish if any author field survives.
+`score` writes `data/report.json` and `data/report.md`. Together they hold the gate table, the decision, per-stratum metrics, reliability tables, recalibration, packing penalty, nonce robustness, baselines, human agreement, stage B fields, cost and speed with a full-run projection, and 10 misses and 10 false positives with their text. It also writes `data/disagreements.csv` for adjudication. `publish` copies the public artifacts to `results/` (committed) without HN usernames, adds a SHA-256 manifest, and refuses to publish if any author field survives.
 
 ## Choices the plan left open
 
