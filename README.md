@@ -12,7 +12,7 @@ The archive holds 41.3 million comments. 17.95 million of them are from 2006-202
 
 This repo is the 1,000-comment pilot that decides whether the full run happens. Every threshold was written down before the first API call, and every gate gets published as pass or fail, including the ones that fail.
 
-> **Status:** the pilot ran on September 23, 2026. Every pre-registered gate passed. Scoring cost **$5.64** in API calls, and **$9.34** with the stage C hindsight check and a baseline rerun I had to do (below). Raw responses, labels and the full report are in [`results/`](results/).
+> **Status:** the pilot ran on September 23, 2026. Every pre-registered gate passed. Scoring cost **$5.64** in API calls, and **$9.34** with the stage C hindsight check and a baseline rerun I had to do (below). Raw responses, labels and the full report are in [`results/`](results/). A first draft of the write-up is in [docs/writeup.md](docs/writeup.md).
 
 ## Results: GO, and the full archive costs about $400
 
@@ -164,7 +164,7 @@ flowchart LR
 | Stage C hindsight check (24 predictions, web search) | $3.70 |
 | Hand labeling (864 comments, 370 notes) | one evening |
 
-Stage C graded the 24 checkable predictions whose horizon has passed; the verdicts are Sonnet's until I've checked each one against its sources, and they never feed the scoring. OpenRouter's `:free` models also work (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
+Stage C graded the 24 checkable predictions whose horizon has passed; Sonnet wrote the verdicts, I checked each against its sources, and they never feed the scoring. OpenRouter's `:free` models also work (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
 
 ## Run it
 
