@@ -83,7 +83,7 @@ The pilot tests that directly. On the uniform random stratum, it compares the me
 flowchart TD
     S[1,000 comments, 2009-2019] --> U[600 uniform random<br/>base rates and calibration]
     S --> E[400 enriched<br/>regex-hinted, for enough positives]
-    U & E --> L[Blind hand labels<br/>+ second labeler on 200, Cohen's kappa]
+    U & E --> L[Blind human labels on uniform + audit + splits<br/>3-model panel on the rest]
     L --> R1[Run 1: stage A single]
     L --> R2[Runs 2-3: packed 8 and 16]
     L --> R4[Run 4: nonce robustness<br/>100 comments x 3]
@@ -95,7 +95,7 @@ flowchart TD
 ```
 
 - **Two strata.** 600 comments are drawn uniformly at random, and only those feed base-rate, calibration and prevalence claims. Predictions are probably 3 to 8% of random comments, so 400 more come from comments matching a prediction-hint regex. That puts enough positives in the sample to test stage B.
-- **Blind labels.** Every label is finished before anyone looks at a Jev output. The labeling tool never shows model output or the stratum. A second labeler covers 200 comments, and the human-human kappa sets the ceiling. I don't expect Jev to agree with me more than another person does.
+- **Human labels where the headline claims live.** I label all 600 uniform comments blind; recall, calibration and prevalence (G1-G3) are computed only on those. A panel of three model families (Claude Haiku 4.5, DeepSeek v4 Flash, GPT-5.6 Luna) labels the enriched comments it agrees on unanimously, and the stage B fields. Every split comes to me, and so does a blind audit of 100 unanimous panel labels, shuffled in with the rest so I can't tell which is which. The report prints the audit error rate next to every result that leans on panel labels. No panel model is ever a baseline, and baselines are graded only on human labels ([amendment A1](PILOT_PLAN.md#amendment-a1-labeling-panel-september-23-2026-before-any-labeling)).
 - **The model never does arithmetic.** TypeSafe documents dates and numbers as weak spots, so no question asks Jev about dates. Horizon buckets become resolution years in code.
 - **Robustness.** 100 comments are asked 3 times each with a random nonce added to the state. If the answers move, that's a finding.
 - **Baselines** get the same state and the same question: the regex (uniform stratum only, since it built the enriched stratum), a cheap LLM, and a frontier LLM through OpenRouter structured output.
@@ -130,11 +130,12 @@ Under ten dollars, and the labeling is the expensive part.
 | Item | Cost |
 |---|---|
 | Jev, every pilot run combined (~1-3M input tokens) | under $1 |
-| Cheap LLM baseline (`deepseek/deepseek-v4-flash`) | ~$0.04 |
+| Cheap LLM baseline (`openai/gpt-5-nano`) | ~$0.03 |
 | Frontier LLM baseline (`anthropic/claude-sonnet-5`, measured $0.0016 per comment) | ~$1.60 |
 | Optional sweep of 7 low-cost models | ~$1 |
 | Stage C hindsight spot check, 30 predictions with web search | ~$1 |
-| Hand labeling | ~8 hours of my time |
+| Three-model labeling panel | ~$2 |
+| Hand labeling | ~2.5 hours of my time |
 
 OpenRouter's `:free` models work too (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
 

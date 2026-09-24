@@ -65,7 +65,7 @@ ARCHIVE_COMMENTS_FALLBACK = 41_317_357
 OPENROUTER_FREE_RPM = 18
 OPENROUTER_PAID_RPM = 300
 BASELINE_PRESETS = {
-    "cheap": "deepseek/deepseek-v4-flash",                     # $0.07/$0.14 per M, ~$0.04 per 1k comments
+    "cheap": "openai/gpt-5-nano",                              # $0.05/$0.40 per M, ~$0.03 per 1k comments
     "frontier": "anthropic/claude-sonnet-5",                   # $2/$10 per M, measured ~$1.60 per 1k comments
     "free_cheap": "liquid/lfm-2.5-2.6b:free",                  # smallest free model, native structured output
     "free_frontier": "nvidia/nemotron-3-ultra-550b-a55b:free",  # largest free model (550B MoE)
@@ -82,7 +82,6 @@ SWEEPS = {
     ],
     # low-cost paid models with native structured output, under ~$0.35 per 1k comments
     "cheap": [
-        "deepseek/deepseek-v4-flash",
         "openai/gpt-5-nano",
         "openai/gpt-6-luna",
         "qwen/qwen3.8-flash",
@@ -91,6 +90,12 @@ SWEEPS = {
         "mistralai/mistral-nemo",
     ],
 }
+# Labeling panel (plan amendment A1). Three model families so their agreement means something.
+# is_prediction: unanimous -> panel label, any split -> you. Stage B: 2-of-3 majority, median for scores.
+# A panel model is never also a baseline: it would be graded against labels it helped write.
+LABEL_PANEL = ["anthropic/claude-haiku-4.5", "deepseek/deepseek-v4-flash", "openai/gpt-5.6-luna"]
+assert not set(LABEL_PANEL) & ({*BASELINE_PRESETS.values(), *SWEEPS["free"], *SWEEPS["cheap"]}),     "a labeling-panel model must not also be a baseline"
+
 STAGE_C_MODEL = "anthropic/claude-sonnet-5"  # plus the web plugin: Exa, ~$0.007 per request
 
 HF_PARQUET_GLOB = "hf://datasets/nikhilambhure00/hacker-news/data/*/*.parquet"

@@ -145,7 +145,7 @@ Written before any Jev call. Every gate is reported pass or fail, including the 
 
 - **Jev tokens:** well under $1 for every pilot run combined (about 1M to 3M input tokens).
 - **LLM baselines and stage C:** roughly $10 to $30.
-- **Main cost:** labeling time, about 8 hours total.
+- **Main cost:** labeling time, about 8 hours total (about 2.5 hours after amendment A1).
 
 Schedule:
 
@@ -172,3 +172,32 @@ Working title: "I asked a decision model to find every prediction on Hacker News
 5. Full-run projection and what launches next
 
 Everything gets published: `questions.json`, raw responses, labels (usernames removed), and the report JSON.
+
+## Amendment A1: labeling panel (September 23, 2026, before any labeling)
+
+Recorded after the sample was drawn and a 20-comment Jev smoke test ran, and before any label was written or any labeled Jev result existed. The gates, thresholds, and metrics above are unchanged. What changes is who writes which labels, because about 8 hours of solo labeling was the bottleneck.
+
+**Human labels, blind, remain the answer key for:**
+
+- `is_prediction` on all 600 uniform comments. G1, G2 and G3 (recall, calibration, prevalence) are computed only on these.
+- A blind audit of 100 random enriched comments the panel labeled unanimously. This measures the panel's error rate, which the write-up reports with a 95% Wilson interval.
+- Every enriched comment the panel does not agree on unanimously.
+
+These three sets are shuffled into one sheet, so the labeler can't tell uniform, audit, and split comments apart. The labeling tool still never shows model output.
+
+**A three-model panel labels the rest:** `anthropic/claude-haiku-4.5`, `deepseek/deepseek-v4-flash`, `openai/gpt-5.6-luna`, three model families at temperature 0 (where supported), given the same labeling rules as the human (`LABELING_RULES.md`).
+
+- `is_prediction` on enriched comments: the panel's label counts only when all three agree.
+- Stage B fields on every positive: strict majority for yes/no and choice fields (no majority leaves the field unlabeled), median for scores.
+
+**Consequences for scoring:**
+
+- No panel model is a baseline. The cheap-LLM baseline moves from `deepseek/deepseek-v4-flash` to `openai/gpt-5-nano`.
+- Baselines (G5) are scored only on human-labeled comments, so no model is graded against labels an LLM wrote.
+- G4 (packing) still uses every labeled comment; single and packed runs are compared on the same labels.
+- The stage B gate's reference ceiling becomes the mean pairwise agreement between panel models, since the stage B labels come from the panel. If a second human labeler is added, human-human agreement replaces it.
+- The report states each label's provenance (`human`, `human_audit`, `human_adjudicated`, `panel`) and the audit error rate next to every result that depends on panel labels.
+
+Human labeling drops from about 8 hours to about 2.5. Panel API cost is about $2.
+
+**Observed when the panel ran, before any human label:** the three models agreed unanimously on 59.0% of the 400 enriched comments. They said "prediction" at very different rates (Haiku 26.8%, DeepSeek 34.2%, GPT-5.6 Luna 55.0%; pairwise agreement 68-80%), with Luna the odd one out in 82 of 164 splits. The unanimity rule stays as registered, so all 164 splits go to the human sheet, which becomes 864 comments (600 uniform, 100 audit, 164 splits). Model disagreement at this level says the task is ambiguous on regex-hinted comments, which is a reason to add a second human labeler if one is available.

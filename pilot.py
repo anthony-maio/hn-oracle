@@ -4,6 +4,7 @@ Subcommands, in pilot order:
   preflight  Check dataset columns/types, Jev auth, response shape, and packed-16 token size.
   count      Exact count of full-run-eligible comments (2006-2020) with DuckDB.
   sample     Draw the stratified 1,000-comment sample, fetch thread context, write label sheets.
+  panel      Two-model labeling panel: a, sheet, (you label), b, merge. See PILOT_PLAN.md amendment A1.
   label      Blind terminal labeler (pass a: is_prediction; pass b: stage B fields).
   run        Jev runs: a_single, a_packed, a_nonce, b. Resumable; logs request, response, latency.
   models     List OpenRouter :free models and whether they support structured output.
@@ -126,6 +127,15 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--rpm", type=float, default=C.RATE_LIMIT_RPM * 0.8, help="client-side request cap")
     p.add_argument("--dry-run", action="store_true", help="print the first request body and exit")
     p.set_defaults(func=lazy("oracle.runs", "cmd_run"))
+
+    p = sub.add_parser("panel", help="two-model labeling panel (plan amendment A1)")
+    p.add_argument("step", choices=["a", "sheet", "b", "merge"])
+    p.add_argument("--labels", default=str(C.DATA / "labels_anthony.csv"), help="your labels from the human sheet")
+    p.add_argument("--audit", type=int, default=100, help="random agreed enriched comments you label blind")
+    p.add_argument("--seed", type=int, default=11)
+    p.add_argument("--workers", type=int, default=6)
+    p.add_argument("--rpm", type=float, default=C.OPENROUTER_PAID_RPM)
+    p.set_defaults(func=lazy("oracle.panel", "cmd_panel"))
 
     p = sub.add_parser("models", help="list OpenRouter :free models and the cheapest paid ones")
     p.add_argument("--top", type=int, default=25)

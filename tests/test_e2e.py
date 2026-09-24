@@ -64,9 +64,19 @@ def fake_transport(request: httpx.Request) -> httpx.Response:
     body = json.loads(request.content)
     if "openrouter" in url:
         text = body["messages"][-1]["content"]
-        states = json.loads(text[text.index("{"):text.index("\n\n", text.index("}\n") if "}\n" in text else 0)])
-        answer = lambda s: {"answer": regex_hint(s["comment"]), "probability": 0.85 if regex_hint(s["comment"]) else 0.1}
-        out = {c: answer(v) for c, v in states.items()} if "c01" in states else answer(states)
+        states, _ = json.JSONDecoder().raw_decode(text[text.index("{", text.index("State (JSON)")):])
+        if "Task: panel_a" in text:
+            hit = regex_hint(states["comment"])
+            if body["model"] == "test/plain:free" and zlib.crc32(states["comment"].encode()) % 6 == 0:
+                hit = not hit  # manufacture panel splits
+            out = {"is_prediction": hit}
+        elif "Task: panel_b" in text:
+            out = {"is_checkable": True, "is_sarcastic": False, "is_conditional": False, "direction": "success",
+                   "domain": "language_or_framework", "horizon": "1_to_5y", "stance_vs_thread": "agrees",
+                   "certainty": 2 if body["model"] != "test/plain:free" else 3, "specificity": 1, "subject_text": "Rust"}
+        else:
+            answer = lambda s: {"answer": regex_hint(s["comment"]), "probability": 0.85 if regex_hint(s["comment"]) else 0.1}
+            out = {c: answer(v) for c, v in states.items()} if "c01" in states else answer(states)
         strict = body.get("response_format", {}).get("type") == "json_schema"
         assert strict == body["model"].startswith("test/strict")
         content = json.dumps(out) if strict else "Sure! Here you go:\n" + json.dumps(out)
@@ -105,6 +115,7 @@ def env(tmp_path, monkeypatch):
             super().__init__(*a, **kw)
 
     monkeypatch.setattr(httpx, "Client", MockClient)
+    monkeypatch.setattr("oracle.jev.time.sleep", lambda s: None)  # a mock bug should fail fast, not back off
     return make_archive(tmp_path)
 
 
@@ -204,6 +215,40 @@ def test_pipeline(env, monkeypatch):
     assert r["stage_b"]["subject_other_share"]["n"] > 0
     assert r["economics"]["eligible_source"].startswith("data/eligible.json")
     assert (data / "report.md").read_text(encoding="utf-8").startswith("# HN Oracle pilot report")
+
+    # Plan amendment A1: three-model labeling panel, human answer key on uniform + audit + splits
+    monkeypatch.setattr(C, "LABEL_PANEL", ["test/strict:free", "test/plain:free", "test/other:free"])
+    cli("panel", "a", "--rpm", 0)
+    cli("panel", "sheet")
+    plan = json.loads((data / "panel_plan.json").read_text())
+    human_sheet = pd.read_csv(data / "labels_blank_human.csv", dtype=str, keep_default_na=False)
+    assert len(human_sheet) == 600 + 100 + len(plan["adjudicate_ids"]) and plan["adjudicate_ids"]
+    assert set(plan["audit_ids"]).isdisjoint(plan["adjudicate_ids"])
+    sample = pd.read_json(data / "sample.jsonl", lines=True).set_index("id")
+    human_sheet["is_prediction"] = [("1" if regex_hint(sample.loc[int(i)].text) else "0") for i in human_sheet.id]
+    human_sheet.loc[human_sheet.index[:3], "is_prediction"] = "1"  # a few audit disagreements are fine
+    human_sheet.to_csv(data / "labels_human.csv", index=False)
+    cli("panel", "b", "--labels", data / "labels_human.csv", "--rpm", 0)
+    cli("panel", "merge", "--labels", data / "labels_human.csv")
+    final = pd.read_csv(data / "labels_final.csv", dtype=str, keep_default_na=False)
+    assert (final.is_prediction != "").all()
+    assert set(final.loc[final.stratum == "uniform", "source"]) == {"human"}
+    assert {"panel", "human_audit", "human_adjudicated"} <= set(final.source)
+    pos = final[final.is_prediction == "1"]
+    assert (pos.certainty == "2.0").all() and (pos.direction == "success").all()  # median / majority
+    audit = json.loads((data / "panel_audit.json").read_text())
+    assert audit["audit_is_prediction"]["n"] == 100
+    assert audit["stage_b_panel_agreement"]["certainty"]["agreement"] < 1.0
+
+    cli("score", "--labels", data / "labels_final.csv", "--single", data / "raw_a_single_v1.jsonl",
+        "--stage-b", data / "raw_b_v1.jsonl", "--baseline-regex", data / "baseline_regex.jsonl",
+        "--baseline-frontier", data / "baseline_frontier.jsonl", "--out", data / "report_panel.json")
+    rp = json.loads((data / "report_panel.json").read_text())
+    n_human = int(final.source.str.startswith("human").sum())
+    assert rp["baselines"]["frontier_llm"]["n"] == n_human  # baselines never graded on panel labels
+    assert rp["stage_b_reference"].startswith("mean pairwise")
+    assert rp["panel_audit"]["audit_is_prediction"]["n"] == 100
+    assert "provenance and panel audit" in (data / "report_panel.md").read_text(encoding="utf-8")
 
     cli("publish")
     pub = C.PUBLISH

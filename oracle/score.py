@@ -42,6 +42,8 @@ def load_labels(path) -> pd.DataFrame:
     df["id"] = df.id.astype(int)
     df = df[df.is_prediction.str.strip().isin(["0", "1"])].copy()
     df["y"] = df.is_prediction.astype(int)
+    if "source" in df.columns:
+        df = df[df.source != "unlabeled"]
     return df
 
 
@@ -326,11 +328,21 @@ def cmd_score(args) -> None:
                     "inputs": {k: v for k, v in vars(args).items() if k != "func"}}
     gates: dict = {}
 
-    # Human ceiling
+    # Label provenance (plan amendment A1) and the stage B reference ceiling
     human = None
+    audit_path = C.DATA / "panel_audit.json"
+    if "source" in labels.columns:
+        report["label_provenance"] = labels.groupby(["stratum", "source"]).size().rename("n").reset_index().to_dict("records")
+        if audit_path.exists():
+            pa = json.loads(audit_path.read_text())
+            report["panel_audit"] = {k: pa[k] for k in ("panel", "rule", "audit_is_prediction", "adjudicated",
+                                                        "panel_unanimity_is_prediction")}
+            human = pa["stage_b_panel_agreement"]
+            report["stage_b_reference"] = "mean pairwise agreement between labeling-panel models"
     if args.second_labels:
         human, dis = human_block(labels, load_labels(args.second_labels))
         report["human_agreement"] = human
+        report["stage_b_reference"] = "human-human agreement (second labeler)"
         if len(dis):
             dis.to_csv(C.DATA / "disagreements.csv", index=False)
             report["human_agreement"]["disagreements_file"] = "data/disagreements.csv"
@@ -404,7 +416,9 @@ def cmd_score(args) -> None:
         name, _, path = spec.partition("=")
         bfiles[name] = path
     if bfiles:
-        bl = baselines_block(single, bfiles, labels)
+        # Baselines are scored on human labels only: a model must not be graded on panel-written labels.
+        human_labels = labels[labels.source.str.startswith("human")] if "source" in labels.columns else labels
+        bl = baselines_block(single, bfiles, human_labels)
         report["baselines"] = bl
         g5_parts, ok = [], True
         if "regex" in bl:
@@ -552,6 +566,20 @@ def render_md(r: dict) -> str:
             L.append(f"| {k} | {v['scope']} | {v['n']} | {fmt(v['baseline']['best_f1'])} | "
                      f"{fmt(v['jev_same_ids']['best_f1'])} | {v['jev_minus_baseline_f1']:+.3f} | "
                      f"{fmt(v['baseline']['brier'])} | {fmt(v['baseline']['ece'])} |")
+
+    if r.get("panel_audit"):
+        pa = r["panel_audit"]
+        au = pa["audit_is_prediction"]
+        L += ["", "## Labels: provenance and panel audit (amendment A1)", "",
+              f"Panel: {', '.join(pa['panel'])}. {pa['rule']}", "",
+              "| stratum | source | n |", "|---|---|---|"]
+        L += [f"| {x['stratum']} | {x['source']} | {x['n']} |" for x in r.get("label_provenance", [])]
+        ci = au.get("error_rate_ci95") or [None, None]
+        L += ["", f"Blind audit of unanimous panel labels: {au['errors']} errors in {au['n']} "
+                  f"(rate {fmt(au['error_rate'])}, 95% CI [{fmt(ci[0])}, {fmt(ci[1])}]; "
+                  f"{au['panel_false_positives']} false positives, {au['panel_false_negatives']} false negatives). "
+                  f"Panel splits you adjudicated: {pa['adjudicated']['n']}, sided with each model: {pa['adjudicated']['human_sided_with']}.",
+              "", f"Stage B reference: {r.get('stage_b_reference', 'none')}."]
 
     if r.get("human_agreement"):
         h = r["human_agreement"]

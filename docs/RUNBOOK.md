@@ -11,27 +11,30 @@ OPENROUTER_API_KEY=...      # LLM baselines and stage C only
 
 ## Run order
 
-**Day 1: verify, count, sample, start labeling**
+**Day 1: verify, count, sample**
 
 ```
 python pilot.py preflight                      # dataset columns/types vs assumptions (no API calls)
 python pilot.py preflight --skip-dataset --call  # Jev auth, answer shape, packed-16 worst case vs 32K window
 python pilot.py count                          # exact 2006-2020 eligible comments -> data/eligible.json
 python pilot.py sample                         # 600 uniform + 400 enriched, thread context, label sheets
-python pilot.py label --labeler anthony --pass a
 ```
 
 `sample` and `count` read Parquet straight from Hugging Face. They only touch the year folders they need. If you download the years first (`hf download nikhilambhure00/hacker-news --repo-type dataset --include "data/20*/*"`), pass `--parquet-glob path/to/data/*/*.parquet`.
 
-**Day 2: finish blind labels, second labeler**
+**Day 2: labels (plan amendment A1)**
 
 ```
-python pilot.py label --labeler anthony --pass b          # stage B fields for every positive
-python pilot.py label --labeler second --sheet data/labels_blank_second.csv --pass a
-python pilot.py label --labeler second --sheet data/labels_blank_second.csv --pass b
+python pilot.py panel a                        # 3-model panel labels is_prediction on the enriched 400 (~$0.50)
+python pilot.py panel sheet                    # your blind sheet: uniform 600 + audit 100 + panel splits, shuffled
+python pilot.py label --labeler anthony --sheet data/labels_blank_human.csv    # ~2.5 hours
+python pilot.py panel b                        # panel labels stage B fields on every positive (~$1.50)
+python pilot.py panel merge                    # data/labels_final.csv + data/panel_audit.json
 ```
 
-The labeler never reads Jev output and never shows the stratum. Press `r` at any prompt to see [LABELING_RULES.md](../LABELING_RULES.md). Progress saves after every answer.
+Score everything with `--labels data/labels_final.csv`. It carries a `source` column (`human`, `human_audit`, `human_adjudicated`, `panel`), and `score` reports provenance and the audit error rate, and grades baselines on human labels only. The labeler never reads Jev or panel output and never shows the stratum. Press `r` at any prompt to see [LABELING_RULES.md](../LABELING_RULES.md), which the panel gets too. Progress saves after every answer.
+
+A second human labeler is optional: `python pilot.py label --labeler second --sheet data/labels_blank_second.csv`, then `score --second-labels data/labels_second.csv`, and human-human agreement becomes the stage B reference.
 
 **Day 3: runs 1-7**
 
@@ -40,13 +43,13 @@ python pilot.py run --mode a_single                 # run 1
 python pilot.py run --mode a_packed --pack 8        # run 2
 python pilot.py run --mode a_packed --pack 16       # run 3
 python pilot.py run --mode a_nonce                  # run 4: 100 comments x 3 nonce repeats
-python pilot.py score --labels data/labels_anthony.csv --single data/raw_a_single_v1.jsonl   # read off the gate
+python pilot.py score --labels data/labels_final.csv --single data/raw_a_single_v1.jsonl   # read off the gate
 python pilot.py run --mode b --gate <t> --stage-a-file data/raw_a_single_v1.jsonl \
-    --also-labeled-positives data/labels_anthony.csv --with-subject                        # run 5
+    --also-labeled-positives data/labels_final.csv --with-subject                        # run 5
 python pilot.py baseline --kind regex                                                      # run 6
 python pilot.py baseline --kind llm --model <cheap-openrouter-slug> --name cheap
 python pilot.py baseline --kind llm --model <frontier-openrouter-slug> --name frontier
-python pilot.py stage-c --stage-b-file data/raw_b_v1.jsonl --labels data/labels_anthony.csv \
+python pilot.py stage-c --stage-b-file data/raw_b_v1.jsonl --labels data/labels_final.csv \
     --model <frontier-openrouter-slug>                                                     # run 7
 ```
 
@@ -55,7 +58,7 @@ Every run appends to `data/raw_<mode>_<tag>.jsonl`, one line per request, holdin
 **Day 4: score, decide, publish**
 
 ```
-python pilot.py score --labels data/labels_anthony.csv --second-labels data/labels_second.csv \
+python pilot.py score --labels data/labels_final.csv \
     --single data/raw_a_single_v1.jsonl \
     --packed data/raw_a_packed8_v1.jsonl data/raw_a_packed16_v1.jsonl \
     --nonce data/raw_a_nonce_v1.jsonl --stage-b data/raw_b_v1.jsonl \
@@ -84,7 +87,7 @@ python pilot.py publish
 
 | Preset | Model | Rough cost for 1,000 comments |
 |---|---|---|
-| `--name cheap` | `deepseek/deepseek-v4-flash` | $0.04 |
+| `--name cheap` | `openai/gpt-5-nano` | $0.03 |
 | `--name frontier` | `anthropic/claude-sonnet-5` | $1.60 (measured) |
 | `--name free_cheap` | `liquid/lfm-2.5-2.6b:free` | $0 |
 | `--name free_frontier` | `nvidia/nemotron-3-ultra-550b-a55b:free` | $0 |
@@ -108,6 +111,7 @@ pilot.py              CLI
 oracle/config.py      paths, pinned model, price, rate limits
 oracle/sample.py      DuckDB sampling, eligibility count, schema check, HN Firebase context
 oracle/labeling.py    blind terminal labeler
+oracle/panel.py       three-model labeling panel, audit, merge (amendment A1)
 oracle/jev.py         Jev client, rate limiter, retries (429/529/5xx), resumable JSONL runner
 oracle/runs.py        run modes and raw-file loaders
 oracle/llm.py         regex and OpenRouter baselines (free and paid presets), model catalog, stage C

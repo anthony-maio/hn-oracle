@@ -1,7 +1,8 @@
 # Labeling rules (fixed before labeling starts)
 
-Blind: labels are finished before anyone looks at a Jev output. The labeler never sees Jev or baseline
-outputs, and does not see the stratum.
+Blind: labels are finished before anyone looks at a Jev output. The labeler never sees Jev, baseline or
+panel outputs, and does not see the stratum. The three-model labeling panel (plan amendment A1) gets
+this same file as its instructions.
 
 ## is_prediction
 
