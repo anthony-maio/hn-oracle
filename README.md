@@ -12,7 +12,7 @@ The archive holds 41.3 million comments. 17.95 million of them are from 2006-202
 
 This repo is the 1,000-comment pilot that decides whether the full run happens. Every threshold was written down before the first API call, and every gate gets published as pass or fail, including the ones that fail.
 
-> **Status:** the pilot ran on September 23, 2026. Every pre-registered gate passed, and the whole thing cost **$3.46** in API calls. Raw responses, labels and the full report are in [`results/`](results/).
+> **Status:** the pilot ran on September 23, 2026. Every pre-registered gate passed. Scoring cost **$5.64** in API calls, and **$9.34** with the stage C hindsight check and a baseline rerun I had to do (below). Raw responses, labels and the full report are in [`results/`](results/).
 
 ## Results: GO, and the full archive costs about $400
 
@@ -22,17 +22,18 @@ This repo is the 1,000-comment pilot that decides whether the full run happens. 
 | **G2 calibration** | ECE 0.017 after isotonic recalibration (raw: 0.105) | ≤ 0.08 | pass |
 | **G3 prevalence** | recalibrated estimate within 0.05 pts of the labeled 8.3% | ±2 pts | pass |
 | **G4 packing** | 8 per request: ΔF1 -0.017. 16 per request: -0.031 | ≥ -0.03 | pass at 8 |
-| **G5 baselines** | Jev F1 0.76 vs regex 0.48, vs Claude Sonnet 5 0.69 | +0.15 / -0.05 | pass |
+| **G5 baselines** | Jev F1 0.76 vs regex 0.48 (+0.29), vs Claude Sonnet 5 0.74 (+0.03, 95% CI -0.02 to +0.07) | +0.15 / -0.05 | pass |
 | **G6 robustness** | median drift across nonce repeats 0.01 | ≤ 0.05 | pass |
 | **G7 economics** | 17.95M comments, packed 8: **$407, 2.4 days** | < $3,000, < 7 days | pass |
 
-On the 864 comments I labeled by hand, Jev found predictions better than both LLM baselines given the same question: F1 0.76 against 0.69 for Claude Sonnet 5 and 0.49 for gpt-5-nano, at $0.042 per million input tokens. One comment per request would have taken 11.7 days, and packing 8 per request gets the full run to 2.4 days, with the request limit, not the bill, still the wall.
+On the 864 comments I labeled by hand, Jev matched Claude Sonnet 5 at finding predictions (F1 0.76 vs 0.74, a statistical tie) at about 1/70th the cost per comment ($0.000024 vs $0.0017) and a tenth of the latency (180 ms vs 1.8 s), and it clearly beat gpt-5-nano (0.62). Put Sonnet on stage A for all 17.95M comments and the bill is about $30,000; Jev's entire projected run, stage B included, is $407. One comment per request would have taken 11.7 days, and packing 8 per request gets the full run to 2.4 days, with the request limit, not the bill, still the wall.
 
 Every gate passed, and some of them passed with less margin than the table suggests:
 
 - **Calibration needs a correction step.** Jev's raw probabilities miss by about 0.1 ECE, consistently enough that isotonic recalibration on held-out halves fixes it. Every "calibrated" claim here means "after recalibration."
 - **Packing costs recall.** At 8 per request, uniform recall at the same gate drops from 0.92 to 0.86, one comment above the line. The full run has to re-pick its gate on packed output.
-- **Sonnet 5 is better calibrated than Jev** (ECE 0.067 vs 0.100 raw), even though Jev ranks predictions better.
+- **Sonnet 5 is better calibrated than Jev out of the box** (ECE 0.035 vs 0.100 raw). Jev's edge is price and speed at equal accuracy, not raw calibration.
+- **My first baseline run was broken, in the LLMs' disfavor.** Its prompt asked for "a calibrated probability that the answer is true," and the models sometimes reported confidence in their own answer instead: 25 of 1,000 Sonnet replies and 209 of 1,000 gpt-5-nano replies said "not a prediction" with probability 0.5 or higher. That run showed Jev beating Sonnet by 0.07. I renamed the field to `p_prediction`, spelled out what it means, and reran both. Jev's lead over Sonnet shrank to a tie. Both runs are in `results/` (the broken ones as `*_v0_ambiguous_prompt` rows in the report).
 - **The recall margin is thin.** Choosing the gate on one half and testing on the other gave 1.00 and 0.84.
 - **The question itself is ambiguous.** Three model families agreed unanimously on only 59% of regex-flagged comments. GPT-5.6 Luna called 55% of them predictions, and Claude Haiku 4.5 called 27%.
 - **Stage B passes on a lenient reference.** Jev is scored against the panel's majority label, which is easier to agree with than one model is with another. In absolute terms, `direction` (0.73) and `is_checkable` (0.74) are the weak fields.
@@ -152,17 +153,18 @@ flowchart LR
 
 ## What the pilot cost
 
-**$3.46**, and the labeling was the expensive part.
+**$9.34** all in, and the labeling was the expensive part.
 
 | Item | Cost |
 |---|---|
 | Jev, every pilot run (1.95M input tokens) | $0.08 |
 | Three-model labeling panel (1,808 calls) | $1.38 |
-| gpt-5-nano baseline (1,000 calls) | $0.33 |
-| Claude Sonnet 5 baseline (1,000 calls) | $1.67 |
+| gpt-5-nano baseline (1,000 calls, run twice) | $0.33 + $0.29 |
+| Claude Sonnet 5 baseline (1,000 calls, run twice) | $1.67 + $1.90 |
+| Stage C hindsight check (24 predictions, web search) | $3.70 |
 | Hand labeling (864 comments, 370 notes) | one evening |
 
-The stage C hindsight spot check (about $1 with web search) hasn't run yet; it's for demo pages, not scoring. OpenRouter's `:free` models also work (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
+Stage C graded the 24 checkable predictions whose horizon has passed; the verdicts are Sonnet's until I've checked each one against its sources, and they never feed the scoring. OpenRouter's `:free` models also work (`--name free_frontier`, `--sweep free`), and packing 16 comments per request keeps a full baseline to 63 calls, under the free tier's daily cap. `python pilot.py models` prints the current free list and the cheapest paid models that support strict structured output.
 
 ## Run it
 

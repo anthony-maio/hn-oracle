@@ -29,7 +29,10 @@
     "baseline_regex": "data/baseline_regex.jsonl",
     "baseline_cheap": "data/baseline_cheap.jsonl",
     "baseline_frontier": "data/baseline_frontier.jsonl",
-    "baseline_extra": null,
+    "baseline_extra": [
+      "sonnet5_v0_ambiguous_prompt=data/baseline_frontier_v0.jsonl",
+      "gpt5nano_v0_ambiguous_prompt=data/baseline_cheap_v0.jsonl"
+    ],
     "gate": null,
     "target_recall": 0.9,
     "eligible": null,
@@ -626,11 +629,11 @@
       "n": 864,
       "scope": "all",
       "baseline": {
-        "best_f1": 0.4857685009487666,
-        "best_f1_threshold": 0.66,
-        "f1_at_0.5": 0.43310344827586206,
-        "brier": 0.2582991898148148,
-        "ece": 0.34181712962962957
+        "best_f1": 0.6231155778894473,
+        "best_f1_threshold": 0.71,
+        "f1_at_0.5": 0.567219152854512,
+        "brier": 0.18526006944444445,
+        "ece": 0.27466435185185195
       },
       "jev_same_ids": {
         "best_f1": 0.7634408602150538,
@@ -638,13 +641,35 @@
         "brier": 0.08187488425925926,
         "ece": 0.10001157407407409
       },
-      "jev_minus_baseline_f1": 0.27767235926628714,
+      "jev_minus_baseline_f1": 0.14032528232560648,
       "uniform": {
-        "baseline_best_f1": 0.34951456310679613,
+        "baseline_best_f1": 0.5466666666666666,
         "jev_best_f1": 0.7652173913043478
       }
     },
     "frontier_llm": {
+      "n": 864,
+      "scope": "all",
+      "baseline": {
+        "best_f1": 0.7361563517915309,
+        "best_f1_threshold": 0.36,
+        "f1_at_0.5": 0.7361563517915309,
+        "brier": 0.07278749999999999,
+        "ece": 0.03520833333333332
+      },
+      "jev_same_ids": {
+        "best_f1": 0.7634408602150538,
+        "best_f1_threshold": 0.5,
+        "brier": 0.08187488425925926,
+        "ece": 0.10001157407407409
+      },
+      "jev_minus_baseline_f1": 0.027284508423522813,
+      "uniform": {
+        "baseline_best_f1": 0.7735849056603774,
+        "jev_best_f1": 0.7652173913043478
+      }
+    },
+    "sonnet5_v0_ambiguous_prompt": {
       "n": 864,
       "scope": "all",
       "baseline": {
@@ -663,6 +688,28 @@
       "jev_minus_baseline_f1": 0.07195149851292604,
       "uniform": {
         "baseline_best_f1": 0.6666666666666666,
+        "jev_best_f1": 0.7652173913043478
+      }
+    },
+    "gpt5nano_v0_ambiguous_prompt": {
+      "n": 864,
+      "scope": "all",
+      "baseline": {
+        "best_f1": 0.4857685009487666,
+        "best_f1_threshold": 0.66,
+        "f1_at_0.5": 0.43310344827586206,
+        "brier": 0.2582991898148148,
+        "ece": 0.34181712962962957
+      },
+      "jev_same_ids": {
+        "best_f1": 0.7634408602150538,
+        "best_f1_threshold": 0.5,
+        "brier": 0.08187488425925926,
+        "ece": 0.10001157407407409
+      },
+      "jev_minus_baseline_f1": 0.27767235926628714,
+      "uniform": {
+        "baseline_best_f1": 0.34951456310679613,
         "jev_best_f1": 0.7652173913043478
       }
     }
@@ -898,7 +945,7 @@
     },
     "G5_baselines": {
       "status": "pass",
-      "value": "vs regex (uniform) +0.289; vs frontier (all) +0.072",
+      "value": "vs regex (uniform) +0.289; vs frontier (all) +0.027",
       "threshold": "regex +0.15, frontier -0.05",
       "detail": ""
     },

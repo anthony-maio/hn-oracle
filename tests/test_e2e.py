@@ -75,7 +75,7 @@ def fake_transport(request: httpx.Request) -> httpx.Response:
                    "domain": "language_or_framework", "horizon": "1_to_5y", "stance_vs_thread": "agrees",
                    "certainty": 2 if body["model"] != "test/plain:free" else 3, "specificity": 1, "subject_text": "Rust"}
         else:
-            answer = lambda s: {"answer": regex_hint(s["comment"]), "probability": 0.85 if regex_hint(s["comment"]) else 0.1}
+            answer = lambda s: {"answer": regex_hint(s["comment"]), "p_prediction": 0.85 if regex_hint(s["comment"]) else 0.1}
             out = {c: answer(v) for c, v in states.items()} if "c01" in states else answer(states)
         strict = body.get("response_format", {}).get("type") == "json_schema"
         assert strict == body["model"].startswith("test/strict")

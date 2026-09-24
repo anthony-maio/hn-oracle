@@ -12,7 +12,7 @@ Model `jev-1.13.0`, schema `pilot-0.1`. Gate threshold 0.52 (all labeled comment
 | G2_calibration | pass | 0.017 | 0.080 | raw ECE 0.1045; best recalibrated: isotonic |
 | G3_prevalence | pass | 0.000 | 0.020 | isotonic-recalibrated gap, 95% CI [-0.015, +0.015] |
 | G4_packing | pass | 8 | F1 drop <= 0.03 and Brier <= 1.10x single | largest passing N goes into the full-run design |
-| G5_baselines | pass | vs regex (uniform) +0.289; vs frontier (all) +0.072 | regex +0.15, frontier -0.05 |  |
+| G5_baselines | pass | vs regex (uniform) +0.289; vs frontier (all) +0.027 | regex +0.15, frontier -0.05 |  |
 | G6_robustness | pass | 0.010 | 0.050 | p95 0.040 |
 | G7_economics | pass | {'cost_usd': 406.82, 'days': 2.41} | {'cost_usd': 3000.0, 'days': 7.0} | design packed8, binding limit: requests |
 | stageB_fields | pass | {'is_checkable': 1.027, 'is_sarcastic': 0.973, 'is_conditional': 0.976, 'direction': 1.062, 'domain': 1.178, 'horizon': 1.109, 'stance_vs_thread': 1.047, 'certainty': 1.068, 'specificity': 1.048} | 0.800 | failing fields are dropped or marked experimental; this does not block Go |
@@ -66,8 +66,10 @@ two-fold, label-stratified cross-fit on the uniform stratum: fit on one half, re
 | Baseline | scope | n | baseline F1 | Jev F1 (same ids) | Jev − baseline | baseline Brier | baseline ECE |
 |---|---|---|---|---|---|---|---|
 | regex | uniform | 600 | 0.476 | 0.765 | +0.289 | 0.128 | 0.128 |
-| cheap_llm | all | 864 | 0.486 | 0.763 | +0.278 | 0.258 | 0.342 |
-| frontier_llm | all | 864 | 0.691 | 0.763 | +0.072 | 0.098 | 0.067 |
+| cheap_llm | all | 864 | 0.623 | 0.763 | +0.140 | 0.185 | 0.275 |
+| frontier_llm | all | 864 | 0.736 | 0.763 | +0.027 | 0.073 | 0.035 |
+| sonnet5_v0_ambiguous_prompt | all | 864 | 0.691 | 0.763 | +0.072 | 0.098 | 0.067 |
+| gpt5nano_v0_ambiguous_prompt | all | 864 | 0.486 | 0.763 | +0.278 | 0.258 | 0.342 |
 
 ## Labels: provenance and panel audit (amendment A1)
 

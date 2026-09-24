@@ -15,15 +15,23 @@ from .runs import comment_state, iter_jsonl, load_stage_b
 from .sample import load_sample
 from .text import gradable, regex_hint, resolution_year
 
+# v1: the field is named for the event, not for "the answer". The v0 wording ("probability that the
+# answer is true") let models report confidence in their own answer: 25/1,000 Sonnet 5 and 209/1,000
+# gpt-5-nano replies said answer=false with probability >= 0.5.
 BASELINE_SCHEMA = {
     "type": "object",
     "properties": {
         "answer": {"type": "boolean", "description": "true if the comment makes a prediction"},
-        "probability": {"type": "number", "description": "probability from 0 to 1 that the answer is true"},
+        "p_prediction": {"type": "number", "description": (
+            "probability from 0 to 1 that the comment makes a prediction. Not your confidence in your answer: "
+            "if answer is false this is below 0.5, if true it is at least 0.5")},
     },
-    "required": ["answer", "probability"],
+    "required": ["answer", "p_prediction"],
     "additionalProperties": False,
 }
+P_FIELD_HELP = ('Return JSON {"answer": true|false, "p_prediction": 0..1}. p_prediction is the probability that '
+                "the comment makes a prediction (not your confidence in your answer): below 0.5 when answer is "
+                "false, at least 0.5 when it is true. Make it calibrated.")
 
 STAGE_C_SCHEMA = {
     "type": "object",
@@ -53,8 +61,7 @@ def baseline_prompt(state: dict) -> str:
         f"Question: {q['instructions']}\n"
         f"Answer true if: {q['criteria']['true']}\n"
         f"Answer false if: {q['criteria']['false']}\n\n"
-        "Return JSON {\"answer\": true|false, \"probability\": 0..1} with your answer and a calibrated "
-        "probability that the answer is true."
+        + P_FIELD_HELP
     )
 
 
@@ -65,8 +72,7 @@ def packed_baseline_prompt(states: dict[str, dict]) -> str:
         f"For EACH comment ID, answer: {q['instructions']}\n"
         f"Answer true if: {q['criteria']['true']}\n"
         f"Answer false if: {q['criteria']['false']}\n\n"
-        "Return one JSON object keyed by comment ID, each value {\"answer\": true|false, \"probability\": 0..1}, "
-        "where probability is your calibrated probability that the answer is true."
+        "Return one JSON object keyed by comment ID; each value is an object as follows. " + P_FIELD_HELP
     )
 
 
@@ -215,7 +221,7 @@ def run_llm_baseline(args, sample, name: str, model: str) -> None:
             resp, dt, attempts = post_json(client, C.OPENROUTER_URL, body, headers, limiter, timeout=300)
             parsed = parse_content(resp)
             per = {"c01": parsed} if pack == 1 else parsed
-            items = [{"id": iid, "p": min(max(float(per[c]["probability"]), 0.0), 1.0), "answer": per[c]["answer"]}
+            items = [{"id": iid, "p": min(max(float(per[c]["p_prediction"]), 0.0), 1.0), "answer": per[c]["answer"]}
                      for iid, c in zip(u["ids"], u["states"])]
             return {"ids": u["ids"], "items": items, "name": name, "model": model, "pack": pack,
                     "latency_ms": dt, "attempts": attempts, "request": body,
