@@ -90,7 +90,7 @@ def run_panel(step: str, ids: list[int], args) -> None:
         limiter = RateLimiter(args.rpm)
         with httpx.Client() as client:
             def fn(u):
-                body = {"model": model, "temperature": 0, "max_tokens": 1500,
+                body = {"model": model, "temperature": 0, "max_tokens": 6000,  # reasoning models need room
                         "messages": [{"role": "system", "content": SYSTEM},
                                      {"role": "user", "content": make(u["state"])}]}
                 with_output_format(body, model, f"panel_{step}", schema)
@@ -213,20 +213,22 @@ def merge(args) -> None:
         i = int(final.at[k, "id"])
         src = final.at[k, "source"]
         final.at[k, "labeler"] = "anthony" if src.startswith("human") else ("panel" if src == "panel" else "")
-        answers = [panel_b[m].get(i) for m in C.LABEL_PANEL]
-        if final.at[k, "is_prediction"] != "1" or any(a is None for a in answers):
+        answers = [a for a in (panel_b[m].get(i) for m in C.LABEL_PANEL) if a is not None]
+        if final.at[k, "is_prediction"] != "1" or len(answers) < 2:  # one model may fail on a comment
             continue
         for f in C.LABEL_FIELDS_B:
             vals = [a.get(f) for a in answers]
             if None in vals:
                 continue
+            pair_ok = len(vals) == len(C.LABEL_PANEL)  # pairwise agreement stats only on complete votes
             if f in SCORE_B:
                 vals = [float(v) for v in vals]
                 final.at[k, f] = str(float(np.median(vals)))
             else:
                 vals = [("1" if v else "0") for v in vals] if f in BOOL_B else list(vals)
                 final.at[k, f] = majority(vals)  # no majority: left unlabeled for that field
-            votes[f][i] = vals
+            if pair_ok:
+                votes[f][i] = vals
         final.at[k, "subject_text"] = answers[0].get("subject_text", "")
     final = final[C.LABEL_COLUMNS + ["source"]]
     final.to_csv(C.DATA / "labels_final.csv", index=False)

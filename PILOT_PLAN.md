@@ -201,3 +201,5 @@ These three sets are shuffled into one sheet, so the labeler can't tell uniform,
 Human labeling drops from about 8 hours to about 2.5. Panel API cost is about $2.
 
 **Observed when the panel ran, before any human label:** the three models agreed unanimously on 59.0% of the 400 enriched comments. They said "prediction" at very different rates (Haiku 26.8%, DeepSeek 34.2%, GPT-5.6 Luna 55.0%; pairwise agreement 68-80%), with Luna the odd one out in 82 of 164 splits. The unanimity rule stays as registered, so all 164 splits go to the human sheet, which becomes 864 comments (600 uniform, 100 audit, 164 splits). Model disagreement at this level says the task is ambiguous on regex-hinted comments, which is a reason to add a second human labeler if one is available.
+
+**Human labeling, as done:** all 864 sheet comments were labeled blind in the terminal tool, then the labeler re-read the file in a text editor and added short `review:` notes to 19 of them. No model output was consulted during labeling or review.

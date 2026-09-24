@@ -206,7 +206,7 @@ def run_llm_baseline(args, sample, name: str, model: str) -> None:
                 prompt, schema = baseline_prompt(u["states"]["c01"]), BASELINE_SCHEMA
             else:
                 prompt, schema = packed_baseline_prompt(u["states"]), packed_schema(list(u["states"]))
-            body = {"model": model, "temperature": 0, "max_tokens": 1500 + 120 * pack,
+            body = {"model": model, "temperature": 0, "max_tokens": 6000 + 120 * pack,  # reasoning models need room
                     "messages": [{"role": "system", "content": "You label Hacker News comments. Reply with JSON only."},
                                  {"role": "user", "content": prompt}]}
             with_output_format(body, model, "is_prediction", schema)
